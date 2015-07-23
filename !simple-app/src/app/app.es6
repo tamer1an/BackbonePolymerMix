@@ -1,6 +1,6 @@
 "use strict";
 
-var Application = (($) => {
+var Application = (function($) {
     var App = {
         stores: {},
         views: {},
@@ -9,7 +9,7 @@ var Application = (($) => {
 
     // MODEL
     var User = Backbone.Model.extend({
-        defaults: () => {
+        defaults: function () {
             return { // User Entity
                 gender : '',
                 fname : '',
@@ -31,20 +31,21 @@ var Application = (($) => {
         events: {
             "click form input": "validate",
             "keypress form input": "saveChanges",
-            "change form input": "saveChanges"
+            "change form input": "saveChanges",
+            "submit form":"submit"
         },
         user : new User,
-        initialize:  () => {
-            console.log('init',this.user);
+        initialize: function () {
+            console.log('init', this.user);
             _.bindAll(this, 'saveChanges','validate','submit');
         },
-        submit:  () => {
-
+        submit:  function (e)  {
+            console.log('submit');
         },
-        validate: ()  => {
+        validate: function (e)  {
             console.log('validate');
         },
-        saveChanges:(e) => {
+        saveChanges: function(e) {
             this.user[e.currentTarget.id] = e.currentTarget.value;
             console.log('saved',this.user);
         }
@@ -53,7 +54,6 @@ var Application = (($) => {
     //APP CONSTRUCTOR:
     $(document).ready(() => {
         console.log('doc ready');
-
         Backbone.history.start();
         App.presenters.AppController = new AppController();
     });
