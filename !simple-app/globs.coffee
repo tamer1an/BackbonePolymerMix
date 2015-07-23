@@ -42,7 +42,7 @@ globs.themeSass = [
 
 globs.app = [
   # you need to reference bower modules here
-  'vendor/jquery/jquery.js',
+  'vendor/jquery/dist/jquery.js',
   'vendor/underscore/underscore.js',
   'vendor/backbone/backbone.js',
 

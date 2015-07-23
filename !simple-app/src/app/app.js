@@ -4,49 +4,57 @@ var Application = (function ($) {
     var App = {
         stores: {},
         views: {},
-        presenters: {},
-        collections: {}
+        presenters: {}
     };
 
-    //VIEWS
-
-
-    //// MODEL & COLLECTIONS
-    var user = Backbone.Model.extend({
+    // MODEL
+    var User = Backbone.Model.extend({
         defaults: function defaults() {
-            return { // video Entity
-                base_url: "url"
+            return { // User Entity
+                gender : '',
+                fname : '',
+                date : '',
+                street : '',
+                streetNumber : '',
+                plz : '',
+                ort : '',
+                email : '',
+                password : '',
+                repassword : ''
             };
         }
     });
-    App.collections.users = Backbone.Collection.extend({
-        url: "https://api.com/api/submit"
-    });
 
-    //PRESENTERS
+    // Form Application
     var AppController = Backbone.View.extend({
         el: "body",
         events: {
-            "change #video-filter": "updateVideolist",
-            "click picture": "showSingleVideo"
+            "click form input": "validate",
+            "keypress form input": "saveChanges",
+            "change form input": "saveChanges"
         },
+        user : new User,
         initialize: function () {
-
+            console.log('init',this.user);
+            _.bindAll(this, 'saveChanges','validate','submit');
         },
         submit: function () {
 
         },
         validate: function () {
-
+            console.log('validate');
+        },
+        saveChanges:function(e){
+            this.user[e.currentTarget.id] = e.currentTarget.value;
+            console.log('saved',this.user);
         }
     });
 
     //APP CONSTRUCTOR:
     $(document).ready(function () {
-        document.ontouchmove = function (e) {
-            e.preventDefault();
-        };
+        console.log('doc ready');
 
+        Backbone.history.start();
         App.presenters.AppController = new AppController();
     });
 
