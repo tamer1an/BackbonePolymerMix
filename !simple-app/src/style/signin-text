@@ -1,0 +1,11 @@
+&_signIn{
+  padding-left:20px;
+  height: 64px;
+  text-align: left;
+  vertical-align: baseline;
+
+  &_text{
+    line-height: 30px;
+    display: inline-block;
+  }
+}

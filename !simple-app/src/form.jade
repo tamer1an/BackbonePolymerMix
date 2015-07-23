@@ -1,0 +1,137 @@
+//    USER REG FORM
+block register_form
+    fieldset.app_section_form_fieldset
+        label(for="gender") Gender*
+        input#gender.radio(
+            required,
+            type="radio",
+            autofocus="true",
+            title="Male",
+            name="gender",
+            value="1",
+        )
+        | Male
+        input#gender.radio(
+            required,
+            type="radio",
+            title="Female",
+            name="gender",
+            value="0",
+        )
+        | Female
+
+    fieldset.app_section_form_fieldset
+        label(for="fname") F. Name*
+        legend F. Name*
+        input#fname.text(
+            required,
+            placeholder="F. Name",
+            title="F. Name",
+            name="fname",
+            type="text",
+            itemprop="agent"
+        )
+
+    fieldset.app_section_form_fieldset
+        label(for="lname") L.Name*
+        legend L. Name*
+        input#lname.text(
+            required,
+            placeholder="L.Name",
+            title="L.Name",
+            name="lname",
+            type="text",
+            itemprop="instrument"
+        )
+
+    fieldset.app_section_form_fieldset
+        label(for="date") Date*
+        legend Date*
+        input#date.date(
+            pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)",
+            required,
+            placeholder="Required (DD.MM.YYYY)",
+            title="Required (DD.MM.YYYY)",
+            name="date",
+            type="instrument"
+        )
+
+    fieldset.app_section_form_fieldset
+        label(for="street") Street*
+        legend Street*
+        input#street.text(
+            required,
+            type="text",
+            placeholder="Street",
+            title="Street",
+            itemprop="instrument"
+        )
+
+    fieldset.app_section_form_fieldset
+        label(for="street") st. num*
+        legend st.num*
+        input#street-number.text(
+            required,
+            type="text",
+            placeholder="Na",
+            title="Street",
+            itemprop="instrument"
+        )
+
+    fieldset.app_section_form_fieldset
+        label(for="plz") PLZ*
+        legend PLZ*
+        input#plz.text(
+            required,
+            type="text",
+            placeholder="PLZ",
+            title="Street",
+            itemprop="instrument"
+        )
+
+    fieldset.app_section_form_fieldset
+        label(for="ort") Ort*
+        legend Ort*
+        input#ort.text(
+            required,
+            type="text",
+            placeholder="Ort",
+            title="Street",
+            itemprop="instrument"
+        )
+
+    fieldset.app_section_form_fieldset
+        label(for="email") Email*
+        legend Email*
+        input#email.email(
+            required,
+            placeholder="Required",
+            title="Required",
+            type="email",
+            name="email",
+            itemprop="instrument"
+        )
+
+    fieldset.app_section_form_fieldset
+        label(for="password") Password*
+        legend Password*
+        input#password.password(
+            required,
+            type="password",
+            placeholder="Password",
+            title="Required",
+            name="password",
+            itemprop="instrument"
+        )
+
+    fieldset.app_section_form_fieldset
+        label(for="repassword") Re-password*
+        legend Re-password*
+        input#repassword.password(
+            required,
+            type="password",
+            placeholder="Re-password",
+            title="Repassword",
+            name="repassword",
+            itemprop="instrument"
+        )

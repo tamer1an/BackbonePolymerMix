@@ -1,0 +1,12 @@
+@import 'src/style/variables';
+&_connectionType{
+  padding-left:20px;
+  height: 50px;
+  border-top: 1px solid $color-grey;
+  vertical-align: baseline;
+
+  &_text{
+    display: inline-block;
+    font-weight: bold;
+  }
+}

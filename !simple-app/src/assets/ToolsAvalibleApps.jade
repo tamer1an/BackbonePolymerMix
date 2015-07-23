@@ -1,0 +1,8 @@
+div(flex="40") 
+  h4.app_h4 Avalible Apps
+  div(layout='column', flex, layout-fill)
+    each val in ['Hadoop', 'Rails', 'Chronos', 'Storm', 'Spark']
+      div.app_avalible(layout='row', layout-align="start center")
+        h4.app_h4(flex).app_avalible_text= val
+        
+        

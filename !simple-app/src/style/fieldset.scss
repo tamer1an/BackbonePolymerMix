@@ -1,0 +1,54 @@
+@import 'src/style/variables';
+&_fieldset{
+  width: 100%;
+  border: none;
+  margin: 0 0 10px 0;
+  padding-right: 0;
+  padding-left: 0;
+
+  > label{
+    display: none;
+    font-weight: bold;
+
+    @media screen and (min-width: $break-ipad-portrait) {
+      display: inline-block;
+      width: 37%;
+      text-align: right;
+    }
+
+    &[for="gender"]{
+      display: inline-block;
+    }
+  }
+
+  > legend{
+    font-weight: bold;
+    display: inline-block;
+    @media screen and (min-width: $break-ipad-portrait) {
+      display: none;
+    }
+  }
+
+  > .radio{
+    height: 20px;
+    width: 30px;
+
+    @media screen and (min-width: $break-ipad-portrait) {
+      margin-left: 6.1%;
+    }
+  }
+
+  > .text, > .number, > .date, > .password, > .email {
+    height: 40px;
+    width: 99%;
+    padding-left: 5px;
+    border: 1px solid $color-grey;
+    background: whitesmoke;
+
+    @media screen and (min-width: $break-ipad-portrait) {
+      width: 55%;
+      float: right;
+      margin-left: 5%;
+    }
+  }
+}

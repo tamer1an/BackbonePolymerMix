@@ -1,0 +1,10 @@
+{
+    "name": "bb-simple-app",
+    "version": "0.0.1",
+    "_comment": "Any dependencies added here require a manual edit to vendor_files in /Gruntfile.js and (??? verify the following) /build/karma-unit.js (e.g 'vendor/angular-resource/angular-resource.js')",
+    "dependencies": {
+        "jquery": "~1.10.2",
+        "underscore": "~1.5.2",
+        "backbone": "~1.1.0"
+    }
+}

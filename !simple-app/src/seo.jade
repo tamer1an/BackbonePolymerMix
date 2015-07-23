@@ -1,0 +1,28 @@
+block seo_basic
+    meta(name="author",          content="Andrii Trybynenko")
+    meta(name="copyright",       content="&copy;@trybynenko")
+    meta(name="application-name",content="/")
+    meta(itemprop="name",        content="Subscribe form" )
+    meta(itemprop="description", content="This is web page." )
+
+block seo_gplus
+    meta(property="og:title",       content="Form", itemprop="keywords")
+    meta(property="og:description", content="Form")
+    meta(property="og:type",        content="Shop")
+    meta(property="og:url",        content="/")
+    meta(property="og:site_name",   content="/")
+    //meta(itemprop="image", content="" )
+
+block seo_twitter
+    meta(name="twitter:card",   content="Form")
+    meta(name="twitter:site",   content="@shop")
+    meta(name="twitter:title",  content="Form")
+    meta(name="twitter:description", content="description")
+    meta(name="twitter:url",    content="/")
+
+block meta_seo
+    meta(name="robots", content="all")
+    meta(http-equiv="cache-control",content="Public")
+    block seo_basic
+    block seo_gplus
+    block seo_twitter

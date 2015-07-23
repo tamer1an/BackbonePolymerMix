@@ -1,0 +1,22 @@
+@import 'src/style/variables';
+&_footer {
+  height: 109px;
+  background: $color-dark;
+  color: $color;
+
+  &_nav{
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+
+    &_item {
+      display: inline-block;
+      line-height: 100px;
+      margin-right: 5px;
+    }
+  }
+
+  &-copyright{
+    padding: 5px 0;
+  }
+}
