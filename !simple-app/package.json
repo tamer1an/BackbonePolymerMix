@@ -28,6 +28,9 @@
     "babel": "*",
     "gulp-babel": "^4.0.0",
     "gulp-es6to5": "*",
-    "express": "*"
+    "express": "*",
+    "mocha": "*",
+    "chai": "*",
+    "chai-backbone":"*"
   }
 }
