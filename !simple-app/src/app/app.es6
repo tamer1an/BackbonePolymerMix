@@ -32,7 +32,7 @@ var Application = (function($) {
             "click form input": "validate",
             "keypress form input": "saveChanges",
             "change form input": "saveChanges",
-            "submit form":"submit"
+            "submit .app_section_form":"submit"
         },
         user : new User,
         initialize: function () {
