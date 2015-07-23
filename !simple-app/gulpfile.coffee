@@ -29,9 +29,11 @@ src_dir    = 'src/'
 build_dir  = 'build/'
 build_vendor_dir = 'build/vendor/'
 
-
 gulp.task 'move:es6to5', ->
   return gulp.src globs.es6to5
+    .pipe(rename({
+        extname: ".js"
+      }))
     .pipe(babel())
     .pipe(gulp.dest('build/app'));
 

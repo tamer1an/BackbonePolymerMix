@@ -1,7 +1,7 @@
 globs = {}
 
 globs.coffee = 'src/**/*.coffee'
-globs.es6to5 = 'src/app/**/*.js'
+globs.es6to5 = 'src/app/**/*.es6'
 globs.jade = 'src/**/*.jade'
 globs.src = 'src/**/*'
 globs.build = 'build/**/*'
