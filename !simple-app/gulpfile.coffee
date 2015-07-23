@@ -16,7 +16,6 @@ jade = require 'gulp-jade'
 sass = require 'gulp-sass'
 coffee = require 'gulp-coffee'
 
-karma = require 'gulp-karma'
 sourcemaps = require 'gulp-sourcemaps'
 
 inject = require 'gulp-inject'
@@ -71,23 +70,12 @@ gulp.task 'move:vendor', ->
 	.pipe gulp.dest(build_vendor_dir)
 
 
-gulp.task 'run:karma', ->
-	gulp.src globs.karma
-	.pipe karma
-		configFile : 'karma.conf.js'
-		action : 'watch'
-	.on 'error', (err) ->
-		throw err
-		return
-
-
 gulp.task 'watch', ->
 	gulp.watch globs.vendor, ['move:vendor']
 	gulp.watch globs.es6to5, ['move:es6to5']
 	gulp.watch globs.jade, ['move:jade']
 	gulp.watch globs.sass, ['move:sass']
 	gulp.watch globs.coffee, ['move:coffee']
-	gulp.watch globs.karma, ['run:karma']
 	
 
 gulp.task 'watch-simple', ->
@@ -112,10 +100,8 @@ gulp.task 'default', ['move:files', 'watch']
 function readModuleArg() {
   var module = argv.c ? 'material.components.' + argv.c : (argv.module || argv.m);
   if (!module) {
-    gutil.log('\nProvide a compnent argument via \`-c\`:',
-      '\nExample: -c toast');
-    gutil.log('\nOr provide a module argument via \`--module\` or \`-m\`.',
-      '\nExample: --module=material.components.toast or -m material.components.dialog');
+    gutil.log('1');
+    gutil.log('2');
     process.exit(1);
   }
   return module;
