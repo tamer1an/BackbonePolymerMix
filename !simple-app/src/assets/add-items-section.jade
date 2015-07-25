@@ -1,0 +1,16 @@
+link(rel="import", href="/vendor/polymer/polymer.html")
+
+dom-module(id="add-items-section", attributes="")
+  template
+    style(rel="stylesheet", href="/style/add-items-section.css")
+    h1 {{ greeting }}, {{ greeting }}!
+    span Update text to change the greeting.
+    input(type="text", value="{{ greeting }}")
+
+script.
+    (function () {
+        Polymer({
+            is: "add-items-section",
+            greeting: '\'Allo'
+        });
+    })();

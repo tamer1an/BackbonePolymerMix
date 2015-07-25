@@ -17,36 +17,14 @@ block application
                 block hamburgerSvg
 
         nav.app_tabs
-            a(href="#").app_tabs_tab TAB1
-            a(href="#").app_tabs_tab TAB2
-            a(href="#").app_tabs_tab TAB3
+            a(href="#").app_tabs_tab Task
+            a(href="#").app_tabs_tab Done
+            a(href="#").app_tabs_tab ...
 
-        .app_signIn
-            p.app_signIn_text Login
 
-        .app_connectionType
-            p.app_connectionType_text Secured
+        add-items-section
 
-        section.app_section(itemscope, itemtype="https://schema.org/RegisterAction")
-            h3.app_section_form_title(itemprop="name") Register
-            form.app_section_form(accept-charset="utf-8")
-                include form.jade
-                h4.app_section_form_agreementLink
-                    | agreement &nbsp
-                    a(href="#", itemprop="url") Link
-                input#contact-submit.submit(
-                    name="submit_form",
-                    value="SUBMIT",
-                    type="submit",
-                    itemprop="target"
-                )
-                h4.app_section_form_note *Additional
+        paper-input
 
-        footer.app_footer
-            nav.app_footer_nav
-                a.app_footer_nav_item NEWS
-                a.app_footer_nav_item ABOUT
-                a.app_footer_nav_item DATA
-                a.app_footer_nav_item AGB
-
-        .app_footer-copyright &copy;trybynenko
+        section.app_section
+            h3.app_section_form_title Create new task

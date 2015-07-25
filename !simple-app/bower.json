@@ -5,6 +5,8 @@
     "dependencies": {
         "jquery": "*",
         "underscore": "*",
-        "backbone": "*"
+        "backbone": "*",
+        "polymer": "*",
+        "paper-elements":"https://github.com/PolymerElements/paper-elements.git"
     }
 }

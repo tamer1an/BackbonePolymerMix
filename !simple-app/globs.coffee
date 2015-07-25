@@ -19,24 +19,12 @@ globs.vendor = 'vendor/**/*'
 globs.theme = 'vendor/angular-material-source/src/core/style/variables.scss'
 
 globs.sass = [
-  # angular material core
-  'vendor/angular-material-source/src/core/style/variables.scss'
-  'vendor/angular-material-source/src/core/style/mixins.scss'
-  'vendor/angular-material-source/src/core/style/structure.scss'
-  'vendor/angular-material-source/src/core/style/layout.scss'
-
-  # angular material components
-  'vendor/angular-material-source/src/components/**/*.scss'
-  '!vendor/angular-material-source/src/components/**/*-theme.scss'
-
   # application style
-  'src/**/*.scss'
+  'src/style/*.scss'
 ]
 
 globs.themeSass = [
-  'vendor/angular-material-source/src/components/**/*-theme.scss'
-  'src/core/style/variables.scss'
-  'src/core/style/mixins.scss'
+
 ]
 
 
@@ -45,7 +33,7 @@ globs.app = [
   'vendor/jquery/dist/jquery.js',
   'vendor/underscore/underscore.js',
   'vendor/backbone/backbone.js',
-
+  'vendor/webcomponentsjs/webcomponents.js',
 
   globs.app_js
   "!build/app/**/*.spec.js"
