@@ -10,12 +10,20 @@ var Application = (function($) {
     // MODEL
     var Task = Backbone.Model.extend({
         defaults: function () {
-            return { // Task Entity
-               title: '',
+            return {
+               title:'',
                body:'',
                type:''
             };
         }
+    });
+
+    var TaskList = Backbone.Collection.extend({
+        url:'/',
+        initialize: function(){
+            this.dropdown = $('#video-filter');
+        },
+        model: Task
     });
 
     var Workspace = Backbone.Router.extend({
@@ -40,36 +48,56 @@ var Application = (function($) {
         router: new Workspace,
         events: {
             "click form input": "validate",
-            "keypress form input": "saveChanges",
-            "change form input": "saveChanges",
-            "submit .app_section_form":"submit"
+            "keypress form input": "validate",
+            "change form input": "validate",
+            "submit form":"submit"
         },
         task : new Task,
         initialize: function () {
             console.log('init', this.task);
+            this.addInput = document.querySelector('add-items-section input');
+
             _.bindAll(this, 'saveChanges','validate','submit');
 
             this.router.on("route:help", function(page) {
                 console.log('help 1');
             });
+
+            this.list = new TaskList();
         },
         submit:  function (e)  {
-            console.log('submit');
+            if(this.addInput.value != ""){
+                this.list.add(this.task);
+                this.task = new Task;
+                e.stopImmediatePropagation();
+                e.preventDefault();
+                console.log('submit');
+            } else {
+                console.log('submit fail!');
+            }
         },
-        validate: function (e)  {
-            console.log('validate');
+        validate: function ()  {
+            if (this.addInput.value != ""){
+                this.saveChanges();
+            } else {
+                console.log('not valid');
+            }
         },
-        saveChanges: function(e) {
-            this.task[e.currentTarget.id] = e.currentTarget.value;
+        saveChanges: function() {
+            this.task.body = this.addInput.value;
             console.log('saved',this.task);
+            return true;
         }
     });
 
     //APP CONSTRUCTOR:
     $(document).ready(() => {
-        console.log('doc ready');
-        App.presenters.AppController = new AppController();
-        Backbone.history.start();
+        HTMLImports.whenReady(() => {
+            console.log('doc ready');
+
+            App.presenters.AppController = new AppController();
+            Backbone.history.start();
+        });
     });
 
     return App;

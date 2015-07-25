@@ -81,14 +81,10 @@ body {
     }
   }
 
-  &_section {
-    height: 1165px;
-    margin-bottom: 98px;
-    border-bottom: 1px solid $color-grey;
-
-    @media screen and (min-width: $break-ipad-portrait) {
-      height: 983px;
-    }
+  add-items-section,compleated-items {
+    height: 165px;
+    display: block;
+    margin: 15px;
   }
 }
 
