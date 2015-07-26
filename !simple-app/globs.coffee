@@ -33,6 +33,9 @@ globs.app = [
   'vendor/jquery/dist/jquery.js',
   'vendor/underscore/underscore.js',
   'vendor/backbone/backbone.js',
+  'vendor/backbone.localStorage/backbone.localStorage.js',
+  'vendor/backbone-fetch-cache/backbone.fetch-cache.js',
+ 
   'vendor/webcomponentsjs/webcomponents.js',
 
   globs.app_js

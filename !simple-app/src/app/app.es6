@@ -24,7 +24,25 @@ var Application = (function($) {
         initialize: function(){
 
         },
-        model: Task
+        localStorage: new Backbone.LocalStorage("TaskCollection"),
+        model: Task,
+        
+        done: function() {
+          return this.filter(function(todo){ return todo.get('done'); });
+        },
+        
+        remaining: function() {
+          return this.without.apply(this, this.done());
+        },
+        
+        nextOrder: function() {
+          if (!this.length) return 1;
+          return this.last().get('order') + 1;
+        },
+        
+        comparator: function(todo) {
+          return todo.get('order');
+        }
     });
 
     // ROUTER
@@ -78,7 +96,6 @@ var Application = (function($) {
                 fragment.appendChild($('<paper-checkbox></paper-checkbox>')[0]);
                 fragment.appendChild($('<paper-input value="'+this.model.body+'"/>')[0]);
 
-
             this.$el.append(fragment);
             return this.el;
         }
@@ -94,9 +111,9 @@ var Application = (function($) {
             "change add-items-section form input": "validate",
             "submit add-items-section form":"submit"
         },
-        task : new Task,
+        model : new Task,
         initialize: function () {
-            console.log('init', this.task);
+            console.log('init', this.model);
             this.addInput = document.querySelector('add-items-section input');
 
             _.bindAll(this, 'saveChanges','validate','submit','refresh');
@@ -104,9 +121,13 @@ var Application = (function($) {
             this.router.on("route:help", function(page) {
                 console.log('help route fired');
             });
+            
+            this.router.on("route:search", function(page) {
+                console.log('filter items route fired');
+            });
 
-            this.list = new TaskList();
-            this.list.on("change reset add remove", this.refresh, this);
+            this.list = new TaskList;
+            this.list.on("change reset add remove", this.refresh, this);             // this.listenTo(this.model, 'change', this.render);
 
             this.taskList = new TaskListView;
         },
@@ -119,8 +140,8 @@ var Application = (function($) {
         },
         submit:  function (e)  {
             if(this.addInput.value != ""){
-                this.list.add(this.task);
-                this.task = new Task;
+                this.list.add(this.model);
+                this.model = new Task;
                 e.stopImmediatePropagation();
                 e.preventDefault();
                 console.log('submit');
@@ -136,8 +157,8 @@ var Application = (function($) {
             }
         },
         saveChanges: function() {
-            this.task.body = this.addInput.value;
-            console.log('saved',this.task);
+            this.model.body = this.addInput.value;
+            console.log('saved',this.model);
             return true;
         }
     });

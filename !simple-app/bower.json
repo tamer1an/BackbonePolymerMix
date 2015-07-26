@@ -7,6 +7,8 @@
         "underscore": "*",
         "backbone": "*",
         "polymer": "*",
-        "paper-elements":"https://github.com/PolymerElements/paper-elements.git"
+        "paper-elements":"https://github.com/PolymerElements/paper-elements.git",
+        "backbone.localStorage":"*",
+        "backbone-fetch-cache":"*"
     }
 }
