@@ -24,6 +24,9 @@ var Application = (function($) {
             this.dropdown = $('#video-filter');
         },
         model: Task
+        //change:function(model,options) {
+        //    console.log(JSON.stringify(model) + ' changed');
+        //}
     });
 
     var Workspace = Backbone.Router.extend({
@@ -43,27 +46,72 @@ var Application = (function($) {
     });
 
     // Form Application
+    var CompleatedViewController = Backbone.View.extend({
+        el: 'compleated-items',
+        initialize: function(){
+            _.bindAll(this, 'render');
+
+        },
+        addItem: function(e){
+            console.log(e)
+        },
+        render: function(){
+            this.$el.find('#todosContainer').append(
+                $('<form><paper-checkbox></paper-checkbox><paper-input value="'+this.model.body+'"/></form>')[0]
+            );
+        }
+    });
+
+    var CompleatedView = Backbone.View.extend({
+        el: 'compleated-items',
+        tagName: 'form',
+        events: {
+            "click": "close"
+        },
+        initialize: function(){
+            _.bindAll(this, 'render','close');
+
+            this.render();
+        },
+        close: function(e){
+            console.log(e)
+        },
+        render: function(){
+            this.$el.find('#todosContainer').append(
+                $('<form><paper-checkbox></paper-checkbox><paper-input value="'+this.model.body+'"/></form>')[0]
+            );
+        }
+    });
+
     var AppController = Backbone.View.extend({
         el: "body",
         router: new Workspace,
         events: {
-            "click form input": "validate",
-            "keypress form input": "validate",
-            "change form input": "validate",
-            "submit form":"submit"
+            "click add-items-section form input": "validate",
+            "keypress add-items-section form input": "validate",
+            "change add-items-section form input": "validate",
+            "submit add-items-section form":"submit"
         },
         task : new Task,
         initialize: function () {
             console.log('init', this.task);
             this.addInput = document.querySelector('add-items-section input');
 
-            _.bindAll(this, 'saveChanges','validate','submit');
+            _.bindAll(this, 'saveChanges','validate','submit','refresh');
 
             this.router.on("route:help", function(page) {
                 console.log('help 1');
             });
 
             this.list = new TaskList();
+            this.list.on("change reset add remove", this.refresh, this);
+        },
+        refresh : function(model,options) {
+            console.log(JSON.stringify(model) + ' changed');
+
+            new CompleatedView({
+                model: model
+            });
         },
         submit:  function (e)  {
             if(this.addInput.value != ""){
