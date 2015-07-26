@@ -1,6 +1,7 @@
 "use strict";
 
 var Application = (function($) {
+    // GLOBAL INTERFACE
     var App = {
         stores: {},
         views: {},
@@ -17,23 +18,21 @@ var Application = (function($) {
             };
         }
     });
-
+    // COLLECTION
     var TaskList = Backbone.Collection.extend({
         url:'/',
         initialize: function(){
-            this.dropdown = $('#video-filter');
+
         },
         model: Task
-        //change:function(model,options) {
-        //    console.log(JSON.stringify(model) + ' changed');
-        //}
     });
 
+    // ROUTER
     var Workspace = Backbone.Router.extend({
         routes: {
-            "help":                 "help",    // #help
-            "search/:query":        "search",  // #search/kiwis
-            "search/:query/p:page": "search"   // #search/kiwis/p7
+            "help":                 "help",
+            "search/:query":        "search",
+            "search/:query/p:page": "search"
         },
 
         help: function() {
@@ -45,44 +44,47 @@ var Application = (function($) {
         }
     });
 
-    // Form Application
-    var CompleatedViewController = Backbone.View.extend({
+    // VIEWS
+    var TaskListView= Backbone.View.extend({
         el: 'compleated-items',
         initialize: function(){
             _.bindAll(this, 'render');
-
         },
-        addItem: function(e){
-            console.log(e)
-        },
-        render: function(){
-            this.$el.find('#todosContainer').append(
-                $('<form><paper-checkbox></paper-checkbox><paper-input value="'+this.model.body+'"/></form>')[0]
-            );
+        addItem: function(item){
+            this.$el.find('#todosContainer').append(item.render());
         }
     });
 
-    var CompleatedView = Backbone.View.extend({
-        el: 'compleated-items',
+    var TaskView = Backbone.View.extend({
         tagName: 'form',
         events: {
             "click": "close"
         },
         initialize: function(){
             _.bindAll(this, 'render','close');
-
-            this.render();
         },
         close: function(e){
-            console.log(e)
+            var cb = $(e.currentTarget).find('paper-checkbox');
+
+            if (cb.prop('checked')){
+                cb.next().prop('disabled',true);
+            } else {
+                cb.next().prop('disabled',false);
+            }
+
         },
         render: function(){
-            this.$el.find('#todosContainer').append(
-                $('<form><paper-checkbox></paper-checkbox><paper-input value="'+this.model.body+'"/></form>')[0]
-            );
+            var fragment = document.createDocumentFragment();
+                fragment.appendChild($('<paper-checkbox></paper-checkbox>')[0]);
+                fragment.appendChild($('<paper-input value="'+this.model.body+'"/>')[0]);
+
+
+            this.$el.append(fragment);
+            return this.el;
         }
     });
 
+    // MAIN CONTROLLER
     var AppController = Backbone.View.extend({
         el: "body",
         router: new Workspace,
@@ -100,18 +102,20 @@ var Application = (function($) {
             _.bindAll(this, 'saveChanges','validate','submit','refresh');
 
             this.router.on("route:help", function(page) {
-                console.log('help 1');
+                console.log('help route fired');
             });
 
             this.list = new TaskList();
             this.list.on("change reset add remove", this.refresh, this);
+
+            this.taskList = new TaskListView;
         },
         refresh : function(model,options) {
             console.log(JSON.stringify(model) + ' changed');
 
-            new CompleatedView({
+            this.taskList.addItem(new TaskView({
                 model: model
-            });
+            }));
         },
         submit:  function (e)  {
             if(this.addInput.value != ""){
@@ -142,7 +146,6 @@ var Application = (function($) {
     $(document).ready(() => {
         HTMLImports.whenReady(() => {
             console.log('doc ready');
-
             App.presenters.AppController = new AppController();
             Backbone.history.start();
         });
