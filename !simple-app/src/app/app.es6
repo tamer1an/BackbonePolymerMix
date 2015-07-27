@@ -17,11 +17,11 @@ var Application = (function($) {
         },
 
         help: function() {
-            console.log('help');
+            console.log('[route] help');
         },
 
-        search: function(query, page) {
-            console.log('search');
+        search: function(query, done) {
+            console.log('[route] search',query, done);
         }
     });
     
@@ -103,9 +103,10 @@ var Application = (function($) {
         },
         
         render: function(){
-            var fragment = document.createDocumentFragment();
-                fragment.appendChild($('<paper-checkbox></paper-checkbox>')[0]);
-                fragment.appendChild($('<paper-input value="'+this.model.body+'"/>')[0]);
+            var fragment = $(document.createDocumentFragment());
+            
+                fragment.append($('<paper-checkbox '+(this.model.get('done')?'checked':'')+'></paper-checkbox>').get(0))
+                        .append($('<paper-input value="'+this.model.get('body')+'"/>').get(0));
 
             this.$el.append(fragment);
             return this.el;
@@ -115,8 +116,8 @@ var Application = (function($) {
     // VIEW LIST
     var TaskListView= Backbone.View.extend({
         
-        el: 'compleated-items',
-        
+        el: 'completed-items',
+      
         initialize: function(){
             _.bindAll(this, 'render');
         },
@@ -131,6 +132,8 @@ var Application = (function($) {
         
         el: "body",
         
+        model : {},
+        
         router: new Workspace,
         
         events: {
@@ -140,16 +143,10 @@ var Application = (function($) {
             
             "submit   add-items-section form"      : "submit",
             
-            "submit   compleated-items  form"      : function(){ return false; }
+            "submit   completed-items  form"      : function(){ return false; }
         },
-        model : new Task,
         
-        initialize: function () {
-            console.log('init', this.model);
-            this.addInput = document.querySelector('add-items-section input');
-
-            _.bindAll(this, 'saveChanges','validate','submit','refresh');
-
+        setupCustomRouters : function(){
             this.router.on("route:help", function(page) {
                 console.log('help route fired');
             });
@@ -157,44 +154,62 @@ var Application = (function($) {
             this.router.on("route:search", function(done) {
                 console.log('filter items route fired find task-done:',done);
             });
+        },
+        
+        initialize: function () {
+            console.log('init');
 
+            this.setupCustomRouters();
+            
+            this.addTaskInput = $('add-items-section input');
+            
+            _.bindAll(this, 'saveChanges','validate','submit','refreshModel','refreshCollection');
+            
             this.list = new TaskList;
-            this.list.on("change reset add remove", this.refresh, this);             // this.listenTo(this.model, 'change', this.render);
-
-            this.taskList = new TaskListView;
+            this.list.on("change reset", this.refreshModel, this);             // this.listenTo(this.model, 'change', this.render);
+            this.list.on("add remove", this.refreshCollection, this);
+            
+            this.taskList = new TaskListView({collection:this.list});
+            
             this.list.fetch();
         },
         
-        refresh : function(model,options) {
-            console.log(JSON.stringify(model) + ' changed');
-
+        refreshModel : function(model,options) {
+            console.log(JSON.stringify(model) + ' [changed/reset]');
+        },
+        
+        refreshCollection : function(model,options) {
+            console.log(JSON.stringify(model) + ' [add/remove]');
+            
             this.taskList.addItem(new TaskView({
                 model: model
             }));
         },
         
         submit:  function (e)  {
-            if(this.addInput.value != ""){
-                this.list.add(this.model);
-                this.model = new Task;
+            if(this.addTaskInput.val().trim() != ""){
+                this.list.create(this.model);
                 e.stopImmediatePropagation();
                 e.preventDefault();
-                console.log('submit');
+                
+                console.log('[submit]');
             } else {
-                console.log('submit fail!');
+                console.log('[submit] fail!');
             }
         },
-        
+
         validate: function ()  {
-            if (this.addInput.value != ""){
-                this.saveChanges();
+            var taskBody = this.addTaskInput.val().trim();
+            
+            if (taskBody != ""){
+                this.saveChanges(taskBody);
             } else {
                 console.log('not valid');
             }
         },
         
-        saveChanges: function() {
-            this.model.body = this.addInput.value;
+        saveChanges: function(taskBody) {
+            this.model.body = taskBody;
             console.log('saved',this.model);
             return true;
         }

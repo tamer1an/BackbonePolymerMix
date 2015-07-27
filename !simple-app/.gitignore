@@ -13,7 +13,7 @@ lib-cov
 pids
 logs
 results
-
+src.1
 npm-debug.log
 node_modules
 build

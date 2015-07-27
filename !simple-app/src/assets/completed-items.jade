@@ -1,14 +1,14 @@
 link(rel="import", href="/vendor/polymer/polymer.html")
-dom-module(id="compleated-items", attributes="")
+dom-module(id="completed-items", attributes="")
   template
-      style(rel="stylesheet", href="/style/compleated-items.css")
+      style(rel="stylesheet", href="/style/completed-items.css")
       h3 {{ title }}
       div#todosContainer
       
 script.
   (function () {
     Polymer({
-      is: "compleated-items",
+      is: "completed-items",
       properties: {
         title: {
           type: String,
