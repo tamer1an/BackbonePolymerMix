@@ -79,7 +79,7 @@ var Application = (function($) {
         tagName: 'form',
         
         events: {
-            "click": "close"
+            "click paper-checkbox": "close"
         },
         
         initialize: function(){
