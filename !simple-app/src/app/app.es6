@@ -7,25 +7,51 @@ var Application = (function($) {
         views: {},
         presenters: {}
     };
+    
+    // ROUTER
+    var Workspace = Backbone.Router.extend({
+        routes: {
+            "help":                 "help",
+            "search/:query":        "search",
+            "search/:query/p:done": "search"
+        },
 
-    // MODEL
+        help: function() {
+            console.log('help');
+        },
+
+        search: function(query, page) {
+            console.log('search');
+        }
+    });
+    
+    // MODEL -> TASK
     var Task = Backbone.Model.extend({
         defaults: function () {
             return {
-               title:'',
+               title:'New task',
                body:'',
-               type:''
+               done:false
             };
+        },
+      
+        initialize: function() {
+          if (!this.get("title")) {
+            this.set({"title": this.defaults().title});
+          }
+        },
+        
+        toggle: function() {
+          this.save({done: !this.get("done")});
         }
     });
-    // COLLECTION
+    
+    // COLLECTION -> TASK
     var TaskList = Backbone.Collection.extend({
-        url:'/',
-        initialize: function(){
-
-        },
-        localStorage: new Backbone.LocalStorage("TaskCollection"),
+        
         model: Task,
+        
+        localStorage: new Backbone.LocalStorage("todos-collection"),
         
         done: function() {
           return this.filter(function(todo){ return todo.get('done'); });
@@ -45,42 +71,21 @@ var Application = (function($) {
         }
     });
 
-    // ROUTER
-    var Workspace = Backbone.Router.extend({
-        routes: {
-            "help":                 "help",
-            "search/:query":        "search",
-            "search/:query/p:page": "search"
-        },
+    var Todos =  new TaskList;
 
-        help: function() {
-            console.log('help');
-        },
-
-        search: function(query, page) {
-            console.log('search');
-        }
-    });
-
-    // VIEWS
-    var TaskListView= Backbone.View.extend({
-        el: 'compleated-items',
-        initialize: function(){
-            _.bindAll(this, 'render');
-        },
-        addItem: function(item){
-            this.$el.find('#todosContainer').append(item.render());
-        }
-    });
-
+    // VIEW ITEM
     var TaskView = Backbone.View.extend({
+        
         tagName: 'form',
+        
         events: {
             "click": "close"
         },
+        
         initialize: function(){
             _.bindAll(this, 'render','close');
         },
+        
         close: function(e){
             var cb = $(e.currentTarget).find('paper-checkbox');
 
@@ -89,8 +94,14 @@ var Application = (function($) {
             } else {
                 cb.next().prop('disabled',false);
             }
-
+            
+            this.toggleDone();
         },
+
+        toggleDone: function() {
+          this.model.toggle();
+        },
+        
         render: function(){
             var fragment = document.createDocumentFragment();
                 fragment.appendChild($('<paper-checkbox></paper-checkbox>')[0]);
@@ -100,18 +111,39 @@ var Application = (function($) {
             return this.el;
         }
     });
+    
+    // VIEW LIST
+    var TaskListView= Backbone.View.extend({
+        
+        el: 'compleated-items',
+        
+        initialize: function(){
+            _.bindAll(this, 'render');
+        },
+        
+        addItem: function(item){
+            this.$el.find('#todosContainer').append(item.render());
+        }
+    });
 
     // MAIN CONTROLLER
     var AppController = Backbone.View.extend({
+        
         el: "body",
+        
         router: new Workspace,
+        
         events: {
-            "click add-items-section form input": "validate",
+            "click    add-items-section form input": "validate",
             "keypress add-items-section form input": "validate",
-            "change add-items-section form input": "validate",
-            "submit add-items-section form":"submit"
+            "change   add-items-section form input": "validate",
+            
+            "submit   add-items-section form"      : "submit",
+            
+            "submit   compleated-items  form"      : function(){ return false; }
         },
         model : new Task,
+        
         initialize: function () {
             console.log('init', this.model);
             this.addInput = document.querySelector('add-items-section input');
@@ -122,15 +154,17 @@ var Application = (function($) {
                 console.log('help route fired');
             });
             
-            this.router.on("route:search", function(page) {
-                console.log('filter items route fired');
+            this.router.on("route:search", function(done) {
+                console.log('filter items route fired find task-done:',done);
             });
 
             this.list = new TaskList;
             this.list.on("change reset add remove", this.refresh, this);             // this.listenTo(this.model, 'change', this.render);
 
             this.taskList = new TaskListView;
+            this.list.fetch();
         },
+        
         refresh : function(model,options) {
             console.log(JSON.stringify(model) + ' changed');
 
@@ -138,6 +172,7 @@ var Application = (function($) {
                 model: model
             }));
         },
+        
         submit:  function (e)  {
             if(this.addInput.value != ""){
                 this.list.add(this.model);
@@ -149,6 +184,7 @@ var Application = (function($) {
                 console.log('submit fail!');
             }
         },
+        
         validate: function ()  {
             if (this.addInput.value != ""){
                 this.saveChanges();
@@ -156,6 +192,7 @@ var Application = (function($) {
                 console.log('not valid');
             }
         },
+        
         saveChanges: function() {
             this.model.body = this.addInput.value;
             console.log('saved',this.model);

@@ -34,7 +34,7 @@ globs.app = [
   'vendor/underscore/underscore.js',
   'vendor/backbone/backbone.js',
   'vendor/backbone.localStorage/backbone.localStorage.js',
-  'vendor/backbone-fetch-cache/backbone.fetch-cache.js',
+  #'vendor/backbone-fetch-cache/backbone.fetch-cache.js',
  
   'vendor/webcomponentsjs/webcomponents.js',
 
