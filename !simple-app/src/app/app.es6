@@ -79,7 +79,8 @@ var Application = (function($) {
         tagName: 'form',
         
         events: {
-            "click paper-checkbox": "close"
+            "click paper-checkbox" : "close"
+            // "change paper-input": "save",
         },
         
         initialize: function(){
@@ -87,7 +88,7 @@ var Application = (function($) {
         },
         
         close: function(e){
-            var cb = $(e.currentTarget).find('paper-checkbox');
+            var cb = $(e.currentTarget);
 
             if (cb.prop('checked')){
                 cb.next().prop('disabled',true);
@@ -103,10 +104,11 @@ var Application = (function($) {
         },
         
         render: function(){
-            var fragment = $(document.createDocumentFragment());
+            var fragment = $(document.createDocumentFragment()),
+                taskState = this.model.get('done');
             
-                fragment.append($('<paper-checkbox '+(this.model.get('done')?'checked':'')+'></paper-checkbox>').get(0))
-                        .append($('<paper-input value="'+this.model.get('body')+'"/>').get(0));
+                fragment.append($('<paper-checkbox '+ (taskState?'checked':'') +'></paper-checkbox>').get(0))
+                        .append($('<paper-input '+ (taskState?'disabled':'') +' value="'+this.model.get('body')+'"/>').get(0));
 
             this.$el.append(fragment);
             return this.el;
