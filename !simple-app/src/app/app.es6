@@ -128,25 +128,21 @@ var Application = (function($) {
         },
         
         addItem: function(item){
-            // var state = item.model.get('done');
-            
-            // switch (this.mode) {
-            //     case 'not-ready':
-            //         if (state) return;
-                   
-            //         break;
-                    
-            //     case 'ready':
-            //         if (!state) return;
-                   
-            //         break;    
-            // } 
-            
              this.$el.find('#todosContainer').append(item.render());
         },
         
         redraw: function(){
             
+        },
+        
+        refreshTodoList : function(list) {
+            var container = $('div#todosContainer');
+        
+            container.html('');
+        
+            list.remaining().forEach(function(val){
+               container.append(new TaskView({model : val}).render());
+            })
         },
         
         refreshDoneList : function(list) {
@@ -199,12 +195,10 @@ var Application = (function($) {
            this.elemTodos.show();
            this.elemDone.hide();
           
+          this.taskList.refreshTodoList(this.list);
         },
         
-        
         initialize: function () {
-            // console.log('init');
-            
             _.bindAll(this, 'saveChanges','validate','submit','refreshModel','refreshCollection','showDone','showTodo');
             
             this.addTaskInput = $('add-items-section input');
@@ -227,8 +221,6 @@ var Application = (function($) {
         },
         
         refreshCollection : function(model,options) {
-            // console.log(JSON.stringify(model) + ' [add/remove]');
-            
             this.taskList.addItem(new TaskView({
                 model: model
             }));
@@ -240,7 +232,6 @@ var Application = (function($) {
                 e.stopImmediatePropagation();
                 e.preventDefault();
                 
-                // console.log('[submit]');
             } else {
                 // console.log('[submit] fail!');
             }
@@ -258,7 +249,6 @@ var Application = (function($) {
         
         saveChanges: function(taskBody) {
             this.model.body = taskBody;
-            // console.log('saved',this.model);
             return true;
         }
     });
@@ -266,7 +256,6 @@ var Application = (function($) {
     //APP CONSTRUCTOR:
     $(document).ready(() => {
         HTMLImports.whenReady(() => {
-            // console.log('doc ready');
             App.presenters.AppController = new AppController();
             Backbone.history.start();
         });
