@@ -12,16 +12,17 @@ var Application = (function($) {
     var Workspace = Backbone.Router.extend({
         routes: {
             "help":                 "help",
+            "todo":                 "todo",
             "search/:query":        "search",
             "search/:query/p:done": "search"
         },
 
         help: function() {
-            console.log('[route] help');
+            // console.log('[route] help');
         },
 
         search: function(query, done) {
-            console.log('[route] search',query, done);
+            // console.log('[route] search',query, done);
         }
     });
     
@@ -106,7 +107,7 @@ var Application = (function($) {
         render: function(){
             var fragment = $(document.createDocumentFragment()),
                 taskState = this.model.get('done');
-            
+                
                 fragment.append($('<paper-checkbox '+ (taskState?'checked':'') +'></paper-checkbox>').get(0))
                         .append($('<paper-input '+ (taskState?'disabled':'') +' value="'+this.model.get('body')+'"/>').get(0));
 
@@ -118,6 +119,8 @@ var Application = (function($) {
     // VIEW LIST
     var TaskListView= Backbone.View.extend({
         
+        mode: 'not-ready',
+        
         el: 'completed-items',
       
         initialize: function(){
@@ -125,8 +128,36 @@ var Application = (function($) {
         },
         
         addItem: function(item){
-            this.$el.find('#todosContainer').append(item.render());
-        }
+            // var state = item.model.get('done');
+            
+            // switch (this.mode) {
+            //     case 'not-ready':
+            //         if (state) return;
+                   
+            //         break;
+                    
+            //     case 'ready':
+            //         if (!state) return;
+                   
+            //         break;    
+            // } 
+            
+             this.$el.find('#todosContainer').append(item.render());
+        },
+        
+        redraw: function(){
+            
+        },
+        
+        refreshDoneList : function(list) {
+            var container = $('div#DoneContainer');
+            
+            container.html('');
+            
+            list.done().forEach(function(val){
+               container.append(new TaskView({model : val}).render());
+            })
+        },
     });
 
     // MAIN CONTROLLER
@@ -150,22 +181,37 @@ var Application = (function($) {
         
         setupCustomRouters : function(){
             this.router.on("route:help", function(page) {
-                console.log('help route fired');
+                // console.log('help route fired');
             });
             
-            this.router.on("route:search", function(done) {
-                console.log('filter items route fired find task-done:',done);
-            });
+            this.router.on("route:search", this.showDone);
+            this.router.on("route:todo", this.showTodo);
         },
         
+        showDone : function(){
+           this.elemTodos.hide();
+           this.elemDone.show();
+           
+           this.taskList.refreshDoneList(this.list);
+        },
+        
+        showTodo : function(){
+           this.elemTodos.show();
+           this.elemDone.hide();
+          
+        },
+        
+        
         initialize: function () {
-            console.log('init');
-
-            this.setupCustomRouters();
+            // console.log('init');
+            
+            _.bindAll(this, 'saveChanges','validate','submit','refreshModel','refreshCollection','showDone','showTodo');
             
             this.addTaskInput = $('add-items-section input');
+            this.elemTodos = $('div#todosContainer');
+            this.elemDone = $('div#DoneContainer');
             
-            _.bindAll(this, 'saveChanges','validate','submit','refreshModel','refreshCollection');
+            this.setupCustomRouters();
             
             this.list = new TaskList;
             this.list.on("change reset", this.refreshModel, this);             // this.listenTo(this.model, 'change', this.render);
@@ -177,11 +223,11 @@ var Application = (function($) {
         },
         
         refreshModel : function(model,options) {
-            console.log(JSON.stringify(model) + ' [changed/reset]');
+            // console.log(JSON.stringify(model) + ' [changed/reset]');
         },
         
         refreshCollection : function(model,options) {
-            console.log(JSON.stringify(model) + ' [add/remove]');
+            // console.log(JSON.stringify(model) + ' [add/remove]');
             
             this.taskList.addItem(new TaskView({
                 model: model
@@ -194,9 +240,9 @@ var Application = (function($) {
                 e.stopImmediatePropagation();
                 e.preventDefault();
                 
-                console.log('[submit]');
+                // console.log('[submit]');
             } else {
-                console.log('[submit] fail!');
+                // console.log('[submit] fail!');
             }
         },
 
@@ -206,13 +252,13 @@ var Application = (function($) {
             if (taskBody != ""){
                 this.saveChanges(taskBody);
             } else {
-                console.log('not valid');
+                // console.log('not valid');
             }
         },
         
         saveChanges: function(taskBody) {
             this.model.body = taskBody;
-            console.log('saved',this.model);
+            // console.log('saved',this.model);
             return true;
         }
     });
@@ -220,7 +266,7 @@ var Application = (function($) {
     //APP CONSTRUCTOR:
     $(document).ready(() => {
         HTMLImports.whenReady(() => {
-            console.log('doc ready');
+            // console.log('doc ready');
             App.presenters.AppController = new AppController();
             Backbone.history.start();
         });

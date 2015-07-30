@@ -34,6 +34,11 @@ body {
   padding: 0;
 }
 
+div#DoneContainer {
+  display:none;
+}
+  
+
 /* APP CLASS */
 .app {
   @media screen and (min-width: $break-ipad-portrait) {
@@ -95,6 +100,27 @@ body {
       width: 95%;
       display: inline-block;
       transform: translateX(15px);
+    }
+  }
+}
+
+.todoapp {
+  padding: 26px;
+  
+    h3 {
+      margin: 10px 0 0 0;
+    }
+  
+   completed-items {
+    //overflow-y: scroll;
+    //height: 100%;
+    form{
+      display:inline-flex;
+      margin: 11px;
+    }
+
+    paper-input {
+      width: 90%;
     }
   }
 }

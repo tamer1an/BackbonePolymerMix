@@ -1,0 +1,41 @@
+extends layout
+
+// toolbar svg markup
+block hamburgerSvg
+    | <svg version="1.1" id="hamburgerSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    | y="0px" viewBox="0 0 25 25" enable-background="new 0 0 25 25" xml:space="preserve">
+    | <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="2.9" y1="2.5" x2="22.3" y2="2.5"/>
+    | <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="2.9" y1="12.5" x2="22.3" y2="12.5"/>
+    | <line fill="none" stroke="#000000" stroke-miterlimit="10" x1="2.9" y1="22.5" x2="22.3" y2="22.5"/>
+    | </svg>
+
+block application
+    body(unresolved, fullbleed, layout, vertical)
+        // template#app(is="auto-binding")
+        // paper-drawer-panel
+
+        // // Drawer
+        // paper-header-panel(drawer)
+
+        //   // Drawer Toolbar
+        //   paper-toolbar Menu
+
+        //   // Drawer Content
+        //   paper-menu(selected="0")
+        //     paper-item(label="Yo")
+        //     paper-item(label="Polymer")
+        //     paper-item(label="App")
+
+        // // Main
+        // paper-header-panel(main)
+
+          // Main Toolbar
+        paper-toolbar
+            paper-icon-button(icon="menu", paper-drawer-toggle)
+            span Todo App:
+
+        .todoapp
+            add-items-section
+            completed-items       
+
+                
