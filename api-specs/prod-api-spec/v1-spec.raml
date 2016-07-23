@@ -1,0 +1,244 @@
+#%RAML 0.8
+title: "CSC Mock REST api"
+version: "v1"
+baseUri: "https://example.com/api/{version}"
+protocols: [HTTPS, HTTP]
+mediaType: "application/json"
+resourceTypes:
+  - collection:
+      description: Collection of available <<resourcePathName>>.
+      get?:
+        responses:
+          200:
+            description: Success!
+            body:
+              application/json:
+                example: "example"
+                schema: "schema"
+  - collection-item:
+      description: Entity representing a <<resourcePathName|!singularize>>
+      get?:
+        description: |
+          Get the <<resourcePathName|!singularize>>
+          with <<resourcePathName|!singularize>>Id =
+          {<<resourcePathName|!singularize>>Id}
+        responses:
+          200:
+            description: Success!
+            body:
+              application/json:
+                example: "example"
+                schema: "schema"
+
+/login:
+  displayName: Login page
+  post:
+    headers: !include schemas/cors_headers.yaml
+    body:
+      application/x-www-form-urlencoded:
+        formParameters:
+          grunt_type:
+            type: string
+          username:
+            type: string
+          password:
+            type: string
+    responses:
+      201:
+        body:
+          application/x-www-form-urlencoded:
+            schema: !include schemas/login_post.json
+            example: !include examples/login_post.json
+  options:
+    headers: !include schemas/cors_headers.yaml
+    responses:
+      200:
+        headers: !include schemas/cors_headers.yaml
+        body:
+          application/x-www-form-urlencoded:
+
+/users:
+  type: collection
+  get:
+    headers: !include schemas/cors_headers.yaml
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schemas/users.json
+            example: !include examples/users.json
+  /{lookup}:
+    type: collection
+    uriParameters:
+      lookup:
+        displayName: String to find
+        type: string
+        required: true
+    get:
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/users.json
+              example: !include examples/users.json
+
+/bids:
+  type: collection
+  get:
+    headers: !include schemas/cors_headers.yaml
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schemas/bids.json
+            example: !include examples/bids.json
+
+  post:
+    headers: !include schemas/cors_headers.yaml
+    body:
+      application/json:
+        schema: !include schemas/bids_post.json
+
+    responses:
+      201:
+        body:
+          application/json:
+            schema: !include schemas/bids_post.json
+            example: !include examples/success.json
+
+  /{id}:
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/bid_details.json
+              example: !include examples/bid_details.json
+
+    put:
+      headers: !include schemas/cors_headers.yaml
+      body:
+        application/json:
+          schema: !include schemas/bids_post.json
+
+      responses:
+        201:
+          body:
+            application/json:
+              schema: !include schemas/success.json
+              example: !include examples/success.json
+    delete:
+      headers: !include schemas/cors_headers.yaml
+      body:
+        application/json:
+          schema: !include schemas/bids_post.json
+
+      responses:
+        201:
+          body:
+            application/json:
+              schema: !include schemas/success.json
+              example: !include examples/success.json
+
+    /client_countries:
+      type: collection
+      get:
+        headers: !include schemas/cors_headers.yaml
+        responses:
+          200:
+            body:
+              application/json:
+                schema: !include schemas/client_countries.json
+                example: !include examples/client_countries.json
+
+      post:
+        headers: !include schemas/cors_headers.yaml
+        body:
+          application/json:
+            schema: !include schemas/client_countries_post.json
+        responses:
+          201:
+            body:
+              application/json:
+                schema: !include schemas/success.json
+                example: !include examples/success.json
+
+      /{id}:
+        put:
+          headers: !include schemas/cors_headers.yaml
+          body:
+            application/json:
+              schema: !include schemas/client_countries_post.json
+
+          responses:
+            201:
+              body:
+                application/json:
+                  schema: !include schemas/success.json
+                  example: !include examples/success.json
+
+        delete:
+          headers: !include schemas/cors_headers.yaml
+          body:
+            application/json:
+              schema: !include schemas/client_countries_post.json
+
+          responses:
+            201:
+              body:
+                application/json:
+                  schema: !include schemas/success.json
+                  example: !include examples/success.json
+
+/countries:
+  type: collection
+  get:
+    headers: !include schemas/cors_headers.yaml
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schemas/countries.json
+            example: !include examples/countries.json
+  /{id}:
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/country.json
+              example: !include examples/country.json
+
+    /currencies:
+      type: collection
+      get:
+        headers: !include schemas/cors_headers.yaml
+        responses:
+          200:
+            body:
+              application/json:
+                schema: !include schemas/country_currencies.json
+                example: !include examples/country_currencies.json
+
+/currencies:
+  type: collection
+  get:
+    headers: !include schemas/cors_headers.yaml
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schemas/currencies.json
+            example: !include examples/currencies.json
+
+  /{id}:
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/currency.json
+              example: !include examples/currency.json

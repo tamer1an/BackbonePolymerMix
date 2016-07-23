@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org",
+  "type": "object",
+  "properties": {
+    "creationDate": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "selected": {
+      "type": "string"
+    },
+    "startDate":{
+      "type": "string"
+    }
+  }
+}

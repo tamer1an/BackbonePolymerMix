@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org",
+    "id": "http://jsonschema.net",
+    "type": "array",
+    "items": {
+        "id": "http://jsonschema.net/0",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type" : "string"
+            },
+            "owner": {
+                "type" : "string"
+            },
+            "roles" : {
+                "type" : "string"
+            },
+            "name" : {
+                "type" : "string"
+            },
+            "description" : {
+                "type" : "string"
+            },
+            "startDate":  {
+                "type" : "string"
+            },
+            "endDate": {
+                "type" : "string"
+            },
+            "creationDate" : {
+                "type" : "string"
+            },
+            "version" : {
+                "type" : "string"
+            }
+        }
+    }
+}

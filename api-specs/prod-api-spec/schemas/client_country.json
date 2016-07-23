@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org",
+    "id": "http://jsonschema.net",
+    "type": "object",
+    "items": {
+        "id": "http://jsonschema.net/0",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type" : "string"
+            },
+
+            "clientCountryId": {
+                "type" : "string"
+            },
+            "clientCountryName" : {
+                "type" : "string"
+            },
+            "clientCountryCode" : {
+                "type" : "string"
+            },
+            "clientCurrencyId": {
+                "type" : "string"
+            },
+            "clientCurrencyName" : {
+                "type" : "string"
+            },
+            "clientCurrencyCode" : {
+                "type" : "string"
+            },
+
+            "invoiceCountryId":  {
+                "type" : "string"
+            },
+            "invoiceCountryName": {
+                "type" : "string"
+            },
+            "invoiceCountryCode": {
+                "type" : "string"
+            },
+            "invoiceCurrencyId" : {
+                "type" : "string"
+            },
+            "invoiceCurrencyName" : {
+                "type" : "string"
+            },
+            "invoiceCurrencyCode" : {
+                "type" : "string"
+            },
+
+            "owningCountryId" : {
+                "type" : "string"
+            },
+            "owningCountryName" : {
+                "type" : "string"
+            },
+            "owningCountryCode" : {
+                "type" : "string"
+            },
+            "owningCurrencyId" : {
+                "type" : "string"
+            },
+            "owningCurrencyName" : {
+                "type" : "string"
+            },
+            "owningCurrencyCode" : {
+                "type" : "string"
+            }
+        }
+    }
+}

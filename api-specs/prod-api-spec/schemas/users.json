@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org",
+    "id": "http://jsonschema.net",
+    "type": "array",
+    "items": {
+        "id": "http://jsonschema.net/0",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "email": {
+                "type": "string"
+            }
+        }
+    }
+}

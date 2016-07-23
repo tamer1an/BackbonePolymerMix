@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "currencyCode": "DZD",
+        "currencyName": "CFP Franc"
+    },
+    {
+        "id": 1,
+        "currencyCode": "ZAR LSL",
+        "currencyName": "Danish Krone"
+    },
+    {
+        "id": 1,
+        "currencyCode": "IDR",
+        "currencyName": "Kenyan Shilling"
+    },
+    {
+        "id": 1,
+        "currencyCode": "TND",
+        "currencyName": "Solomon Islands Dollar"
+    },
+    {
+        "id": 1,
+        "currencyCode": "MUR",
+        "currencyName": "Forint"
+    }
+]

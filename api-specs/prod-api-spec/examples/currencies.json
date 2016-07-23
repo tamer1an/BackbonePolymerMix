@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "currencyCode": "GMD",
+        "currencyName": "Comoro Franc"
+    },
+    {
+        "id": 1,
+        "currencyCode": "EEK",
+        "currencyName": "Argentine Peso"
+    },
+    {
+        "id": 1,
+        "currencyCode": "MRO",
+        "currencyName": "Turkish Lira"
+    },
+    {
+        "id": 1,
+        "currencyCode": "ANG",
+        "currencyName": "Djibouti Franc"
+    },
+    {
+        "id": 1,
+        "currencyCode": "RUB",
+        "currencyName": "Uganda Shilling"
+    },
+    {
+        "id": 1,
+        "currencyCode": "EEK",
+        "currencyName": "Cuban Peso Peso Convertible"
+    },
+    {
+        "id": 1,
+        "currencyCode": "MRO",
+        "currencyName": "Falkland Islands Pound"
+    }
+]

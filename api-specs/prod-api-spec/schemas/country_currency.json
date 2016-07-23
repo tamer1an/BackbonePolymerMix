@@ -1,0 +1,20 @@
+{
+    "$schema": "http://json-schema.org",
+    "id": "http://jsonschema.net",
+    "type": "object",
+    "items": {
+        "id": "http://jsonschema.net/0",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type" : "string"
+            },
+            "currencyCode" : {
+                "type" : "string"
+            },
+            "currencyName": {
+                "type" : "string"
+            }
+        }
+    }
+}

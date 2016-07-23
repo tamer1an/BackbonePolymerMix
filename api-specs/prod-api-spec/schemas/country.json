@@ -1,0 +1,32 @@
+{
+    "$schema": "http://json-schema.org",
+    "id": "http://jsonschema.net",
+    "type": "object",
+    "items": {
+        "id": "http://jsonschema.net/0",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type" : "string"
+            },
+            "countryNumber": {
+                "type" : "string"
+            },
+            "countryCode1" : {
+                "type" : "string"
+            },
+            "countryCode2" : {
+                "type" : "string"
+            },
+            "countryName": {
+                "type" : "string"
+            },
+            "fgds": {
+                "type" : "string"
+            },
+            "relativeCostLevel": {
+                "type" : "string"
+            }
+        }
+    }
+}

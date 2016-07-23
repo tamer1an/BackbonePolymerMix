@@ -1,0 +1,10 @@
+{
+    "$schema": "http://json-schema.org",
+    "id": "http://jsonschema.net",
+    "type": "object",
+    "properties": {
+        "msg": {
+            "type": "string"
+        }
+    }
+}

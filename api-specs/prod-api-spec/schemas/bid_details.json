@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org",
+    "id": "http://jsonschema.net",
+    "type": "object",
+    "items": {
+        "id": "http://jsonschema.net/0",
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string"
+            },
+            "owner": {
+                "type": "string"
+            },
+            "name": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "startDate": {
+                "type": "string"
+            },
+            "endDate": {
+                "type": "string"
+            },
+            "creationDate": {
+                "type": "string"
+            },
+            "clientCountries": [
+                {
+                    "id": {
+                        "type": "string"
+                    },
+                    "ClientCountryId": {
+                        "type": "string"
+                    },
+                    "ClientCountryName": {
+                        "type": "string"
+                    },
+                    "ClientCountryCode": {
+                        "type": "string"
+                    },
+                    "ClientCurrencyId": {
+                        "type": "string"
+                    },
+                    "ClientCurrencyName": {
+                        "type": "string"
+                    },
+                    "ClientCurrencyCode": {
+                        "type": "string"
+                    },
+                    "InvoiceCountryId": {
+                        "type": "string"
+                    },
+                    "InvoiceCountryName": {
+                        "type": "string"
+                    },
+                    "InvoiceCountryCode": {
+                        "type": "string"
+                    },
+                    "InvoiceCurrencyId": {
+                        "type": "string"
+                    },
+                    "InvoiceCurrencyName": {
+                        "type": "string"
+                    },
+                    "InvoiceCurrencyCode": {
+                        "type": "string"
+                    },
+                    "OwningCountryId": {
+                        "type": "string"
+                    },
+                    "OwningCountryName": {
+                        "type": "string"
+                    },
+                    "OwningCountryCode": {
+                        "type": "string"
+                    },
+                    "OwningCurrencyId": {
+                        "type": "string"
+                    },
+                    "OwningCurrencyName": {
+                        "type": "string"
+                    },
+                    "OwningCurrencyCode": {
+                        "type": "string"
+                    }
+                }
+            ]
+        }
+    }
+}
