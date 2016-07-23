@@ -1,0 +1,47 @@
+/mock-data/api/local-api-server
+# Created by http://gitignore.io
+
+### Node ###
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+src.1
+npm-debug.log
+node_modules
+build
+
+
+### Bower ###
+app/bower_components
+vendor
+
+### Linux ###
+.*
+!.gitignore
+!.git*
+!.editorconfig
+!.jshintrc
+!.npmignore
+!.travis.yml
+!.eslintrc
+!.jscsrc
+*~
+
+
+### SASS ###
+### SASS Ignores - "Sassy CSS" http://sass-lang.com/
+*.sass-cache
+
+
+### Yeoman ###
+dist
+test/temp

@@ -1,0 +1,3 @@
+[submodule "mock-data"]
+	path = mock-data
+	url = git@vm199251.projects.local:CSC/CAP-N-RAML-API.git

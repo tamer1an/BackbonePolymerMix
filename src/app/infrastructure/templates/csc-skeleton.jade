@@ -1,0 +1,7 @@
+header#header
+  include csc-skeleton-header.jade
+section(layout='row', flex)#main-view
+  .viewer(layout='column', sidebar-styling)
+    md-content#main-view_sidenav.md-whiteframe-z2(ui-view='sidebar', flex, layout-padding, layout-fill)
+  .viewer(layout='column', flex)
+    md-content#main-view_content(ui-view='content',layout-padding, layout-fill, flex)

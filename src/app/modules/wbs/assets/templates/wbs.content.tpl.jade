@@ -1,0 +1,38 @@
+header.wbs
+  span(ng-bind="::wbsCtrl.t.content.header").content-header
+  div(layout="row", layout-align="start center").selected-level-header
+    span(ng-bind="wbsCtrl.getLevelDescription(wbsCtrl.itemHierarchy.length).label")
+    span(ng-bind="wbsCtrl.selectedItem.name")
+    div(ng-if="wbsCtrl.editMode()" flex layout="row" layout-align="end center").buttons-container
+      md-button(ng-bind='::wbsCtrl.t.content.bidDetails.save', aria-label='save-level', ng-click='wbsCtrl.saveLevel()').csc-primary-raised-btn.md-primary.md-raised
+      md-button(ng-bind='::wbsCtrl.t.content.bidDetails.cancel', aria-label='cancel-level', ng-click='wbsCtrl.cancelLevelCreation()').csc-primary-raised-btn.md-raised#cancel-button
+v-accordion.csc-accordion.vAccordion--default(multiple, ng-if="wbsCtrl.selectedItem !== null")
+  v-pane(expanded)
+    v-pane-header(ng-bind="::wbsCtrl.t.content.bidLevels.header")
+    v-pane-content
+      .row(ng-repeat="itemNode in wbsCtrl.itemHierarchy"  layout="row", layout-align="start center").content-item
+        .row(ng-if="!wbsCtrl.hasDetails(itemNode.level)" layout="column", layout-align="center start").level-header
+          div(layout="row", layout-align="start center")
+            p(ng-bind="::wbsCtrl.getLevelDescription(itemNode.level).label").level-label
+            .details-list(layout="row", layout-align="space-between center")
+              .list-row(layout="row", layout-fill)
+                p(ng-bind="::wbsCtrl.getLevelDescription(itemNode.level).name")
+                p(ng-bind="::itemNode.value.name")
+          country-form(ng-if="wbsCtrl.editMode()" client-country='wbsCtrl.editingItem' countries-list='wbsCtrl.countriesList')
+        v-accordion.csc-accordion.vAccordion--default(ng-if="!wbsCtrl.editMode() && wbsCtrl.hasDetails(itemNode.level)" multiple).level-header
+          v-pane
+            v-pane-header
+              .row(layout="row", layout-align="start center")
+                p(ng-bind="::wbsCtrl.getLevelDescription(itemNode.level).label").level-label
+                .details-list(layout="column", layout-align="space-between center")
+                  .list-row(layout="row", layout-fill)
+                    p(ng-bind="::wbsCtrl.getLevelDescription(itemNode.level).name")
+                    p(ng-bind="::itemNode.value.name")
+            v-pane-content
+              .details-list(layout="column", layout-align="space-between center")
+                .list-row(ng-repeat="itemDetail in wbsCtrl.getLevelDetailsDescription(itemNode.level)" layout="row", layout-wrap, layout-fill)
+                  p(ng-bind="::wbsCtrl.getLevelDescription(itemNode.level).details[itemDetail]")
+                  p(ng-bind="::itemNode.value[itemDetail]")
+
+
+

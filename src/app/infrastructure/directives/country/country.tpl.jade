@@ -1,0 +1,126 @@
+div(layout="column").md-margin
+  //  Client Country field
+  .row(layout="row" layout-wrap)
+    label(flex="35") Client Country
+    md-autocomplete.csc-autocomplete( flex="50" placeholder="Select Client Country"
+    ng-disabled="countyCtrl.clientCountry.isDisabled"
+    md-selected-item="countyCtrl.clientCountry.selectedItem"
+    md-selected-item-change="countyCtrl.selectedCountryChange(item, countyCtrl.clientCountry)"
+    md-search-text="countyCtrl.clientCountry.searchText"
+    md-search-text-change="countyCtrl.searchTextChange(countyCtrl.clientCountry.searchText)"
+    md-items="item in countyCtrl.countryQuerySearch(countyCtrl.clientCountry.searchText)"
+    md-item-text="item.countryName"
+    md-min-length="0"
+    )
+      md-item-template
+        span.left-value(md-highlight-text="countyCtrl.clientCountry.searchText" md-highlight-flags="^i") {{item.countryName}}
+        span.right-value(md-highlight-text="countyCtrl.clientCountry.searchText" md-highlight-flags="^i") {{item.countryCode}}
+      md-not-found No matches found ...
+    .csc-displayfield {{countyCtrl.clientCountry.selectedItem.countryCode}}
+
+  //  Client Currency field
+  .row(layout="row" layout-wrap)
+    label(flex="35") Client Currency
+    md-autocomplete.csc-autocomplete( flex="50" placeholder="Select Client Currency"
+    ng-disabled="countyCtrl.clientCurrency.isDisabled"
+    md-no-cache="countyCtrl.clientCurrency.noCache"
+    md-selected-item="countyCtrl.clientCurrency.selectedItem"
+    md-selected-item-change="countyCtrl.selectedCurrencyChange(item, countyCtrl.clientCurrency.name)"
+    md-search-text="countyCtrl.clientCurrency.searchText"
+    md-search-text-change="countyCtrl.searchTextChange(countyCtrl.clientCurrency.searchText)"
+    md-items="item in countyCtrl.currencyQuerySearch(countyCtrl.clientCurrency, countyCtrl.clientCountry.selectedItem)"
+    md-item-text="item.currencyCode"
+    md-min-length="0"
+    ng-if="!countyCtrl.clientCurrency.isDisabled"
+    )
+      md-item-template
+        span.left-value(md-highlight-text="countyCtrl.clientCurrency.searchText" md-highlight-flags="^i") {{item.currencyCode}}
+      md-not-found No matches found ...
+    .csc-displayfield(
+    ng-bind='countyCtrl.clientCurrency.selectedItem.currencyCode'
+    ng-if="countyCtrl.clientCurrency.isDisabled"
+    )
+
+  //  Invoice Country field
+  .row(layout="row" layout-wrap)
+    label(flex="35") Invoice Country
+    md-autocomplete.csc-autocomplete(flex="50" placeholder="Select Invoice Country"
+    md-selected-item="countyCtrl.invoiceCountry.selectedItem"
+    md-selected-item-change="countyCtrl.selectedCountryChange(item, countyCtrl.invoiceCountry)"
+    md-search-text="countyCtrl.invoiceCountry.searchText"
+    md-search-text-change="countyCtrl.searchTextChange(countyCtrl.invoiceCountry.searchText)"
+    md-items="item in countyCtrl.countryQuerySearch(countyCtrl.invoiceCountry.searchText)"
+    md-item-text="item.countryName"
+    md-min-length="0"
+    )
+      md-item-template
+        span.left-value(md-highlight-text="countyCtrl.invoiceCountry.searchText" md-highlight-flags="^i") {{item.countryName}}
+        span.right-value(md-highlight-text="countyCtrl.invoiceCountry.searchText" md-highlight-flags="^i") {{item.countryCode}}
+      md-not-found No matches found ...
+    .csc-displayfield {{countyCtrl.invoiceCountry.selectedItem.countryCode}}
+
+  //  Invoice Currency field
+  .row(layout="row" layout-wrap)
+    label(flex="35") Invoice Currency
+    md-autocomplete.csc-autocomplete(flex="50" placeholder="Select Invoice Currency"
+    ng-disabled="countyCtrl.invoiceCurrency.isDisabled"
+    md-no-cache="countyCtrl.invoiceCurrency.noCache"
+    md-selected-item="countyCtrl.invoiceCurrency.selectedItem"
+    md-selected-item-change="countyCtrl.selectedCurrencyChange(item, countyCtrl.invoiceCurrency.name)"
+    md-search-text="countyCtrl.invoiceCurrency.searchText"
+    md-search-text-change="countyCtrl.searchTextChange(countyCtrl.invoiceCurrency.searchText)"
+    md-items="item in countyCtrl.currencyQuerySearch(countyCtrl.invoiceCurrency, countyCtrl.invoiceCountry.selectedItem)"
+    md-item-text="item.currencyCode"
+    md-min-length="0"
+    ng-if="!countyCtrl.invoiceCurrency.isDisabled"
+    )
+      md-item-template
+        span.left-value(md-highlight-text="countyCtrl.invoiceCurrency.searchText" md-highlight-flags="^i") {{item.currencyCode}}
+      md-not-found No matches found ...
+    .csc-displayfield(
+    ng-bind='countyCtrl.invoiceCurrency.selectedItem.currencyCode'
+    ng-if="countyCtrl.invoiceCurrency.isDisabled"
+    )
+
+  //  Owning Country field
+  .row(layout="row" layout-wrap)
+    label(flex="35") Owning Country
+    md-autocomplete.csc-autocomplete(
+    flex="50"
+    md-selected-item="countyCtrl.owningCountry.selectedItem"
+    md-selected-item-change="countyCtrl.selectedCountryChange(item, countyCtrl.owningCountry)"
+    md-search-text="countyCtrl.owningCountry.searchText"
+    md-search-text-change="countyCtrl.searchTextChange(countyCtrl.owningCountry.searchText)"
+    md-items="item in countyCtrl.countryQuerySearch(countyCtrl.owningCountry.searchText)"
+    md-item-text="item.countryName"
+    md-min-length="0"
+    placeholder="Select Owning Country"
+    )
+      md-item-template
+        span.left-value(md-highlight-text="countyCtrl.owningCountry.searchText" md-highlight-flags="^i") {{item.countryName}}
+        span.right-value(md-highlight-text="countyCtrl.owningCountry.searchText" md-highlight-flags="^i") {{item.countryCode}}
+      md-not-found No matches found ...
+    .csc-displayfield {{countyCtrl.owningCountry.selectedItem.countryCode}}
+
+  //  Owning Currency field
+  .row(layout="row" layout-wrap)
+    label(flex="35") Owning Currency
+    md-autocomplete.csc-autocomplete( flex="50" placeholder="Select Owning Currency"
+    ng-disabled="countyCtrl.owningCurrency.isDisabled"
+    md-no-cache="countyCtrl.owningCurrency.noCache"
+    md-selected-item="countyCtrl.owningCurrency.selectedItem"
+    md-selected-item-change="countyCtrl.selectedCurrencyChange(item, countyCtrl.owningCurrency.name)"
+    md-search-text="countyCtrl.owningCurrency.searchText"
+    md-search-text-change="countyCtrl.searchTextChange(countyCtrl.owningCurrency.searchText)"
+    md-items="item in countyCtrl.currencyQuerySearch(countyCtrl.owningCurrency, countyCtrl.owningCountry.selectedItem)"
+    md-item-text="item.currencyCode"
+    md-min-length="0"
+    ng-if="!countyCtrl.owningCurrency.isDisabled"
+    )
+      md-item-template
+        span.left-value(md-highlight-text="countyCtrl.owningCurrency.searchText" md-highlight-flags="^i") {{item.currencyCode}}
+      md-not-found No matches found ...
+    .csc-displayfield(
+    ng-bind='countyCtrl.owningCurrency.selectedItem.currencyCode'
+    ng-if="countyCtrl.owningCurrency.isDisabled"
+    )

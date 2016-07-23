@@ -1,0 +1,3 @@
+[submodule "api/local-api-server/api-specs/prod-api-spec"]
+	path = api/local-api-server/api-specs/prod-api-spec
+	url = git@vm199251.projects.local:CSC/CAP-N-ApiDocs.git

@@ -1,0 +1,35 @@
+.main-modules.md-toolbar-tools
+  md-button.selected-module COSTING
+  //md-button PRICING
+  //md-button M&I
+  //md-button TAGGING
+  //md-button FINANCIAL
+.costing-options.md-toolbar-tools
+  md-button.selected WBS
+  //md-button B&M
+  //md-button Shaping
+  //md-button Labor productivity
+  //md-button Cost's adjustments
+  //md-button Data center use
+  //md-button ARC&RRCs
+  //md-button Allocations
+  //md-button Element Search/Replace
+.wbs-actions.md-toolbar-tools
+  md-button(layout='row', layout-align='start center').all-levels.ng-hide
+    .bid-icons.all-levels
+    span.label-text
+      | {{wbsCtrl.t.wbsActions.allLevels}}
+    .bid-icons.small-arrow-down
+  md-button(ng-bind="::wbsCtrl.t.wbsActions.addSubfolder" ng-click="wbsCtrl.createLevel()"
+    aria-label="add-subfolder" ng-hide="wbsCtrl.editMode() || wbsCtrl.itemHierarchy.length != 1").bid-icons.add-subfolder
+  md-button.ng-hide
+    .bid-icons.copy-to
+    | {{wbsCtrl.t.wbsActions.copyTo}}
+  md-button.ng-hide
+    .bid-icons.move-to
+    | {{wbsCtrl.t.wbsActions.moveTo}}
+  md-button(ng-bind="::wbsCtrl.t.wbsActions.edit" ng-click="wbsCtrl.editLevel()"
+    aria-label="edit" ng-hide="wbsCtrl.editMode() || wbsCtrl.itemHierarchy.length != 2").bid-icons.edit
+
+  md-button(ng-bind="::wbsCtrl.t.wbsActions.delete" ng-click="wbsCtrl.deleteLevel()"
+  aria-label="edit" ng-hide="wbsCtrl.editMode() || wbsCtrl.itemHierarchy.length != 2 || wbsCtrl.bidsList[0].clientCountries.length <= 1").bid-icons.delete-bid

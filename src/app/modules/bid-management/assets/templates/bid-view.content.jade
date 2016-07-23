@@ -1,0 +1,71 @@
+md-content
+  v-accordion.csc-accordion.vAccordion--default(multiple, ng-if='bidCtrl.singleSelection() && !bidCtrl.editMode')
+    v-pane(expanded="$first")
+      v-pane-header(ng-bind='::bidCtrl.t.content.bidLevels.header')
+      v-pane-content
+        .row(layout='row', layout-align='start center')
+          p(ng-bind='::bidCtrl.t.content.bidLevels.l1.label').level-label
+          .details-list(layout='column', layout-align='space-between center')
+            .list-row(layout='row', layout-wrap, layout-fill)
+              p(ng-bind='::bidCtrl.t.content.bidLevels.l1.name')
+              p(ng-bind='bidCtrl.selectedBids[0].name')
+        .sub-accordion-container(layout='column', data-ng-repeat='clientCountry in bidCtrl.selectedBids[0].clientCountries')
+          header(layout='column')
+            h3
+              | {{::bidCtrl.t.content.bidLevels.countryLabel + ' ' + ($index + 1)}}
+            md-divider
+          v-accordion.csc-accordion.vAccordion--default(multiple)
+            v-pane
+              v-pane-header
+                .row(layout='row', layout-align='start center')
+                  p(ng-bind='::bidCtrl.t.content.bidLevels.l2.label').level-label
+                  .details-list(layout='column', layout-align='space-between center')
+                    .list-row(layout='row', layout-wrap, layout-fill)
+                      p(ng-bind='::bidCtrl.t.content.bidLevels.l2.clientCountry')
+                      p
+                        span(ng-bind='::clientCountry.clientCountryName')
+                        | &nbsp;
+                        span(ng-bind='::clientCountry.clientCountryCode').country-code
+              v-pane-content
+                .details-list(layout='column', layout-align='space-between center')
+                  .list-row(layout='row', layout-wrap, layout-fill)
+                    p(ng-bind='::bidCtrl.t.content.bidLevels.l2.clientCurrency')
+                    p(ng-bind='::clientCountry.clientCurrencyCode')
+                  .list-row(layout='row', layout-wrap, layout-fill)
+                    p(ng-bind='::bidCtrl.t.content.bidLevels.l2.invoiceCountry')
+                    p
+                      span(ng-bind='::clientCountry.invoiceCountryName')
+                      | &nbsp;
+                      span(ng-bind='::clientCountry.invoiceCountryCode').country-code
+                  .list-row(layout='row', layout-wrap, layout-fill)
+                    p(ng-bind='::bidCtrl.t.content.bidLevels.l2.invoiceCurrency')
+                    p(ng-bind='::clientCountry.invoiceCurrencyCode')
+                  .list-row(layout='row', layout-wrap, layout-fill)
+                    p(ng-bind='::bidCtrl.t.content.bidLevels.l2.owningCountry')
+                    p
+                      span(ng-bind='::clientCountry.owningCountryName')
+                      | &nbsp;
+                      span(ng-bind='::clientCountry.owningCountryCode').country-code
+                  .list-row(layout='row', layout-wrap, layout-fill)
+                    p(ng-bind='::bidCtrl.t.content.bidLevels.l2.owningCurrency')
+                    p(ng-bind='::clientCountry.owningCurrencyCode')
+    v-pane(expanded="$second").bid-additional-info
+      v-pane-header(ng-bind='::bidCtrl.t.content.bidInfo.header')
+      v-pane-content
+        .row(layout='row', layout-align='start center')
+          .details-list(layout='column', layout-align='space-between center')
+            .list-row(layout='row', layout-wrap, layout-fill)
+              p(ng-bind='::bidCtrl.t.content.bidInfo.start')
+              p(ng-bind='bidCtrl.selectedBids[0].startDate | date:"MMM y"')
+            .list-row(layout='row', layout-wrap, layout-fill)
+              p(ng-bind='::bidCtrl.t.content.bidInfo.end')
+              p(ng-bind='bidCtrl.selectedBids[0].endDate | date:"MMM y"')
+            .list-row(layout='row', layout-wrap, layout-fill)
+              p(ng-bind='::bidCtrl.t.content.bidInfo.duration')
+              p
+                span(ng-bind='bidCtrl.selectedBids[0].duration')
+                | &nbsp;
+                span(ng-bind='::bidCtrl.t.content.bidInfo.label')
+            .list-row(layout='row', layout-wrap, layout-fill)
+              p(ng-bind='::bidCtrl.t.content.bidInfo.description')
+              textarea(ng-bind='::bidCtrl.selectedBids[0].description', readonly='true', name='description', cols='40')

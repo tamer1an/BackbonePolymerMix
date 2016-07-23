@@ -1,0 +1,20 @@
+div(layout="row" layout-align="center center").searchbox-container
+  input(type="search" placeholder="Search").searchbox.ng-hide
+div(layout="row" layout-align="start end" id="tree-caption")
+  div(flex)
+    label
+      |{{wbsCtrl.t.sidebar.header}}
+  div.tree-icon.bid-icons.arrow-left.ng-hide
+md-divider.md-margin
+div(ui-tree="" data-nodrag-enabled="true" data-drag-delay="300" data-empty-placeholder-enabled)
+  ol(ui-tree-nodes="" ng-model="wbsCtrl.bidsList")
+    li(ng-repeat="bid in wbsCtrl.bidsList" ui-tree-node)
+      div(ui-tree-handle layout="row" layout-align="start center" ng-class="{'selected-tree-node': wbsCtrl.isSelected(this)}" )
+        span(ng-click="wbsCtrl.selectItem(this)" flex)
+          |{{bid.name}}
+      ol(ui-tree-nodes="" ng-model="bid.clientCountries" ng-if="!this.collapsed")
+        li(ng-repeat="country in bid.clientCountries" ui-tree-node)
+          div(ui-tree-handle layout="row" layout-align="start center" ng-class="{'selected-tree-node': wbsCtrl.isSelected(this)}" )
+            span(ng-click="wbsCtrl.selectItem(this)" flex)
+              |{{country.clientCountryCode}}
+

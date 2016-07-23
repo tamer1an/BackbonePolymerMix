@@ -1,0 +1,116 @@
+$second-column-width: 185px;
+$third-column-width: 146px;
+
+#main-view {
+    &_sidenav {
+        md-divider {
+            margin: 15px 0;
+        }
+        header {
+            margin-bottom: 28px;
+        }
+        h2 {
+            margin: 0;
+            font-weight: 400;
+        }
+        .csc-bids-search {
+            padding: 0;
+            .md-button {
+                min-width: 30px;
+                min-height: 30px;
+                width: 30px;
+                height: 30px;
+                margin: 0;
+                padding: 0;
+                border: 1px solid #074185;
+                ng-md-icon {
+                    fill: #074185;
+                }
+            }
+            input {
+                display: none;
+            }
+        }
+    }
+}
+
+
+.bids-list{
+  border-collapse: collapse;
+  tr{
+    border-bottom: 1px solid rgba(151, 151, 151, 0.6);
+    &.selected{
+        background: #C7DBF2;
+    }
+  }
+  thead th{
+    height: 24px;
+    padding: 0;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: left;
+    color: rgba(47, 47, 47, 0.69);
+    &:first-of-type{
+        width: 36px;
+    }
+    &:nth-of-type(2){
+        width: $second-column-width;
+    }
+    &:nth-of-type(3){
+        width: $third-column-width;
+    }
+    &:nth-of-type(4){
+        cursor: pointer;
+        position: relative;
+        .bid-icons{
+            position: absolute;
+            right: -8px;
+            top: 6px;
+        }
+    }
+  }
+  tbody{
+      tr{
+          cursor: pointer;
+      }
+      td{
+        height: 53px;
+        padding: 4px 1px 0;
+        line-height: 1.45;
+        font-size: 12px;
+        color: #4a4a4a;
+        &:nth-of-type(4){
+            padding-right: 2px;
+        }
+        &:not(:first-of-type) *{
+          margin: 0;
+        }
+        p{
+            padding-right: 4px;
+            box-sizing: border-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &:nth-of-type(2) p{
+            width: $second-column-width;
+        }
+        &:nth-of-type(3) p{
+            width: $third-column-width;
+        }
+      }
+      tr:last-of-type{
+          border: none;
+          & td{
+              font-size: 13px;
+          }
+      }
+  }
+}
+
+.bid-short-info{
+  h5{
+    font-weight: 400;
+    font-size: 13px;
+  }
+}

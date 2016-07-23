@@ -1,0 +1,60 @@
+.row {
+    padding: 0;
+}
+
+div.row.content-item {
+    .details-list {
+        margin: 0;
+    }
+    p.level-label {
+        margin: 0;
+    }
+    & > .row {
+        padding-left: 18px;
+    }
+    & > v-accordion.csc-accordion {
+        padding-left: 18px;
+        v-pane-content {
+            padding-left: 24px;
+        }
+    }
+}
+
+//.level-header {
+//    min-width: 240px;
+//    p {
+//        text-align: right;
+//        color: #4a4a4a;
+//    }
+//}
+
+
+header.wbs {
+    margin-bottom: 15px;
+
+    .content-header {
+        font-size: 12px;
+        line-height: 30px;
+        font-weight: normal;
+    }
+
+    .selected-level-header {
+        span {
+            margin-right: 10px
+        }
+        font-size: 20px;
+        font-weight: normal;
+    }
+}
+//.sub-accordion-container{
+//    h3{
+//        margin-bottom: 8px;
+//        font-size: 12px;
+//    }
+//    .details-list{
+//        margin-left: 7%;
+//    }
+//    v-pane-content .details-list{
+//        margin: 0 95px 0 0;
+//    }
+//}

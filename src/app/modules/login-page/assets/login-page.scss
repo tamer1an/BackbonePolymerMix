@@ -1,0 +1,72 @@
+.form-container{
+    background: url('./images/CSC-Get_login-background.png') no-repeat center center fixed;;
+    background-size: cover;
+    font-size: 14px;
+}
+.login-form {
+    background: #ffffff;
+    min-width: 340px;
+    min-height: 300px;
+    md-content {
+        display: block;
+        padding: 50px 50px 50px 50px;
+    }
+    input {
+        outline: none;
+        display: block;
+        width: 100%;
+        border: 1px solid #d9d9d9;
+        padding: 10px 15px;
+        box-sizing: border-box;
+    }
+    #user-name{
+        margin-bottom: 20px;
+    }
+    label {
+        color: #7c7c7c;
+    }
+    input:focus {
+        border: 1px solid #33b5e5;
+        color: #333333;
+    }
+    button {
+        cursor: pointer;
+        background: #1b7ef1;
+        width: 100%;
+        border: 0;
+        padding: 10px 15px;
+        color: #ffffff;
+        margin-top: 40px;
+        &:hover {
+            background: #178ab4;
+        }
+    }
+    .error-message {
+        padding: 5px;
+        border:1px solid red;
+        background-color: #FBB5B5;
+        width: 228px;
+        display: block;
+        color: red;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    .error-message::before, .error-message::after {
+        content: '';
+        position: absolute;
+        left: 20px; top: -20px;
+        border: 10px solid transparent;
+        border-bottom: 10px solid red;
+    }
+    .error-message::after {
+        border-bottom: 10px solid #FBB5B5;
+        top: -19px;
+    }
+
+    .invalid {
+        border-color: red;
+    }
+
+
+}
