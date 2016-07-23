@@ -1,0 +1,30 @@
+button.md-button{
+    min-width: auto;
+    min-height: auto;
+    margin: 0;
+    border-radius: 0;
+    font-size: 13px;
+    line-height: 1;
+    text-transform: none;
+}
+button.md-raised.md-button{
+    min-width: 60px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 2px;
+}
+button.md-raised.md-button:not([disabled]){
+    box-shadow: none;
+    margin: 0;
+}
+button.csc-primary-raised-btn.md-primary.md-button{
+    background: #186ac9;
+}
+button.csc-raised-btn.md-raised{
+    color: #186ac9;
+    border: 1px solid;
+}
+button.md-button.md-raised[disabled] {
+    background: #cecece; color:white;
+}

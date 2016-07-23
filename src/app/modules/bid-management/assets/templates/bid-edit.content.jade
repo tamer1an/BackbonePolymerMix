@@ -1,0 +1,56 @@
+md-content#bids_edit_block
+  form(name='bidEdit')
+    v-accordion.csc-accordion.vAccordion--default(multiple, ng-if='bidCtrl.bidCreation() || bidCtrl.editMode')
+      v-pane(expanded="$first")
+        v-pane-header(ng-bind='::bidCtrl.t.content.bidLevels.header')
+        v-pane-content
+          .row(layout='row', layout-align='start center')
+            p(ng-bind='::bidCtrl.t.content.bidLevels.l1.label').level-label
+            .details-list(layout='column', layout-align='space-between center')
+              .list-row(layout='row', layout-wrap, layout-fill)
+                p(ng-bind='::bidCtrl.t.content.bidLevels.l1.name')
+                input(ng-model='bidCtrl.selectedBids[0].name', required, name='myName').text-field
+          .row(layout='row', layout-align='start center')
+                div(ng-messages='bidEdit.myName.$error')
+                  .error-message(ng-message='required') This Field is Required
+          .sub-accordion-container(layout='column', data-ng-repeat='clientCountry in bidCtrl.selectedBids[0].clientCountries')
+            header(layout='column')
+              h3(layout='row', layout-align='space-between center').delete-country
+                | {{::bidCtrl.t.content.bidLevels.countryLabel + ' ' + ($index + 1)}}
+                md-button(aria-label='delete-client-country', ng-click='bidCtrl.deleteCountry($event, $index)', ng-if='bidCtrl.selectedBids[0].clientCountries.length > 1').md-icon-button.md-primary.bid-icons.delete-bid.delete-country-button
+              md-divider
+            country-form(client-country='clientCountry' countries-list='bidCtrl.countriesList')
+          .row(layout='row', layout-align='start center').add-country
+            .details-list(layout='column', layout-align='space-between center')
+              .list-row(layout='row', layout-wrap, layout-fill)
+                p
+                P
+                  md-button(ng-bind='::bidCtrl.t.content.bidLevels.l1.addCountry', aria-label='cancel-bid', ng-click='bidCtrl.addNewCountry()').csc-primary-raised-btn.md-primary.md-raised.add-country-button
+      v-pane(expanded="$second").bid-additional-info
+        v-pane-header(ng-bind='::bidCtrl.t.content.bidInfo.header')
+        v-pane-content
+          .row(layout='row', layout-align='start center')
+            .details-list(layout='column', layout-align='space-between center')
+              .list-row(layout='row', layout-wrap, layout-fill)
+                p(ng-bind='::bidCtrl.t.content.bidInfo.start')
+                input(type='date', ng-model='bidCtrl.selectedBids[0].startDate', ng-change='bidCtrl.calculateDuration()', name='startDate', required).text-field
+              .list-row(layout='row', layout-wrap, layout-fill)
+                div(ng-messages='bidEdit.startDate.$error')
+                  .error-message.error-message-details(ng-message='required') This Field is Required
+                  .error-message.error-message-details(ng-message='date') Date is not Valid
+              .list-row(layout='row', layout-wrap, layout-fill)
+                p(ng-bind='::bidCtrl.t.content.bidInfo.end')
+                input(type='date', ng-model='bidCtrl.selectedBids[0].endDate', ng-change='bidCtrl.calculateDuration()', name='endDate', required).text-field
+              .list-row(layout='row', layout-wrap, layout-fill)
+                div(ng-messages='bidEdit.endDate.$error')
+                  .error-message.error-message-details(ng-message='required') This Field is Required
+                  .error-message.error-message-details(ng-message='date') Date is not Valid
+              .list-row(layout='row', layout-wrap, layout-fill)
+                p(ng-bind='::bidCtrl.t.content.bidInfo.duration')
+                p
+                  span(ng-bind='bidCtrl.selectedBids[0].duration')
+                  | &nbsp;
+                  span(ng-bind='::bidCtrl.t.content.bidInfo.label')
+              .list-row(layout='row', layout-wrap, layout-fill)
+                p(ng-bind='::bidCtrl.t.content.bidInfo.description')
+                textarea(ng-model='bidCtrl.selectedBids[0].description', name='description')

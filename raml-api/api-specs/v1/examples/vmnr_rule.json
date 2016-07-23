@@ -1,0 +1,19 @@
+{
+    "number": "2.83",
+    "ownerType": "User",
+    "rule": [
+        {
+            "Enabled": [
+                false
+            ]
+        },
+        {
+            "IfUnread": [
+                "mark_unread"
+            ]
+        }
+    ],
+    "ruleId": "lmKSFn7WGkWqaHR457zXld7x",
+    "ruleName": "Celine Heidenreich rule 1.39",
+    "userId": "AoPDnOF6BvPwWHz8pLhWbDGN"
+}

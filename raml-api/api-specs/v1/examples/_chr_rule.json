@@ -1,0 +1,81 @@
+{
+    "address": "",
+    "addresseeId": "64331.23",
+    "displayUserIDForExCall": false,
+    "enabled": false,
+    "number": 1,
+    "ownerType": "User",
+    "rule": {
+        "Actions": [
+            {
+                "FindMe": [
+                    {
+                        "Try": [
+                            {
+                                "To": [
+                                    {
+                                        "Ext": [
+                                            "102"
+                                        ]
+                                    },
+                                    {
+                                        "Id": [
+                                            "00085D235E3F"
+                                        ]
+                                    },
+                                    {
+                                        "Assigned": []
+                                    },
+                                    {
+                                        "All": []
+                                    }
+                                ]
+                            },
+                            {
+                                "For": [
+                                    7
+                                ]
+                            },
+                            {
+                                "Ask": [
+                                    0
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "Bad": [
+                            {
+                                "ForwardToVM": [
+                                    "0"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Conditions": [
+            {
+                "Presence": [
+                    1,
+                    4
+                ]
+            },
+            {
+                "DateRange": [
+                    "11/25/2015",
+                    "11/26/2015"
+                ]
+            }
+        ],
+        "Triggers": [
+            {
+                "AnyCall": []
+            }
+        ]
+    },
+    "ruleId": "awlE5VkPyjYFxaSsyLVYwUqV",
+    "ruleName": "MGA",
+    "userId": "LaJnW1xmG9OOzjWloofb56gF"
+}

@@ -1,0 +1,113 @@
+{
+    "chr_rules": [
+        {
+            "address": "0",
+            "addresseeId": "4294967295",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": -10,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "4907323942347254276",
+            "ruleName": "Call Forwarding",
+            "userId": "7407548707064473"
+        },
+        {
+            "address": "",
+            "addresseeId": "4294967295",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "4907323943756431787",
+            "ruleName": "CHR",
+            "userId": "7407548707064473"
+        }
+    ],
+    "command": "get_chr_list",
+    "index": 0,
+    "success": true
+}

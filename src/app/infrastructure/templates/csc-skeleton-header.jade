@@ -1,0 +1,14 @@
+md-toolbar(layout='column')
+  #header_main-menu.md-toolbar-tools(layout='row', layout-align='space-between center')
+    #header_logo CAPT'N
+    nav#header_nav-actions(flex, offset='5')
+      md-button
+        a(ui-sref='bidManagement') Bids
+      md-button(ng-disabled='true') Templates
+      md-button(ng-disabled='true') Help center
+    md-input-container#header_user-interactions(layout='row', layout-align='start center')
+      .bid-icons.settings
+      p Super User
+
+  .viewer(ui-view='header')
+

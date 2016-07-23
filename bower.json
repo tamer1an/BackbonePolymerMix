@@ -1,0 +1,9 @@
+{
+  "name": "User portal Dependencies",
+  "version": "0.0.1",
+  "_comment": "Project Dependencies",
+  "devDependencies": {
+	"polymer": "*",
+	"paper-elements": "https://github.com/PolymerElements/paper-elements.git"
+  }
+}

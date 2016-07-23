@@ -1,0 +1,64 @@
+{
+    "adminProfile": {
+        "profileId": "",
+        "profileName": ""
+    },
+    "callRecProfile": {
+        "profileId": "",
+        "profileName": ""
+    },
+    "callerId": "1313",
+    "cellPhone": "",
+    "defaultRole": {
+        "roleId": "",
+        "roleName": ""
+    },
+    "devices": [
+        {
+            "deviceId": "LN7VlF34M1UKzbdTtwT495mu",
+            "deviceRecId": "Hzlues4BuNfq1QoUiAtFSMS1",
+            "deviceType": "ZIP 35i",
+            "ipAddress": "",
+            "lines": [
+                {
+                    "deviceId": "sdfsdf",
+                    "name": "",
+                    "sipAuth": "sdfsdf",
+                    "sipPwd": ""
+                }
+            ],
+            "location": "Considine burgh",
+            "macAddress": "000BEA888889",
+            "profileName": "zippo 35i",
+            "users": [
+                "43283552513373536",
+                "43283552047541480"
+            ]
+        }
+    ],
+    "email": "Makenzie88@yahoo.com",
+    "email2": "Virgie.Runolfsdottir@gmail.com",
+    "extension": "4160",
+    "faxDID": "",
+    "faxNumber": "",
+    "firstName": "Delilah",
+    "homePhone": "",
+    "lastName": "Beatty",
+    "ldapAuthentication": false,
+    "login": "Login_4160",
+    "msExchangeId": "Clotilde_Bogisich38@gmail.com",
+    "pagingProfile": {
+        "profileId": "",
+        "profileName": ""
+    },
+    "password": "",
+    "pin": "",
+    "pseudonym": "",
+    "userId": "my_user_4160",
+    "userProfile": {
+        "profileId": "Ur8PwVtABm1XNjkHzDJsroxL",
+        "profileName": "Default"
+    },
+    "userRecId": "FNn8PtVtq2YGGRNl2bLtTnIP",
+    "voiceDID": ""
+}

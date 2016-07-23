@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    include meta.jade
+    title {%=o.htmlWebpackPlugin.options.title || 'Webpack App'%}
+    |{% for (var css in o.htmlWebpackPlugin.files.css) { %}
+    link(href='{%=o.htmlWebpackPlugin.files.css[css] %}', rel='stylesheet')
+    |{% } %}
+  body(ng-app='app', ng-cloak, layout='row')
+    .app-view(ui-view, layout='column', layout-fill).md-whiteframe-1dp
+    |{% for (var chunk in o.htmlWebpackPlugin.files.chunks) { %}
+    script(src='{%=o.htmlWebpackPlugin.files.chunks[chunk].entry %}')
+    |{% } %}
+    script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js")

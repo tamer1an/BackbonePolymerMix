@@ -1,0 +1,21 @@
+header
+    h2(ng-bind='::bidCtrl.t.messages.noSelect', ng-if='bidCtrl.noSelection()')
+    h2(ng-if='bidCtrl.multipleSelection()')
+        span(ng-bind='bidCtrl.selectedBids.length')
+        | &nbsp;
+        span(ng-bind='::bidCtrl.t.messages.multiSelect')
+    h2(layou='row', layout-align='space-between center', ng-if='bidCtrl.singleSelection() && !bidCtrl.editMode')
+      strong(ng-bind='::bidCtrl.t.content.bidDetails.header')
+      md-button(ng-bind='::bidCtrl.t.content.bidDetails.edit', aria-label='edit-bid', ng-click='bidCtrl.setEditMode()').csc-primary-raised-btn.md-primary.md-raised
+    h2(layou='row', layout-align='space-between center', ng-if='bidCtrl.bidCreation()')
+      strong(ng-bind='::bidCtrl.t.content.bidDetails.header')
+      div
+        md-button(ng-bind='::bidCtrl.t.content.bidDetails.save', aria-label='save-bid', ng-click='bidCtrl.saveNewBid()', ng-disabled='bidCtrl.saveBidDisabled || bidEdit.$invalid || !bidCtrl.selectedBids[0].clientCountries.length').csc-primary-raised-btn.md-primary.md-raised
+        md-button(ng-bind='::bidCtrl.t.content.bidDetails.cancel', aria-label='cancel-bid', ng-click='bidCtrl.cancelBidCreation()').csc-primary-raised-btn.md-raised#cancel-button
+    h2(layou='row', layout-align='space-between center', ng-if='bidCtrl.editMode')
+      strong(ng-bind='::bidCtrl.t.content.bidDetails.header')
+      div
+        md-button(ng-bind='::bidCtrl.t.content.bidDetails.save', aria-label='save-bid', ng-click='bidCtrl.saveEditedBid()', ng-disabled='bidCtrl.saveBidDisabled || bidEdit.$invalid || !bidCtrl.selectedBids[0].clientCountries.length').csc-primary-raised-btn.md-primary.md-raised
+        md-button(ng-bind='::bidCtrl.t.content.bidDetails.cancel', aria-label='cancel-bid', ng-click='bidCtrl.cancelBidEditing()').csc-primary-raised-btn.md-raised#cancel-button
+include bid-view.content
+include bid-edit.content

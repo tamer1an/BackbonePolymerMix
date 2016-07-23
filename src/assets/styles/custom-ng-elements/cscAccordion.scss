@@ -1,0 +1,76 @@
+.csc-accordion.vAccordion--default {
+  v-pane-header {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #2f2f2f;
+    border-bottom: 1px solid #C1C1C1;
+    &:hover, &:focus {
+      color: #2f2f2f;
+    }
+    &::after, &::before {
+      content: '';
+      display: block;
+      background-color: transparent;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform-origin: 50% 50%;
+      transition: none;
+    }
+    &::before {
+      width: 16px;
+      height: 16px;
+      border-radius: 2px;
+      border: 1px solid #d1d1d1;
+      transform: translateY(-50%) !important;
+    }
+    &::after {
+      width: 6px;
+      height: 6px;
+      right: 5px;
+      border-bottom: 1px solid #7c7c7c;
+      border-right: 1px solid #7c7c7c;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+  v-pane.is-expanded > v-pane-header{
+    border-bottom: 1px solid #C1C1C1;
+    &::after {
+        transform: translateY(-35%) rotate(-135deg);
+        opacity: 1;
+    }
+  }
+  v-accordion{
+      margin-top: 4px;
+      padding-left: 18px;
+      v-pane-header{
+        &::before{
+              border: none;
+        }
+        &::after{
+            right: auto;
+            left: -14px;
+            top: 20px;
+        }
+      }
+      v-pane-header{
+          margin-bottom: 0;
+          margin-top: 10px;
+          border: none!important;
+      }
+  }
+}
+.sub-accordion-container{
+    margin-top: 6px;
+    padding-right: 10%;
+    v-pane-header .row{
+        height: 30px;
+        padding: 0;
+    }
+    h3{
+        font-weight: 400;
+    }
+    md-divider{
+        border-top-color: #C1C1C1;
+    }
+}

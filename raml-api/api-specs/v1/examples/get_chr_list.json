@@ -1,0 +1,998 @@
+{
+    "chr_rules": [
+        {
+            "address": "",
+            "addresseeId": "25308.53",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "X5GF93y8VxWFw2m56S81nvNp",
+            "ruleName": "MRO",
+            "userId": "k6YBdxnQDqpXUI4tPQCOmTGh"
+        },
+        {
+            "address": "",
+            "addresseeId": "11522.96",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "7MvxYwxa8t0mykBoOrwH6BHx",
+            "ruleName": "TRY",
+            "userId": "Q4R5sDDsLRqcLxfrS2mBmEGE"
+        },
+        {
+            "address": "",
+            "addresseeId": "27970.46",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "joVR1jxpm8Ilw71jkaokrdwy",
+            "ruleName": "RON",
+            "userId": "DUkhtcrFa3f1Wr56QQcwEu8X"
+        },
+        {
+            "address": "",
+            "addresseeId": "29191.12",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "5scNnEq5EuWd4jTiCChmfpAt",
+            "ruleName": "PEN",
+            "userId": "HR6c8UqcKTCN7GuPGw4hnRXC"
+        },
+        {
+            "address": "",
+            "addresseeId": "69879.95",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "Pj2bcMIWuFMbIs5wMhXMYbkM",
+            "ruleName": "SLL",
+            "userId": "b5kVHIJU7fWn27a7xUG3wTNV"
+        },
+        {
+            "address": "",
+            "addresseeId": "54749.24",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "iCLfab2VfWcbiIuNoiJ4LMQP",
+            "ruleName": "GEL",
+            "userId": "OE7YdQ7vcrN1KGg8G1gwHYvl"
+        },
+        {
+            "address": "",
+            "addresseeId": "61099.26",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "WVHIDYYdvTQvmCqCCCa3PaeJ",
+            "ruleName": "LTL",
+            "userId": "euQceM86msAy7VDky8REMTbp"
+        },
+        {
+            "address": "",
+            "addresseeId": "75534.68",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "G9Y9vL6QRtK5KYnGlMvHPagy",
+            "ruleName": "JPY",
+            "userId": "o1mJescYMm3kh8GALMBDhVw9"
+        },
+        {
+            "address": "",
+            "addresseeId": "35935.79",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "rIiXzb20ymEwRI7G9SJHCHed",
+            "ruleName": "SHP",
+            "userId": "sR9GEEDCcYXwwy1F385NZ6Sz"
+        },
+        {
+            "address": "",
+            "addresseeId": "31728.06",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "XmvJYzbP02VAEKRx9EzIA5Md",
+            "ruleName": "GNF",
+            "userId": "htn3s4R2DYkfURk5AKdID7Wv"
+        },
+        {
+            "address": "",
+            "addresseeId": "29057.19",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "zSGNFuvcs186g4IMeQ9chwoq",
+            "ruleName": "CDF",
+            "userId": "5dUq7JDZZ3GBatT9Dlfoj3nu"
+        },
+        {
+            "address": "",
+            "addresseeId": "34064.06",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "VUL1TFQCnq5PK6KF5EUhbkSS",
+            "ruleName": "BOB BOV",
+            "userId": "SrhgzuabXJHn1c78AtEbwTQu"
+        },
+        {
+            "address": "",
+            "addresseeId": "27335.84",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "jWQN2AmNlQv9Li05bF2RVTgA",
+            "ruleName": "CHF",
+            "userId": "FxYTkL4SzYOaLHnaO2NSoEY5"
+        },
+        {
+            "address": "",
+            "addresseeId": "52844.49",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "2iuuoUMMx5f3aHWVw3xzLGRE",
+            "ruleName": "UGX",
+            "userId": "SoaHRyHlqh47NJ3qYyp0Im7M"
+        },
+        {
+            "address": "",
+            "addresseeId": "64331.23",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    "102"
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    "00085D235E3F"
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": []
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            7
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "Presence": [
+                            1,
+                            4
+                        ]
+                    },
+                    {
+                        "DateRange": [
+                            "11/25/2015",
+                            "11/26/2015"
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "awlE5VkPyjYFxaSsyLVYwUqV",
+            "ruleName": "MGA",
+            "userId": "LaJnW1xmG9OOzjWloofb56gF"
+        }
+    ],
+    "command": "get_chr_list",
+    "index": 0,
+    "success": true
+}

@@ -1,0 +1,35 @@
+header(layout='row', layout-align='space-between center')
+    h2(ng-bind='::bidCtrl.t.sidebar.header')
+    md-input-container(layout='row', layout-align='space-between center').csc-bids-search
+        //- md-button(aria-label='bids-search')
+        //-     ng-md-icon(icon='search', size='20')
+        //- input(type='search', aria-label='search')
+table.bids-list
+    thead
+        tr
+            th
+                md-checkbox(ng-checked='bidCtrl.selected()', aria-label='selected bids').csc-checkbox.md-primary
+            th(ng-bind='::bidCtrl.t.sidebar.col1')
+            th(ng-bind='::bidCtrl.t.sidebar.col2')
+            th(ng-click='bidCtrl.orderByCreationDate()')
+                span(ng-bind='::bidCtrl.t.sidebar.col3')
+                .bid-icons(ng-class='[bidCtrl.sortReverse ? "arrow-up" : "arrow-down"]')
+    tbody
+        tr(ng-repeat='bid in bidCtrl.bidsList | orderBy:bidCtrl.sortType:bidCtrl.sortReverse', ng-click='bidCtrl.selectBid(bid)', 
+           ng-class='{"selected": bid.selected}', ng-if='bidCtrl.bidsList.length')
+            td
+                md-checkbox(ng-model='bid.selected', 
+                ng-show='bid.selected', ng-change='bidCtrl.selectBid(bid)', 
+                aria-label='selected bids').md-primary.csc-checkbox
+            td.bid-short-info
+                h5
+                    strong(ng-bind='::bid.name')
+                    | &nbsp;
+                    span(ng-bind='::bid.strVersion')
+                p(ng-bind='::bid.description')
+            td.owner-info
+                p(ng-bind='::bid.owner')
+                p(ng-bind='::bid.roles')
+            td(ng-bind='::bid.creationDate | date:"MMM d, y h:mm a"')
+        tr
+            td(ng-bind='::bidCtrl.t.messages.emptyList', ng-if='!bidCtrl.bidsList.length', colspan='4')

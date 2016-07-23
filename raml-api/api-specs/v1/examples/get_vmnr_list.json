@@ -1,0 +1,886 @@
+{
+    "vmnr_rules": [
+        {
+            "number": 1,
+            "ownerType": "User",
+            "enabled": false,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_unread"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "private"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                }
+            ],
+            "ruleId": "urETH9CaUQ3hL6qnLHc7W9xG",
+            "ruleName": "Cora Wilderman rule 3.12",
+            "userId": "RxRimdweiDizjPleZvSTlfVw"
+        },
+        {
+            "number": 2,
+            "ownerType": "User",
+            "enabled": false,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_unread"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "private"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                }
+            ],
+            "ruleId": "swayTXnfFcmid4IKA4aXEolW",
+            "ruleName": "Alexie VonRueden rule 1.20",
+            "userId": "RJ0nAexpbc766SE4TYbsZHyc"
+        },
+        {
+            "number": 3,
+            "ownerType": "User",
+            "enabled": true,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "NotifInterval": [
+                        {
+                            "Period": [
+                                12
+                            ]
+                        },
+                        {
+                            "StartFrom": [
+                                "19: 30"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_saved"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                },
+                {
+                    "WhenTimeOfDay": [
+                        "01: 00",
+                        "04: 50"
+                    ]
+                },
+                {
+                    "MessageMedia": [
+                        "fax"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "urgent",
+                        "private"
+                    ]
+                },
+                {
+                    "DaysOfWeek": [
+                        4
+                    ]
+                },
+                {
+                    "MessageOlderThan": [
+                        1
+                    ]
+                },
+                {
+                    "Notify": [
+                        {
+                            "Transport": [
+                                {
+                                    "By": [
+                                        "e-mail"
+                                    ]
+                                },
+                                {
+                                    "Destination": [
+                                        "1@mail"
+                                    ]
+                                },
+                                {
+                                    "CallMethod": [
+                                        "simultaneously"
+                                    ]
+                                },
+                                {
+                                    "ToAttach": [
+                                        true
+                                    ]
+                                },
+                                {
+                                    "Pause": [
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "ruleId": "xTAYaUVOiG4XyLpqyen9rdhA",
+            "ruleName": "Winona Stokes rule 3.41",
+            "userId": "FkybwFmWcbKjJWHStrCspfAf"
+        },
+        {
+            "number": 4,
+            "ownerType": "User",
+            "enabled": true,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "NotifInterval": [
+                        {
+                            "Period": [
+                                12
+                            ]
+                        },
+                        {
+                            "StartFrom": [
+                                "19: 30"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_saved"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                },
+                {
+                    "WhenTimeOfDay": [
+                        "01: 00",
+                        "04: 50"
+                    ]
+                },
+                {
+                    "MessageMedia": [
+                        "fax"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "urgent",
+                        "private"
+                    ]
+                },
+                {
+                    "DaysOfWeek": [
+                        4
+                    ]
+                },
+                {
+                    "MessageOlderThan": [
+                        1
+                    ]
+                },
+                {
+                    "Notify": [
+                        {
+                            "Transport": [
+                                {
+                                    "By": [
+                                        "e-mail"
+                                    ]
+                                },
+                                {
+                                    "Destination": [
+                                        "1@mail"
+                                    ]
+                                },
+                                {
+                                    "CallMethod": [
+                                        "simultaneously"
+                                    ]
+                                },
+                                {
+                                    "ToAttach": [
+                                        true
+                                    ]
+                                },
+                                {
+                                    "Pause": [
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "ruleId": "toCNwC8X9RR3laJreGIqkoxU",
+            "ruleName": "Tamia Bergstrom rule 4.83",
+            "userId": "hddUnYzqpgBkOlfoK2oi3t5m"
+        },
+        {
+            "number": 5,
+            "ownerType": "User",
+            "enabled": false,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_unread"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "private"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                }
+            ],
+            "ruleId": "UXKvSCfjLA77MKeL6lPKsQB1",
+            "ruleName": "Emmanuelle Jacobi rule 4.67",
+            "userId": "NWoALMeZMejKB7E9EiaW3mad"
+        },
+        {
+            "number": 6,
+            "ownerType": "User",
+            "enabled": false,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_unread"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "private"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                }
+            ],
+            "ruleId": "ItxhLn4p9l6XSiMXt2ZrKv6D",
+            "ruleName": "Justen Reichert rule 1.28",
+            "userId": "HJFUy5M5bBV9dvpQHsvwf6nP"
+        },
+        {
+            "number": 7,
+            "ownerType": "User",
+            "enabled": true,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "NotifInterval": [
+                        {
+                            "Period": [
+                                12
+                            ]
+                        },
+                        {
+                            "StartFrom": [
+                                "19: 30"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_saved"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                },
+                {
+                    "WhenTimeOfDay": [
+                        "01: 00",
+                        "04: 50"
+                    ]
+                },
+                {
+                    "MessageMedia": [
+                        "fax"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "urgent",
+                        "private"
+                    ]
+                },
+                {
+                    "DaysOfWeek": [
+                        4
+                    ]
+                },
+                {
+                    "MessageOlderThan": [
+                        1
+                    ]
+                },
+                {
+                    "Notify": [
+                        {
+                            "Transport": [
+                                {
+                                    "By": [
+                                        "e-mail"
+                                    ]
+                                },
+                                {
+                                    "Destination": [
+                                        "1@mail"
+                                    ]
+                                },
+                                {
+                                    "CallMethod": [
+                                        "simultaneously"
+                                    ]
+                                },
+                                {
+                                    "ToAttach": [
+                                        true
+                                    ]
+                                },
+                                {
+                                    "Pause": [
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "ruleId": "X664yp7B4MnQlEDRl8Nc8ria",
+            "ruleName": "Yasmin Kreiger rule 3.41",
+            "userId": "acQjia2JrjdyjStzB17XoHLY"
+        },
+        {
+            "number": 8,
+            "ownerType": "User",
+            "enabled": false,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_unread"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "private"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                }
+            ],
+            "ruleId": "y4sYpyjdFIbqeRLaJlvNiA3f",
+            "ruleName": "Terrance Casper rule 4.91",
+            "userId": "FFRgydz5Uytw9Xm11mUrlHIP"
+        },
+        {
+            "number": 9,
+            "ownerType": "User",
+            "enabled": true,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "NotifInterval": [
+                        {
+                            "Period": [
+                                12
+                            ]
+                        },
+                        {
+                            "StartFrom": [
+                                "19: 30"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_saved"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                },
+                {
+                    "WhenTimeOfDay": [
+                        "01: 00",
+                        "04: 50"
+                    ]
+                },
+                {
+                    "MessageMedia": [
+                        "fax"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "urgent",
+                        "private"
+                    ]
+                },
+                {
+                    "DaysOfWeek": [
+                        4
+                    ]
+                },
+                {
+                    "MessageOlderThan": [
+                        1
+                    ]
+                },
+                {
+                    "Notify": [
+                        {
+                            "Transport": [
+                                {
+                                    "By": [
+                                        "e-mail"
+                                    ]
+                                },
+                                {
+                                    "Destination": [
+                                        "1@mail"
+                                    ]
+                                },
+                                {
+                                    "CallMethod": [
+                                        "simultaneously"
+                                    ]
+                                },
+                                {
+                                    "ToAttach": [
+                                        true
+                                    ]
+                                },
+                                {
+                                    "Pause": [
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "ruleId": "wpkhNSAEz4kwtEyVXKlX2Qoy",
+            "ruleName": "Lydia Smith rule 4.90",
+            "userId": "mT24aj3XNiGD2CIYwBEzaPgn"
+        },
+        {
+            "number": 10,
+            "ownerType": "User",
+            "enabled": false,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_unread"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "private"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                }
+            ],
+            "ruleId": "d11TRzHX3sy9I4TxmzJXk28w",
+            "ruleName": "Alayna Hansen rule 4.52",
+            "userId": "jgXc6jweoEn7jGWLuHwObbR6"
+        },
+        {
+            "number": 11,
+            "ownerType": "User",
+            "enabled": true,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "NotifInterval": [
+                        {
+                            "Period": [
+                                12
+                            ]
+                        },
+                        {
+                            "StartFrom": [
+                                "19: 30"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_saved"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                },
+                {
+                    "WhenTimeOfDay": [
+                        "01: 00",
+                        "04: 50"
+                    ]
+                },
+                {
+                    "MessageMedia": [
+                        "fax"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "urgent",
+                        "private"
+                    ]
+                },
+                {
+                    "DaysOfWeek": [
+                        4
+                    ]
+                },
+                {
+                    "MessageOlderThan": [
+                        1
+                    ]
+                },
+                {
+                    "Notify": [
+                        {
+                            "Transport": [
+                                {
+                                    "By": [
+                                        "e-mail"
+                                    ]
+                                },
+                                {
+                                    "Destination": [
+                                        "1@mail"
+                                    ]
+                                },
+                                {
+                                    "CallMethod": [
+                                        "simultaneously"
+                                    ]
+                                },
+                                {
+                                    "ToAttach": [
+                                        true
+                                    ]
+                                },
+                                {
+                                    "Pause": [
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "ruleId": "sy2qnlFBYGWaWIJpPQiJ6PMw",
+            "ruleName": "Theresa Littel rule 3.97",
+            "userId": "klDLgoxPdDfKOpQmhckrnzfI"
+        },
+        {
+            "number": 12,
+            "ownerType": "User",
+            "enabled": false,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_unread"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "private"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                }
+            ],
+            "ruleId": "3Db6aQx2600TTaWnyGgT8dIS",
+            "ruleName": "Lourdes Tromp rule 2.42",
+            "userId": "dPGzf8vSCQrWxfje66YUYFxH"
+        },
+        {
+            "number": 13,
+            "ownerType": "User",
+            "enabled": false,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_unread"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "private"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                }
+            ],
+            "ruleId": "BhH9wAczUlqRzuHjeWDGo9h7",
+            "ruleName": "Milford Lowe rule 4.26",
+            "userId": "u9sF89t9wSGiKT4RrvIqaV6V"
+        },
+        {
+            "number": 14,
+            "ownerType": "User",
+            "enabled": false,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_unread"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "private"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                }
+            ],
+            "ruleId": "gU3V8YWxGyETJcgzdi3nPBDx",
+            "ruleName": "Devante Gerlach rule 2.60",
+            "userId": "tyAqCbmrOCQNoFCKlPNR5Jks"
+        },
+        {
+            "number": 15,
+            "ownerType": "User",
+            "enabled": true,
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "NotifInterval": [
+                        {
+                            "Period": [
+                                12
+                            ]
+                        },
+                        {
+                            "StartFrom": [
+                                "19: 30"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_saved"
+                    ]
+                },
+                {
+                    "MessageFrom": [
+                        "042"
+                    ]
+                },
+                {
+                    "WhenTimeOfDay": [
+                        "01: 00",
+                        "04: 50"
+                    ]
+                },
+                {
+                    "MessageMedia": [
+                        "fax"
+                    ]
+                },
+                {
+                    "MessageClass": [
+                        "normal",
+                        "urgent",
+                        "private"
+                    ]
+                },
+                {
+                    "DaysOfWeek": [
+                        4
+                    ]
+                },
+                {
+                    "MessageOlderThan": [
+                        1
+                    ]
+                },
+                {
+                    "Notify": [
+                        {
+                            "Transport": [
+                                {
+                                    "By": [
+                                        "e-mail"
+                                    ]
+                                },
+                                {
+                                    "Destination": [
+                                        "1@mail"
+                                    ]
+                                },
+                                {
+                                    "CallMethod": [
+                                        "simultaneously"
+                                    ]
+                                },
+                                {
+                                    "ToAttach": [
+                                        true
+                                    ]
+                                },
+                                {
+                                    "Pause": [
+                                        0
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "ruleId": "rJa0YhP3VNMgH278aBoYaAgX",
+            "ruleName": "Jaylen Leannon rule 1.51",
+            "userId": "8Vtdnv3IgOlIeAdYtCJOWcO8"
+        }
+    ],
+    "command": "get_vmnr_list",
+    "index": 0,
+    "success": true
+}

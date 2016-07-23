@@ -1,0 +1,14 @@
+.form-container(layout='row', layout-align='center center', flex, layout-fill)
+  form.md-whiteframe-4dp.login-form
+    md-content(layout='column', layout-padding, layout-fill)
+      label(for='user-name')
+        | User Name
+      input(ng-model='login.userModel.name', type='text', ng-class='{invalid: !login.validation.formValid}')#user-name
+      label(for='user-password')
+        | Password
+      input(ng-model='login.userModel.password', type='password', ng-class='{invalid: !login.validation.formValid}')#user-password
+      .error-message(ng-show='!login.validation.formValid')
+        span(ng-bind='login.validation.message')
+      button(ng-click='login.submitData()')
+        | Log In
+

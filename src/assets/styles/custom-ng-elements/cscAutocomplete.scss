@@ -1,0 +1,88 @@
+md-autocomplete.csc-autocomplete {
+    $height: 30px;
+    height: $height;
+
+    md-autocomplete-wrap {
+        height: $height;
+        border: 1px solid #d1d1d1;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: none;
+        input {
+            height: $height;
+            font: 400 13px/2 OpenSans;
+            line-height: $height;
+            padding: 0 10px;
+            color: #4a4a4a;
+        }
+        &.md-menu-showing {
+            border-color: #186ac9;
+        }
+        & > button {
+            display: none;
+        }
+    }
+    ::placeholder {
+        font: 400 13px/2 OpenSans;
+        color: #898996;
+    }
+    //&:after {
+    //    content: " ";
+    //    top: 50%;
+    //    right: 7px;
+    //    width: 0;
+    //    height: 0;
+    //    z-index: 100;
+    //    position: absolute;
+    //    border-style: solid;
+    //    border-width: 4px 3px 0 3px;
+    //    border-color: #4a4a4a transparent transparent transparent;
+    //}
+}
+
+.md-virtual-repeat-container {
+    background-color: #ffffff;
+    min-width: 246px !important;
+
+    .md-virtual-repeat-offsetter {
+        right: 10px;
+        margin-left: 10px;
+
+        .md-autocomplete-suggestions li {
+            color: #000000;
+            height: 35px;
+            font: 400 13px/2.7 OpenSans;
+            padding-right: 36px;
+
+            &:hover,
+            &.selected {
+                background-color: #c6d7eb;
+            }
+
+            .right-value{
+                right: 10px;
+                position: absolute;
+            }
+        }
+    }
+
+    .md-virtual-repeat-scroller {
+        &::-webkit-scrollbar-track {
+            width: 10px;
+            border-radius: 5px;
+            background-color: #f6f6f6;
+        }
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            width:6px;
+            background-color: #d8d8d8;
+            &:hover {
+                background-color: #c2c2c2;
+                cursor: pointer;
+            }
+        }
+    }
+}

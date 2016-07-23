@@ -1,0 +1,26 @@
+{
+    "vmnr_rules": [
+        {
+            "number": 0,
+            "ownerType": "User",
+            "rule": [
+                {
+                    "Enabled": [
+                        false
+                    ]
+                },
+                {
+                    "IfUnread": [
+                        "mark_unread"
+                    ]
+                }
+            ],
+            "ruleId": "",
+            "ruleName": "FN_1026 LN_1026 rule 1",
+            "userId": "43283551514895903"
+        }
+    ],
+    "command": "get_vmnr_list",
+    "index": 0,
+    "success": true
+}

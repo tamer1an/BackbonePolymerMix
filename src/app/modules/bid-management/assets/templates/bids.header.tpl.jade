@@ -1,0 +1,19 @@
+.bid-actions.md-toolbar-tools
+  md-button(ng-click='bidCtrl.createBid()', aria-label='create')
+    .bid-icons.create-bid
+    span(ng-bind='bidCtrl.t.bidActions.create')
+  md-button(ng-click='bidCtrl.openBid()', ng-if='bidCtrl.singleSelection()', aria-label='open')
+    .bid-icons.open-bid
+    span(ng-bind='bidCtrl.t.bidActions.open')
+  //- md-button(aria-label='add')
+  //-   .bid-icons.add-new-version
+  //-   span(ng-bind='bidCtrl.t.bidActions.add')
+  //- md-button(aria-label='clone')
+  //-   .bid-icons.clone
+  //-   span(ng-bind='bidCtrl.t.bidActions.clone')
+  //- md-button(aria-label='archive')
+  //-   .bid-icons.archive
+  //-   span(ng-bind='bidCtrl.t.bidActions.archive')
+  //- md-button(aria-label='delete')
+  //-   .bid-icons.delete-bid
+  //-   span(ng-bind='bidCtrl.t.bidActions.delete')

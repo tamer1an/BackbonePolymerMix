@@ -1,0 +1,140 @@
+#main-view {
+    &_content {
+        padding: 10px 21px;
+        h2 {
+            min-height: 30px;
+            margin-bottom: 22px;
+            font-size: 16px;
+            font-weight: 400;
+            display: flex;
+        }
+    }
+}
+
+v-pane-content .row {
+    padding: 0 20px;
+}
+
+.details-list {
+    min-width: 240px;
+    margin-left: 2%;
+    .list-row {
+        p{
+            height: 9px;
+            font-size: 13px;
+            &:first-of-type{
+                min-width: 105px;
+                margin-right: 20px;
+                text-align: right;
+                color: #A2A2A2;
+            }
+            &:nth-of-type(2){
+                min-width: 94px;
+                padding-right: 10px;
+                color: #4a4a4a;
+            }
+        }
+    }
+}
+.sub-accordion-container{
+    h3{
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+    .details-list{
+
+    }
+    v-pane-content .details-list{
+        margin: 0 50px 0 35px;
+    }
+    .list-row{
+        .country-code{
+            margin-left: 12px;
+        }
+    }
+}
+.bid-additional-info{
+    .details-list{
+        margin-left: 7%;
+        textarea{
+            width: 250px;
+            margin-top: 9px;
+            border: none;
+            font: 400 13px/1.35 OpenSans;
+            resize: none;
+            overflow: hidden;
+        }
+    }
+}
+
+#bids_edit_block {
+    .error-message {
+        padding: 5px;
+        border:1px solid red;
+        background-color: #FBB5B5;
+        width: 158px;
+        display: block;
+        color: red;
+        margin-top: -7px;
+        position: relative;
+        margin-left: 161px;
+    }
+
+    .error-message-details {
+        margin-top: 8px;
+    }
+
+    .error-message::before, .error-message::after {
+        content: '';
+        position: absolute;
+        left: 20px; top: -20px;
+        border: 10px solid transparent;
+        border-bottom: 10px solid red;
+    }
+    .error-message::after {
+        border-bottom: 10px solid #FBB5B5;
+        top: -19px;
+    }
+}
+
+#bids_edit_block {
+    input.text-field {
+        width: 220px;
+        height: 17px;
+        border-radius: 2px;
+        border: 1px solid #d1d1d1;
+        padding: 5px;
+        margin: 3px;
+    }
+
+    textarea {
+        width: 220px;
+        height: 84px;
+        border-radius: 2px;
+        border: 1px solid #d1d1d1;
+        padding: 5px;
+        resize: none;
+    }
+
+    .add-country {
+        height: 100px;
+        .add-country-button {
+            width: 232px;
+            border-radius: 2px;
+            border: 1px solid #186ac9;
+            color: #186ac9;
+            margin-left: 3px;
+            background-color: white;
+        }
+    }
+
+    .delete-country {
+        .delete-country-button {
+            width: 28px;
+            height: 28px;
+            color: #186ac9;
+            background-color: white;
+        }
+    }
+
+}

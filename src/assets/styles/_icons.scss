@@ -1,0 +1,31 @@
+
+.bid-icons {
+    float: left;
+    display: inline-block;
+    padding: 4px 0 16px 25px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #444;
+    background-image: url($bid-icons);
+    background-repeat: no-repeat;
+}
+
+.bid-icons.create-bid {background-position: 0 0;}
+.bid-icons.open-bid {background-position: 0 -24px;}
+.bid-icons.add-new-version {background-position: 0 -48px;}
+.bid-icons.clone {background-position: 0 -72px;}
+.bid-icons.archive {background-position: 0 -96px;}
+.bid-icons.delete-bid {background-position: 0 -120px;}
+.bid-icons.all-levels {background-position: 0 -144px;}
+.bid-icons.add-subfolder {background-position: 0 -168px;}
+.bid-icons.copy-to {background-position: 0 -192px;}
+.bid-icons.edit {background-position: 0 -216px;}
+.bid-icons.move-to {background-position: 0 -240px;}
+.bid-icons.find {background-position: 0 -264px;}
+.bid-icons.arrow-up {background-position: 0 -385px;}
+.bid-icons.arrow-down {background-position: 0 -412px;}
+.bid-icons.arrow-left {background-position: -7px -437px;}
+.bid-icons.big-x {background-position: 0 -456px;}
+.bid-icons.x {background-position: 0 -480px;}
+.bid-icons.small-arrow-down {background-position: 0 -504px;}
+.bid-icons.settings { background-position: 0 -312px; }

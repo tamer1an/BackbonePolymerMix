@@ -1,0 +1,100 @@
+{
+    "number": 15,
+    "ownerType": "User",
+    "enabled": true,
+    "rule": [
+        {
+            "Enabled": [
+                false
+            ]
+        },
+        {
+            "NotifInterval": [
+                {
+                    "Period": [
+                        12
+                    ]
+                },
+                {
+                    "StartFrom": [
+                        "19: 30"
+                    ]
+                }
+            ]
+        },
+        {
+            "IfUnread": [
+                "mark_saved"
+            ]
+        },
+        {
+            "MessageFrom": [
+                "042"
+            ]
+        },
+        {
+            "WhenTimeOfDay": [
+                "01: 00",
+                "04: 50"
+            ]
+        },
+        {
+            "MessageMedia": [
+                "fax"
+            ]
+        },
+        {
+            "MessageClass": [
+                "normal",
+                "urgent",
+                "private"
+            ]
+        },
+        {
+            "DaysOfWeek": [
+                4
+            ]
+        },
+        {
+            "MessageOlderThan": [
+                1
+            ]
+        },
+        {
+            "Notify": [
+                {
+                    "Transport": [
+                        {
+                            "By": [
+                                "e-mail"
+                            ]
+                        },
+                        {
+                            "Destination": [
+                                "1@mail"
+                            ]
+                        },
+                        {
+                            "CallMethod": [
+                                "simultaneously"
+                            ]
+                        },
+                        {
+                            "ToAttach": [
+                                true
+                            ]
+                        },
+                        {
+                            "Pause": [
+                                0
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "ruleId": "rJa0YhP3VNMgH278aBoYaAgX",
+    "ruleName": "Jaylen Leannon rule 1.51",
+    "userId": "8Vtdnv3IgOlIeAdYtCJOWcO8"
+}

@@ -1,0 +1,15 @@
+#header .bid-actions {
+  height: 30px;
+  background: #b2c8e3;
+  button.md-button {
+    color: #074185;
+    line-height: 1.85;
+    text-transform: capitalize;
+    &:not(:first-of-type) {
+      margin-left: 3px;
+    }
+    & .bid-icons{
+        margin: 0;
+    }
+  }
+}
