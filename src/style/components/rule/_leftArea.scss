@@ -1,0 +1,20 @@
+&_leftArea {
+  min-width: 305px;
+  background: $color-corporate-bg-grey;
+  height: 1060px;
+  //height: 100%;
+  max-height: none!important;
+
+  > md-checkbox {
+    margin-bottom: 6px;
+  }
+
+  > md-radio-group md-radio-button {
+    margin-top: 0;
+    margin-bottom: 6px;
+  }
+
+  label, .md-label {
+    font-size: 14px;
+  }
+}

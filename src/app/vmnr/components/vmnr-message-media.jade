@@ -1,0 +1,13 @@
+td
+    span and
+td
+    h4(ng-bind='condition.label')
+td
+    md-input-container
+        label(ng-bind='condition.title')
+        md-select(aria-label='select to attach', ng-model='ruleObj.MessageMedia[0]')
+            md-option(value='voice') voice
+            md-option(value='fax') fax
+td
+    md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditionsSwitch(conditions[0])')
+        include ../../../assets/icons/svg/delete

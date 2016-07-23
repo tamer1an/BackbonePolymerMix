@@ -1,0 +1,26 @@
+td
+    span and
+td
+    h4(ng-bind='condition.label')
+td
+    md-menu
+        md-button.md-hue-2(
+            aria-label='Open demo menu',
+            ng-click='$mdOpenMenu($event)'
+            ng-bind='msgWeekDays.btnTitle()'
+        )
+        md-menu-content.md-padding(style='max-height:450px!important', width='2')
+            md-menu-item(
+                    ng-repeat='day in msgWeekDays.weekDays',
+                    style='font-size:80%!important'
+                )
+                md-checkbox.md-hue-3(
+                    aria-label='DayOfWeek',
+                    title='{{day.title}}',
+                    ng-checked='day.selected',
+                    ng-click='toggleConditions(day,"WeekDays")'
+                )
+                    label(ng-bind='day.label')
+td
+    md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditionsSwitch(conditions[4])')
+        include ../../../assets/icons/svg/delete

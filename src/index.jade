@@ -1,0 +1,85 @@
+extends skel
+
+////////////////////////////// HEADER
+block Header
+
+    md-toolbar.UP_head(md-theme='zultys-dark',layout='row',ng-style="{visibility: User.getSession().is_logged?'visible':'hidden'}")
+        //md-button.UP_head_hamburger.md-primary(
+        //    title='Open sidebar',
+        //    ng-click='toggleLeft()',
+        //    hide-gt-md
+        //) ≡
+        //.UP_head_logoText(hide-md,hide-sm,hide-xs) Zultys
+        .UP_head_logo(title='© Copyright 2015 Zultys All Rights Reserved')
+            img(src='assets/img/logo.png')
+        .md-toolbar-tools(flex)
+            h1.UP_head_title.md-flex
+                div(style='margin-right:5px;' class='mdi {{ Settings.page.icon }}')
+                | {{ Settings.page.title }}
+            .UP-clear(flex)
+            // layout-fill,
+            div.mt5px(
+                layout='column',
+                ng-if='User.getSession().is_logged'
+            )
+                p.UP_head_userTitle(
+                    hide-xs,
+                    hide-sm,
+                    title='You are logged in as, {{ User.fullName }}') Welcome, {{ User.fullName }}
+                md-button.UP_head_logout(
+                    title='Stop current session',
+                    ng-click='logout()'
+                )
+                    | Logout
+                    .mdi.mdi-logout
+
+            .UP_head_avatar(ng-if='User.getSession().is_logged', title='Press to change your avatar')
+                include ./assets/icons/svg/avatar
+
+
+/////////////////////////// LEFT SIDENAV
+block Sidenav
+    //$mdMedia("gt-md")
+    md-sidenav.UP_sidebar.md-sidenav-left.md-whiteframe-z2.md-hue-2(
+        md-component-id='left',
+        md-is-locked-open='true',
+        ng-if='User.getSession().is_logged'
+    )
+        md-content(ng-controller='LeftCtrl', md-theme='zultys-dark')
+            //md-button.UP_sidebar_close.md-primary(ng-click='close()', hide-gt-md, style='color: #FAFAFA;') x
+            md-list.UP_sidebar_list(ng-cloak)
+                //md-subheader.md-no-sticky Personal settings
+                md-list-item(
+                    aria-label='menu item',
+                    ng-href='{{menu.prefix+item.href}}',
+                    ng-style='{"background":loc.url()==item.href?"#477454":"none","border-left": loc.url()==item.href?"4px solid #5EB53E":"4px solid #384962" }',
+                    ng-repeat='item in menu.items'
+                )
+                    div(class='UP_sidebar_list_item-icon {{menu.icon_prefix}} mdi-{{item.icon}}')
+                    | &nbsp
+                    span(ng-bind='item.title', title='{{item.desc}}')
+
+
+//////////////////////////////// BODY
+block Body
+
+    md-content(layout='row', flex=100, layout-fill)
+        block Sidenav
+
+        md-content.UP_Content(flex=100, layout-padding, ng-class='{login: !User.getSession().is_logged}')
+            .UP_uiView(ui-view, layout-fill, flex=100, ng-cloak)
+
+            //.UP_BASE_lAYOUT(layout='column',  layout-align='top center', layout-fill, flex=100)
+                .UP_uiView(ui-view, layout-fill, flex=100)
+
+            //.UP-clear(flex)
+
+
+/////////////////////////////// FOOTER
+block Footer
+
+    //footer
+        md-toolbar.UP_footer
+            .md-toolbar-tools
+                div(flex)
+                .copyright © Copyright 2015 Zultys All Rights Reserved

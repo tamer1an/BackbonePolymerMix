@@ -1,0 +1,44 @@
+md-dialog(aria-label='{{rule.ruleName}}', ng-cloak).rule-Dialog
+    //md-is-locked-open='true'
+    form.rule-Dialog_form
+        md-toolbar.md-hue-2
+            .md-toolbar-tools
+                h4 Name:
+                md-input-container.rule-Dialog_form_ruleName(flex=50)
+                    input(
+                        aria-label='input name',
+                        ng-model='rule.ruleName',
+                        md-autofocus,
+                        title='Rule name'
+                    )
+                .UP-clear(flex)
+                md-button.md-primary.md-raised(
+                        ng-click='save(rule)',
+                        style='color:white',
+                        title='Save rule'
+                    ) Save
+                md-button.md-primary.md-raised.mr20px(
+                        ng-click='cancel("cancel")',
+                        style='color:white',
+                        title='Cancel editing mode'
+                    ) Cancel
+
+        md-dialog-content.md-dialog-content(layout='row')
+            include ./chr-triggers-conditions
+
+            .rule-Dialog_form_rightArea.md-padding(layout='column')
+                h1 Rule Description
+                h6 Click on highlighted value to edit it
+
+                fieldset.rule-Dialog_form_description
+                    .rule-Dialog_form_description_chr(layout='column')
+                        include ./chr-events
+
+                    .rule-Dialog_form_description_chr(layout='column')
+                        include ./chr-conditions
+
+                fieldset.rule-Dialog_form_description
+
+                    .rule-Dialog_form_description_chr(layout='column')
+                        h2(style='margin-top:15px') do next &nbsp
+                        include ./chr-actions

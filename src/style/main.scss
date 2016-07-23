@@ -1,0 +1,117 @@
+@import "../../vendor/angular-material/angular-material.scss";
+@import "theme/variables";
+@import "theme/fonts";
+
+@mixin MarginPadding($val) {
+  margin: $val;
+  padding: $val;
+}
+
+body {
+    background: $color-corporate-bg-darkgrey;
+
+    &.login{
+      background: $color-corporate-bg-Blue;
+    }
+
+  > div.md-select-menu-container{
+    z-index: 10000000;
+
+    > md-backdrop.md-menu-backdrop.md-click-catcher.ng-scope.md-zultys-theme{
+      visibility: hidden;
+    }
+  }
+}
+
+[ng-model="ruleObj.Conditions.CallFrom"] {
+  .md-chips{
+    font-size: 13px!important;
+  }
+}
+
+.UP {
+  width: 1024px!important;
+  min-width: 1024px!important;
+  max-width: 1024px!important;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+
+  &.login{
+    border-right: 1px solid #323208;
+    border-left: 1px solid #2F3C50;
+  }
+
+  &_Content {
+    &.login {
+      background:  $color-corporate-bg-Blue;
+    }
+
+     > .md-subheader-wrapper{
+       padding: 0!important;
+     }
+  }
+
+  &_Content,&_BASE_lAYOUT {
+    @include MarginPadding(0);
+  }
+
+  @import "app/header";
+
+  @import "app/sidebar";
+
+  @import "app/view";
+
+  @import "app/footer";
+
+  @import "components/_login";
+
+}
+
+@import "components/rule/_rule";
+@import "components/addressBook";
+
+
+.rule_addNew + .md-scroll-mask{
+  z-index: 0!important;
+}
+
+.md-virtual-repeat-container.md-autocomplete-suggestions-container{
+  z-index: 555555555555555555!important;
+  width: 350px;
+}
+
+.chipsdemoContactChips md-content.autocomplete {
+  min-height: 250px; }
+.chipsdemoContactChips md-content.autocomplete input {
+  min-width: 400px; }
+.chipsdemoContactChips .md-item-text.compact {
+  padding-top: 8px;
+  padding-bottom: 8px; }
+.chipsdemoContactChips .contact-item {
+  box-sizing: border-box; }
+.chipsdemoContactChips .contact-item.selected {
+  opacity: 0.5; }
+.chipsdemoContactChips .contact-item.selected h3 {
+  opacity: 0.5; }
+.chipsdemoContactChips .contact-item .md-list-item-text {
+  padding: 14px 0;
+  max-width: 190px; }
+.chipsdemoContactChips .contact-item .md-list-item-text h3 {
+  margin: 0 !important;
+  padding: 0;
+  line-height: 1.2em !important; }
+.chipsdemoContactChips .contact-item .md-list-item-text h3, .chipsdemoContactChips .contact-item .md-list-item-text p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+@media screen and (min-width: 960px) {
+  .chipsdemoContactChips .contact-item {
+    float: left;
+    width: 33%; } }
+.chipsdemoContactChips md-contact-chips {
+  margin-bottom: 10px; }
+.chipsdemoContactChips .md-chips {
+  padding: 5px 0 8px; }
+.chipsdemoContactChips .fixedRows {
+  height: 250px;
+  overflow: hidden; }

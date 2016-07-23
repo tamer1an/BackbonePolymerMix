@@ -1,0 +1,48 @@
+&_uiView{
+  .addressBook {
+    .md-subheader-inner{
+      padding: 0!important;
+    }
+  }
+
+  @include MarginPadding(0);
+  min-width: 350px;
+  width: 100%;
+
+  md-backdrop.md-opaque.md-zultys-theme{
+    display: none!important;
+  }
+
+  @include mqSet(s-screen) {
+    min-width: 0;
+  }
+
+  > .md-dialog-container{
+    //height: 100%;
+
+    padding: 0;
+    overflow-x: hidden;
+    top: 0 !important;
+    height: 100% !important;
+  }
+
+
+  &_body{
+    margin-top: 15px;
+
+    > button{
+      > .md-list-item-inner{
+
+        @include mqSet(b-screen) {
+          width:70%;
+          > p{
+            height: 35px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: normal;
+          }
+        }
+      }
+    }
+  }
+}

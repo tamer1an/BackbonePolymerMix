@@ -1,0 +1,52 @@
+.rule {
+  padding-left: 30px;
+  min-height: 30px;
+  height: 30px;
+  font-size: 14px;
+
+  &:nth-child(even) {
+    background: $color-corporate-bg-lightgrey;
+  }
+
+  &_addNew {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 180%;
+    color: $color-corporate-bg-white!important;
+  }
+
+  &_name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+
+    + .md-button, + .md-button + .md-button {
+      @include MarginPadding(0);
+      min-width: 30px;
+      margin-right: 67px;
+    }
+
+    + .md-button {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+  }
+
+  &_short_description {
+    color: $color-corporate-font-darkgrey;
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+  }
+
+  @import "ruleDialog";
+
+  md-list-item > p {
+    margin: 9px;
+    overflow: hidden;
+    height: 15px;
+    text-overflow: ellipsis;
+  }
+}

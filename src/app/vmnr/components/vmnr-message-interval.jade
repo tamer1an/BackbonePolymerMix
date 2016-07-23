@@ -1,0 +1,30 @@
+td
+    span and
+td
+    h4(ng-bind='condition.label')
+td
+    md-menu
+        md-button.md-hue-2(
+            aria-label='Open demo menu',
+            ng-click='$mdOpenMenu($event)'
+        ) {{ruleObj.NotifInterval[0].Period[0]}}hours, starting from {{ruleObj.NotifInterval[1].StartFrom[0]}}
+        md-menu-content.md-padding(width='1')
+
+            md-menu-item
+                md-input-container
+                    label(ng-bind='condition.title')
+                    md-select(aria-label='select to attach', ng-model='ruleObj.NotifInterval[0].Period[0]')
+                        md-option(value='1') 1 hour
+                        md-option(value='2') 2 hours
+                        md-option(value='3') 3 hours
+                        md-option(value='4') 4 hours
+                        md-option(value='5') 5 hours
+                        md-option(value='12') 12 hours
+                        md-option(value='24') 24 hours
+
+                md-input-container
+                    label FORM:
+                    input(aria-label='input destination', ng-model='ruleObj.NotifInterval[1].StartFrom[0]', type='text', min=0)
+td
+    //md-button.delete-btn.md-warn(aria-label='remove item', ng-click='') x
+

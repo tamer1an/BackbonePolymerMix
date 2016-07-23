@@ -1,0 +1,183 @@
+div.rule-Dialog_form_description_chr_findMe(ng-switch-when="FindMe")
+    p Find me:
+    div
+        span Try
+        md-button.md-raised.md-primary.md-hue-1(
+            aria-label='any internal',
+            ng-disabled='ruleWeakMap.get(ruleObj.Actions.FindMe).action.tryMap.length >= 4',
+            ng-click='addTry(ruleWeakMap.get(ruleObj.Actions.FindMe),getDefaultTry())'
+            style='color:white!important;width: 160px;'
+        ) Add more contacts
+    div(
+        ng-init='ruleWeakMap.get(ruleObj.Actions.FindMe).action.all',
+        ng-repeat='(key, tryRule) in ruleWeakMap.get(ruleObj.Actions.FindMe).action.try'
+    )
+        md-menu
+            md-button.md-hue-2(
+                aria-label='Open demo menu',
+                ng-click='$mdOpenMenu($event)',
+                title='{{ruleWeakMap.get(ruleObj.Actions.FindMe).action.allItems[key].length>1?ruleWeakMap.get(ruleObj.Actions.FindMe).action.allItems[key].reduce(findMeTitile):ruleWeakMap.get(ruleObj.Actions.FindMe).action.allItems[key][0].businessPhone}}',
+                ng-bind='ruleWeakMap.get(ruleObj.Actions.FindMe).action.allItems[key].length>1?ruleWeakMap.get(ruleObj.Actions.FindMe).action.allItems[key].reduce(findMeTitile):ruleWeakMap.get(ruleObj.Actions.FindMe).action.allItems[key][0].businessPhone')
+            md-menu-content.md-padding(
+                width='5',
+                style='height: 296px;width: 419px; max-width:430px;'
+            )
+                md-menu-item(style='font-size: 86%;')
+                    div
+                        md-checkbox.md-hue-3(
+                            aria-label='any internal',
+                            ng-checked='this.ruleWeakMap.get(this.ruleObj.Actions.FindMe).action.tryMap[key].Assigned.indexOf("bound")!=-1',
+                            ng-click='findAnyCheck("bound",this.ruleWeakMap.get(this.ruleObj.Actions.FindMe).action.tryMap[key].Assigned.indexOf("bound")!=-1,this.ruleWeakMap.get(this.ruleObj.Actions.FindMe),key)'
+                        )
+                            label Bound
+                        md-checkbox.md-hue-3(
+                            aria-label='any internal',
+                            ng-checked='this.ruleWeakMap.get(this.ruleObj.Actions.FindMe).action.tryMap[key].Assigned.indexOf("home")!=-1',
+                            ng-click='findAnyCheck("home",this.ruleWeakMap.get(this.ruleObj.Actions.FindMe).action.tryMap[key].Assigned.indexOf("home")!=-1,this.ruleWeakMap.get(this.ruleObj.Actions.FindMe),key)'
+                        )
+                            label Home
+                    div
+                        md-checkbox.md-hue-3(
+                            aria-label='any internal',
+                            ng-checked='this.ruleWeakMap.get(this.ruleObj.Actions.FindMe).action.tryMap[key].Assigned.indexOf("cell")!=-1',
+                            ng-click='findAnyCheck("cell",this.ruleWeakMap.get(this.ruleObj.Actions.FindMe).action.tryMap[key].Assigned.indexOf("cell")!=-1,this.ruleWeakMap.get(this.ruleObj.Actions.FindMe),key)'
+                        )
+                            label Mobile
+                        md-checkbox.md-hue-3(
+                            aria-label='any internal',
+                            ng-checked='this.ruleWeakMap.get(this.ruleObj.Actions.FindMe).action.tryMap[key].Assigned.indexOf("assigned")!=-1',
+                            ng-click='findAnyCheck("assigned",this.ruleWeakMap.get(this.ruleObj.Actions.FindMe).action.tryMap[key].Assigned.indexOf("assigned")!=-1,this.ruleWeakMap.get(this.ruleObj.Actions.FindMe),key)'
+                        )
+                            label All my
+                    div
+                        md-checkbox.md-hue-3(
+                            aria-label='any internal',
+                            ng-checked='this.ruleWeakMap.get(this.ruleObj.Actions.FindMe).action.tryMap[key].All[0]',
+                            ng-click='findAnyCheck("all",this.ruleWeakMap.get(this.ruleObj.Actions.FindMe).action.tryMap[key].All[0],this.ruleWeakMap.get(this.ruleObj.Actions.FindMe),key)'
+                        )
+                            label All
+
+                md-menu-item(style='transform: translateY(23px);')
+                    div(layout='column', ng-cloak='')
+                        md-content.md-padding.autocomplete(layout='column')
+                            md-contact-chips(
+                                ng-model="ruleWeakMap.get(ruleObj.Actions.FindMe).action.allItems[key]",
+                                md-contacts='querySearch($query)',
+                                md-contact-name='businessPhone',
+                                md-contact-image='image',
+                                md-contact-email='lastName',
+                                md-require-match='true',
+                                secondary-placeholder="add number or id" ,
+                                md-highlight-flags='i',
+                                filter-selected='filterSelected',
+                                placeholder='To'
+                            )
+
+        md-input-container(
+            flex=20,
+            title='Pause',
+            style='transform: translateY(-13px); margin-right: 21px;'
+        )
+            md-select(
+                aria-label='select pause',
+                ng-model='tryRule.Try[1].For[0]'
+            )
+                md-option(value='0') 0 sec
+                md-option(value='7') 7 sec
+                md-option(value='10') 10 sec
+                md-option(value='15') 15 sec
+                md-option(value='20') 20 sec
+                md-option(value='30') 30 sec
+                md-option(value='45') 45 sec
+                md-option(value='60') 60 sec
+
+        md-menu
+            md-button(
+                aria-label='Open demo menu',
+                ng-click='$mdOpenMenu($event)',
+                ng-bind='tryRule.Try[2].Ask[0]?"immediately":"ask befores"'
+            )
+            md-menu-content.md-padding(width='2')
+                md-menu-item
+                    md-button(ng-click='tryRule.Try[2].Ask[0] = 1') immediately
+                md-menu-item
+                    md-button(ng-click='tryRule.Try[2].Ask[0] = 0') ask before
+
+        md-button.delete-btn.md-warn(
+            aria-label='remove item',
+            ng-click='deleteTry(key, tryRule, ruleWeakMap.get(ruleObj.Actions.FindMe))',
+            style='color:#FF5722!important;margin-left: 6px;'
+        )
+            include ../../../assets/icons/svg/delete
+
+    .UP-clear(flex,style='margin-bottom: 15px;')
+
+    div
+        span if unsuccessfull
+        md-checkbox.md-hue-3(
+            aria-label='any internal',
+            ng-checked='ruleObj.Actions.FindMe.indexOf("Updates") !== -1',
+            ng-click='toggleFindMeUpdates(ruleObj.Actions.FindMe)',
+            style='transform: translateX(15px);'
+        )
+            label Provide updates to user
+
+    md-menu
+        md-button.md-hue-2(
+            aria-label='Open demo menu',
+            style='width: 156px;',
+            ng-click='$mdOpenMenu($event)',
+            ng-bind='ruleWeakMap.get(ruleObj.Actions.FindMe).action.titleBad'
+        )
+        md-menu-content.md-padding(
+            width='3'
+        )
+            md-menu-item
+                md-button(
+                    ng-click='selectFindMeBad(ruleWeakMap.get(ruleObj.Actions.FindMe),"ForwardTo")',
+                    aria-label='Open demo menu',
+                ) ForwardTo
+            md-menu-item
+                md-button(
+                    ng-click='selectFindMeBad(ruleWeakMap.get(ruleObj.Actions.FindMe),"ForwardToVM")',
+                    aria-label='Open demo menu',
+                ) ForwardToVm
+            md-menu-item
+                md-button(
+                    ng-click='selectFindMeBad(ruleWeakMap.get(ruleObj.Actions.FindMe),"Reject")',
+                    aria-label='Open demo menu',
+                ) Reject
+
+    md-input-container.rule-Dialog_form_description_chr_findMe_badRule
+        input(
+            aria-label='forwardto',
+            ng-hide='ruleWeakMap.get(ruleObj.Actions.FindMe).action.bad[0].Bad[0].ForwardToVM',
+            ng-readonly='ruleWeakMap.get(ruleObj.Actions.FindMe).action.badInputModel.length == 0',
+            ng-model='ruleWeakMap.get(ruleObj.Actions.FindMe).action.badInputModel[0]'
+        )
+
+    md-input-container(
+        ng-show='ruleWeakMap.get(ruleObj.Actions.FindMe).action.bad[0].Bad[0].ForwardToVM'
+        flex=20,
+        title='Select greeting',
+        style='transform: translate(-165px, -13px);'
+    )
+        md-select(
+            aria-label='select pause',
+            ng-model='ruleWeakMap.get(ruleObj.Actions.FindMe).action.greeting',
+            ng-change="onFindMeToVMChangeGreet(ruleWeakMap.get(ruleObj.Actions.FindMe))"
+        )
+            md-option(value='-3') No Greeting
+            md-option(value='-2') System Greeting
+            md-option(value='0')  Active greeting
+            md-option(value='1') Greeting 1
+            md-option(value='2') Greeting 2
+            md-option(value='3') Greeting 3
+            md-option(value='4') Greeting 4
+
+    md-switch.md-warn.md-hue-4(
+        ng-model='ruleWeakMap.get(ruleObj.Actions.FindMe).action.greetingSwitch',
+        ng-show='ruleWeakMap.get(ruleObj.Actions.FindMe).action.bad[0].Bad[0].ForwardToVM',
+        ng-change="onFindMeToVMChange(ruleWeakMap.get(ruleObj.Actions.FindMe))"
+        style='transform: translateX(41px);'
+    ) {{ruleWeakMap.get(ruleObj.Actions.FindMe).action.greetingSwitch?'Disconnect after greeting':'Record message'}}

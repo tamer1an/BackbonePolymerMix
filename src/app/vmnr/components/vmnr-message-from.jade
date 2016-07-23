@@ -1,0 +1,13 @@
+td
+    span and
+td
+    h4(ng-bind='condition.label')
+td
+    md-input-container(style='min-width:50px')
+        label(ng-bind='condition.title')
+        input(aria-label='input destination', ng-model='ruleObj.MessageFrom[0]')
+td
+    md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditionsSwitch(conditions[1])')
+        include ../../../assets/icons/svg/delete
+
+

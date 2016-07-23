@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org",
+  "type": "object",
+  "properties": {
+    "command": {
+      "type": "string"
+    },
+    "index": {
+      "type": "string"
+    },
+    "read_commands": {
+      "type":"array"
+    },
+    "write_commands" :{
+      "type":"array"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.addressBook {
+  font-size: 14px;
+
+  &_subheader {
+    width: 100%;
+  }
+
+  &_Filter {
+    margin: 12px 0 2px 0;
+  }
+
+  .mdi-account-search {
+    padding: 0 12px 0 15px;
+  }
+
+  &_item {
+    padding-left: 45px;
+    min-height: 35px;
+    height: 35px;
+    max-height: 35px;
+
+    .mdi-account-circle{
+      margin-right: 15px;
+      font-size: 200%;
+      color: lightgray;
+    }
+
+    &_blank{
+      margin-right: 15px;
+      font-size: 200%;
+      color: lightgray;
+    }
+
+    &:nth-child(even) {
+      background: $color-corporate-bg-lightgrey;
+    }
+  }
+}

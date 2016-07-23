@@ -1,0 +1,75 @@
+md-dialog.rule-Dialog(aria-label='{{rule.ruleName}}', ng-cloak)
+    form.rule-Dialog_form
+        md-toolbar.md-hue-2
+            .md-toolbar-tools
+                h4 Name:
+                md-input-container.rule-Dialog_form_ruleName(flex=50)
+                    input(
+                        aria-label='input name',
+                        ng-model='rule.ruleName',
+                        md-autofocus,
+                        title='Rule name'
+                    )
+                .UP-clear(flex)
+                md-button.md-primary.md-raised(
+                        ng-click='save(rule)',
+                        style='color:white',
+                        title='Save rule'
+                    ) Save
+                //md-warn md-hue-4
+                md-button.md-primary.md-raised.mr20px(
+                        ng-click='cancel("cancel")',
+                        style='color:white',
+                        title='Cancel editing mode'
+                    ) Cancel
+
+        md-dialog-content.md-dialog-content(layout='row')
+            include ./vmnr-triggers-conditions
+
+            .rule-Dialog_form_rightArea.md-padding(layout='column')
+                h1 Rule Description
+                h6 Click on highlighted value to edit it
+
+                fieldset.rule-Dialog_form_description
+                    .rule-Dialog_form_description_chr(layout='column')
+                        h2(style='margin-top:35px') notify me &nbsp
+
+                        div(layout='column')
+                            fieldset.rule-Dialog_form_notifStatement
+
+                                div(ng-if='ruleObj.Notify.items.length > 0 && interval.optionState!==true')
+                                    .rule-Dialog_form_notifStatement_item(
+                                        layout='row',
+                                        flex,
+                                        ng-repeat='($index, notifRule) in ruleObj.Notify.items track by $index',
+                                        ng-switch='notifRule.Transport[0].By[0]'
+                                    )
+                                        include ./notif-email
+                                        include ./notif-call
+
+                                div(ng-if='ruleObj.Notify.items.length > 0 && interval.optionState===true')
+                                    .rule-Dialog_form_notifStatement_item(
+                                        layout='row',
+                                        flex,
+                                        ng-init='notifRule = ruleObj.Notify.items[0]',
+                                        ng-switch='notifRule.Transport[0].By[0]'
+                                    )
+                                        include ./notif-email
+
+                        include ./vmnr-addNewNotif
+
+                        .rule-Dialog_form_description_stillUnread(layout='row')
+                            h2 if still unread
+                            md-input-container
+                                label(ng-bind='condition.title')
+                                md-select(aria-label='select to attach', ng-model='ruleObj.IfUnread[0]')
+                                    md-option(value='mark_unread') mark unread
+                                    md-option(value='mark_saved') mark saved
+                                    md-option(value='delete') delete
+
+                        h2(style='margin-top:35px') apply this rule when &nbsp
+                        table.rule-Dialog_form_rightArea_conditions
+                            tbody
+                                include ./vmnr-description
+
+        //include ./dialog-actions

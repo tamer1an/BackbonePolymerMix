@@ -1,0 +1,35 @@
+div
+    md-list(layout='row', layout-wrap, ng-cloak)
+        .UP-clear(flex=100)
+        md-list-item.rule(
+            ng-hide="user.chr.editState",
+            aria-label='navigat to',
+            ng-repeat='(idx,rule) in user.chr.rules',
+            flex=100,
+            title='Edit this rule'
+        )
+            p.rule_name(
+                flex=20,
+                ng-bind='(idx+1)+":"+user.chr.RAW_rules[idx].ruleName'
+            )
+            md-button(
+                title='Edit this rule',
+                ng-click='navigateTo(rule, $event, user.chr.RAW_rules[idx])',
+                aria-label='Edit'
+            )
+                .mdi.mdi-pencil
+            md-button.md-warn(
+                title='Delete this rule',
+                ng-click='deleteRule(rule, user, user.chr.RAW_rules[idx])',
+                aria-label='Del'
+            )
+                .mdi.mdi-delete
+
+            p.rule_short_description(flex,ng-bind='createDescription(rule)')
+
+md-button.md-primary.md-fab.rule_addNew(
+        aria-label='Add new rule',
+        ng-click='newRule(user)',
+        title='Add new rule'
+    )
+    .mdi.mdi-plus

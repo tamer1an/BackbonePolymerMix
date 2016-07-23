@@ -1,0 +1,23 @@
+td
+    span and
+td
+    h4(ng-bind='condition.label')
+td
+    md-menu
+        md-button.md-hue-2(
+            aria-label='Open demo menu',
+            ng-click='$mdOpenMenu($event)',
+            ng-bind='presence.btnTitle()'
+        )
+        md-menu-content.md-padding(width='3')
+            md-menu-item(ng-repeat='class in presence.classes')
+                md-checkbox.md-hue-3(
+                    aria-label='presence',
+                    title='{{class.title}}',
+                    ng-checked='class.selected',
+                    ng-click='toggleConditions(class,"Presence")'
+                )
+                    label(ng-bind='class.label')
+td
+    md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditionsSwitch(conditions[0])')
+        include ../../../assets/icons/svg/delete

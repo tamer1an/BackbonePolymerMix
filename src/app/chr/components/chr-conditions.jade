@@ -1,0 +1,12 @@
+h2(style='margin-top:15px') and when: &nbsp
+
+table(style='width:100%;')
+    thead
+    tbody
+        tr.rule-Dialog_form_condition(
+            ng-repeat='condition in conditions',
+            ng-if='condition.selected',
+            ng-include='["app/chr/components/chr-",condition.url,".html"].join("")'
+        )
+
+

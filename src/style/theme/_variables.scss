@@ -1,0 +1,93 @@
+// MATERIAL ICONS:
+$mdi-filename:         "materialdesignicons";
+$mdi-font-name:        "Material Design Icons";
+$mdi-font-family:      "materialdesignicons";
+$mdi-font-weight:      "regular";
+$mdi-font-path:        "../vendor/mdi/fonts" !default;
+$mdi-font-size-base:   24px !default;
+$mdi-css-prefix:       mdi !default;
+$mdi-version:          "1.4.57" !default;
+
+@import "../../../vendor/mdi/scss/path";
+@import "../../../vendor/mdi/scss/core";
+@import "../../../vendor/mdi/scss/icons";
+@import "../../../vendor/mdi/scss/extras";
+
+// FONTS
+$OpenSansPath: "../../vendor/open-sans-fontface/fonts" !default;
+$OpenSansVersion: "1.1.0" !default;
+
+// APP
+$dialog-space : 10;
+
+$color-mail: #FFFCF0;
+$color-phone: #F5FFF8;
+
+$color-corporate-font-grey: #C6C9CC;
+$color-corporate-font-darkgrey: #7F7F7F;
+$color-corporate-font-doubleblue: #1E90FF;
+$color-corporate-font-dodgerblue: dodgerblue;
+
+$color-corporate-bg-Blue: #384962; //#384A62;
+$color-corporate-bg-blue: #384962;
+$color-corporate-bg-darkblue: #28394C;
+
+$color-corporate-bg-grey: #EDEDED;
+$color-corporate-bg-lightgrey: #F5F5F5;
+$color-corporate-bg-darkgrey: #505459;
+
+$color-corporate-bg-white: white;
+
+
+//grey #B3B3B3;
+
+.mr20px{
+  margin-right: 20px;
+}
+.pl10px{
+  padding-left: 10px;
+}
+.pt10px{
+  padding-top: 10px;
+}
+.w100pc{
+  width: 100%;
+}
+.m0{
+  margin: 0;
+}
+.mt5px {
+  margin-top: 5px;
+}
+.mt10px {
+  margin-top: 10px;
+}
+.mt15px {
+  margin-top: 15px;
+}
+.mt20px {
+  margin-top: 20px;
+}
+
+.fl{
+  float: left;
+}
+
+@mixin mqSet($point) {
+  @if $point == xb-screen {
+    @media (max-width: 1980px) { @content; }
+  }
+  @if $point == b-screen {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == m-screen {
+    @media (max-width: 1250px) { @content; }
+  }
+  @else if $point == s-screen {
+    @media (max-width: 600px)  { @content; }
+  }
+  @else if $point == xs-screen {
+    @media (max-width: 300px)  { @content; }
+  }
+}
+

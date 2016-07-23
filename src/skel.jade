@@ -1,0 +1,26 @@
+doctype html
+html(lang='en', itemscope, itemtype='http://schema.org/WebPage' )
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        title Zultys User Portal
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.9, user-scalable=yes')
+        meta(name='apple-mobile-web-app-capable',            content='yes' )
+        meta(name='apple-mobile-web-app-status-bar-style',    content='black-translucent')
+
+
+        // inject:css
+        // Note that inject and endinject must be surrounded by a space on both sides
+        // endinject
+
+        // inject:js
+        // Note that inject and endinject must be surrounded by a space on both sides
+        // endinject
+
+
+        body(ng-class='{login:!User.getSession().is_logged}', ng-app='app', ng-controller='AuthController', layout='column', ng-cloak)
+            //ng-style='textSize'
+            section.UP(layout='column', ng-cloak, flex='100', ng-class='{login: User.getSession().is_logged}')
+
+                block Header
+                block Body
+                block Footer

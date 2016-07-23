@@ -1,0 +1,7 @@
+tr.rule-Dialog_form_description_vmnr.rule-Dialog_form_condition(
+            ng-hide='condition.id=="older" && interval.optionState===true',
+            ng-show='condition.id=="interval" && interval.optionState===true',
+            ng-repeat='condition in conditions',
+            ng-if='condition.selected',
+            ng-include='["app/vmnr/components/vmnr-",condition.url,".html"].join("")'
+        )

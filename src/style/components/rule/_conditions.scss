@@ -1,0 +1,31 @@
+&_condition {
+
+  .md-button {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .md-menu {
+    padding: 0;
+    color: $color-corporate-font-dodgerblue!important;
+
+    button {
+      line-height: inherit;
+      word-wrap: normal;
+      word-break: break-word!important;
+      white-space: normal;
+      text-align: left;
+      width: 148px!important;
+
+      span {
+        float: left;
+      }
+    }
+  }
+
+  > div {
+    height: 34px;
+  }
+}

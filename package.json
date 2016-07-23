@@ -1,0 +1,48 @@
+{
+  "name": "Offline",
+  "version": "0.0.2",
+  "author": "Andrii Trybynenko",
+  "scripts": {
+    "preapi": "cd raml-api/ && npm i && cd api-specs/ && cp -a prod-api-spec/. v1/ && cp -a mock-system/. v1/",
+    "api": "cd raml-api/bin && node localapi run ../api-specs/v1/v1-spec.raml -d -p",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "babel": "^6.3.26",
+    "babel-plugin-transform-es2015-for-of": "^6.5.2",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "bower": "^1.7.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-concat": "2.6.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-filter": "^3.0.1",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-if": "^2.0.0",
+    "gulp-inject": "3.0.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "jade": "^1.11.0",
+    "path": "^0.12.7",
+    "stream-series": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel-preset-stage-0": "^6.5.0",
+    "express": "*",
+    "gulp-changed": "*",
+    "gulp-watch": "*",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "*",
+    "karma": "*",
+    "karma-chrome-launcher": "*",
+    "karma-jasmine": "*",
+    "karma-jasmine-runner-reporter": "^0.2.0",
+    "karma-phantomjs-launcher": "*",
+    "phantomjs-prebuilt": "*"
+  }
+}

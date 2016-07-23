@@ -1,0 +1,67 @@
+&_head{
+  min-height: 120px;
+  max-height: 120px;
+
+  &_avatar{
+    font-size: 373%;
+    margin: 0 9px 0 19px
+    //margin: 23px 39px 0 19px;
+  }
+
+  .md-toolbar-tools{
+    min-height: 120px;
+    max-height: 120px;
+    background: url('../assets/img/header-pic.png');
+
+    h2{
+      font-weight: bold;
+      padding-top: 60px;
+      padding-left: 13px;
+    }
+  }
+
+  &_title{
+    font-size: 21px;
+    font-family: MontserratBold, sans-serif;
+    text-transform: uppercase;
+    margin-left: 15px!important;
+    margin-top: 4px!important;
+
+    //@include mqSet(s-screen) {
+    //  font-size: 70%!important;
+    //}
+    //@include mqSet(m-screen) {
+    //  font-size: 88%!important;
+    //}
+  }
+
+  &_logout{
+    margin-right: 0!important;
+    text-align: right;
+    font-size: 14px;
+    font-family: MontserratRegular, sans-serif;
+    color: $color-corporate-font-grey !important;
+  }
+
+  &_userTitle{
+    margin: 7px 0 0;
+    font-size: 14px;
+    font-family: MontserratRegular, sans-serif;
+  }
+
+  &_logo{
+    width: 200px; //TODO: 1111
+
+    img{
+      margin: 26px auto 24px;
+      display: block;
+    }
+  }
+
+  &_hamburger {
+    color: white!important;
+    transform: scale(1.7,1.2);
+    width: 210px;
+    margin: 0;
+  }
+}

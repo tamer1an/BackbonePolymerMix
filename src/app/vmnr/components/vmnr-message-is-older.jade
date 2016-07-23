@@ -1,0 +1,56 @@
+td
+    span and
+td
+    h4(ng-bind='condition.label')
+td
+    md-menu
+        md-button.md-hue-2(
+            aria-label='Open demo menu',
+            ng-click='$mdOpenMenu($event)'
+            ng-bind='ruleWeakMap.get(ruleObj.MessageOlderThan).parsed.title()'
+        )
+        md-menu-content.md-padding(width='1')
+            md-menu-item
+                label Days
+                md-input-container
+                    label Days
+                    input(
+                        aria-label='input destination',
+                        ng-model='ruleWeakMap.get(ruleObj.MessageOlderThan).parsed.current.days',
+                        type='number',
+                        min=0
+                    )
+            md-menu-item
+                label Hours
+                md-input-container
+                    label Hours
+                    input(
+                        aria-label='input destination',
+                        ng-model='ruleWeakMap.get(ruleObj.MessageOlderThan).parsed.current.hours',
+                        type='number',
+                        min=0
+                    )
+            md-menu-item
+                label Minutes
+                md-input-container
+                    label Minutes
+                    input(
+                        aria-label='input destination',
+                        ng-model='ruleWeakMap.get(ruleObj.MessageOlderThan).parsed.current.minutes',
+                        type='number',
+                        min=0
+                    )
+            md-menu-item
+                label Seconds
+                md-input-container
+                    label Seconds
+                    input(
+                        aria-label='input destination',
+                        ng-model='ruleWeakMap.get(ruleObj.MessageOlderThan).parsed.current.seconds',
+                        type='number',
+                        min=0
+                    )
+td
+    md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditionsSwitch(conditions[4])')
+        include ../../../assets/icons/svg/delete
+

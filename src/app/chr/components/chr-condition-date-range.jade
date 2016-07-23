@@ -1,0 +1,30 @@
+td
+    span and
+td
+    h4(ng-bind='condition.label')
+td
+    md-menu
+        md-button.md-hue-2(
+            aria-label='Open demo menu',
+            ng-click='$mdOpenMenu($event)',
+            ng-bind='ruleWeakMap.get(ruleObj.Conditions.DateRange).parsed.title(ruleObj.Conditions.DateRange)'
+        )
+        md-menu-content.md-padding(width='1')
+            md-menu-item
+                md-checkbox.md-hue-3(
+                    title='From',
+                    style='width: 125px;',
+                    ng-model='ruleWeakMap.get(ruleObj.Conditions.DateRange).parsed.from.active'
+                )
+                    label FORM:
+                md-datepicker(ng-disabled='!ruleWeakMap.get(ruleObj.Conditions.DateRange).parsed.from.active', ng-model="ruleWeakMap.get(ruleObj.Conditions.DateRange).parsed.from.date" md-placeholder="Enter date")
+            md-menu-item
+                md-checkbox.md-hue-3(
+                    title='To',
+                    style='width: 125px;',
+                    ng-model='ruleWeakMap.get(ruleObj.Conditions.DateRange).parsed.to.active')
+                    label TO:
+                md-datepicker(ng-disabled='!ruleWeakMap.get(ruleObj.Conditions.DateRange).parsed.to.active', ng-model="ruleWeakMap.get(ruleObj.Conditions.DateRange).parsed.to.date" md-placeholder="Enter date")
+td
+    md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditionsSwitch(conditions[2])')
+        include ../../../assets/icons/svg/delete

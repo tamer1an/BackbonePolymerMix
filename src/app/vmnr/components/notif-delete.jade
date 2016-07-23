@@ -1,0 +1,8 @@
+md-button.delete-btn.md-warn(
+    aria-label='delete',
+    style='transform: translateY(5px);',
+    title='Deleate statement',
+    ng-click='delete($index)',
+    ng-hide='interval.optionState===true'
+)
+    include ../../../assets/icons/svg/delete

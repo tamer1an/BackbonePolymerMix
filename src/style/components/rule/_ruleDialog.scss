@@ -1,0 +1,112 @@
+&-Dialog {
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  min-width: 825px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 !important;
+
+  .md-button {
+    @include mqSet(s-screen) {
+      margin: 6px 1px;
+    }
+  }
+
+  &_form{
+    overflow: hidden;
+    min-height: 100%;
+    height: 100%;
+
+    md-dialog-content {
+      height: 100%;
+    }
+
+    @import "leftArea";
+    @import "rightArea";
+
+    &_leftArea, &_rightArea {
+      padding-left: 34px;
+      padding-top: 32px;
+      margin: 0;
+
+      > h1 {
+        margin: 5px 0 2px;
+        font-size: 21px;
+      }
+
+      > h3 {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 9px;
+      }
+
+      > h6 {
+        color: #757575;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        margin: 0;
+      }
+
+      > h7 {
+        color: #757575;
+      }
+    }
+
+    @import "notifStatement";
+    @import "conditions";
+    @import "description";
+
+    &_headMenuItem {
+      padding-top: 10px;
+      padding-left: 20px;
+      font-size: 90%;
+    }
+
+    &_ruleName {
+      padding: 0;
+      margin: 0;
+      transform: scale(0.9);
+
+      input {
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+        font-size: 18px;
+        transform: translateY(13px);
+        border-color: $color-corporate-bg-white!important;
+        color: $color-corporate-font-grey!important;
+      }
+    }
+
+    &_actions {
+      background: none;
+      margin-top: -130px;
+      padding-right: 26px;
+    }
+
+    //TODO: work around
+    > md-toolbar {
+      padding-right: 30px;
+      //background: $color-corporate-bg-blue!important;
+
+      h4 {
+        color: $color-corporate-bg-white;
+      }
+    }
+
+    > md-dialog-content {
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    fieldset {
+      border: none;
+    }
+
+    h4 {
+      margin: 0;
+    }
+  }
+}

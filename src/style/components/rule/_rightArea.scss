@@ -1,0 +1,56 @@
+&_rightArea {
+  width: 507px;
+
+  h2 {
+    font-size: 18px;
+  }
+  h4 {
+    font-weight: 500;
+    font-size: 14px;
+    width: 124px;
+  }
+  &_conditions{
+    md-select, input {
+      color: $color-corporate-font-doubleblue!important;
+    }
+  }
+
+  .rule-Dialog_form_description_chr + .rule-Dialog_form_description_chr, &_conditions{
+    td{
+      > md-input-container {
+        transform: translateY(-7px);
+        margin-top: 26px;
+        margin-left: 10px;
+      }
+
+      &:nth-child(2){
+        width: 130px;
+        text-indent: 5px;
+      }
+
+      &:nth-child(3){
+        width: 187px;
+      }
+
+      md-menu{
+        button{
+          width: 156px!important;
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
+
+  .delete-btn{
+    width: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+     span {
+       font-weight: 800;
+       font-size: 16px;
+     }
+  }
+}

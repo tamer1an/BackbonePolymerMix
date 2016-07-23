@@ -1,0 +1,25 @@
+td
+    span and
+td
+    h4(ng-bind='condition.label')
+td
+    md-menu(style='padding-top: 30px;')
+        md-button.md-hue-2(
+            aria-label='Open demo menu',
+            ng-click='$mdOpenMenu($event)',
+            ng-bind='ruleWeakMap.get(ruleObj.WhenTimeOfDay).parsed.title()'
+        )
+        md-menu-content.md-padding(width='1')
+            md-menu-item
+                md-input-container
+                    label FROM
+                    input(aria-label='input destination', ng-model='ruleWeakMap.get(ruleObj.WhenTimeOfDay).parsed.from', type='time', min=0)
+            md-menu-item
+                md-input-container
+                    label TO
+                    input(aria-label='input destination', ng-model='ruleWeakMap.get(ruleObj.WhenTimeOfDay).parsed.to', type='time', min=0)
+td
+    md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditionsSwitch(conditions[3])')
+        include ../../../assets/icons/svg/delete
+
+

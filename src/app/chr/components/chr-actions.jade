@@ -1,0 +1,32 @@
+div(style='margin-left:13px;',ng-switch="currentAction")
+    div(ng-switch-when="ForwardTo")
+        md-input-container(style='max-width: 200px;')
+            label ForwardTo
+            input(aria-label='input destination', ng-model='ruleObj.Actions.ForwardTo[0]')
+
+    div(ng-switch-when="ForwardToVM", layout='row')
+        md-input-container(
+            flex=20,
+            title='Select greeting'
+        )
+            md-select(
+                aria-label='select pause',
+                ng-model='ruleWeakMap.get(ruleObj.Actions.ForwardToVM).action.greeting',
+                ng-change="onFindMeToVMChangeGreet(ruleWeakMap.get(ruleObj.Actions.ForwardToVM))"
+            )
+                md-option(value='-3') No Greeting
+                md-option(value='-2') System Greeting
+                md-option(value='0')  Active greeting
+                md-option(value='1') Greeting 1
+                md-option(value='2') Greeting 2
+                md-option(value='3') Greeting 3
+                md-option(value='4') Greeting 4
+
+        md-switch.md-warn.md-hue-4(
+            ng-model='ruleWeakMap.get(ruleObj.Actions.ForwardToVM).action.greetingSwitch',
+            ng-change="onFindMeToVMChange(ruleWeakMap.get(ruleObj.Actions.ForwardToVM))"
+            style='transform: translateX(55px);'
+        ) {{ruleWeakMap.get(ruleObj.Actions.ForwardToVM).action.greetingSwitch?'Disconnect after greeting':'Record message'}}
+
+    include chr-actions-findMe
+    div(ng-switch-when="Reject") Reject

@@ -1,0 +1,36 @@
+md-list.addressBook(layout='row', layout-wrap, ng-cloak)
+    md-subheader.addressBook_subheader.md-sticky(layout='column')
+        .mdi.mdi-account-search
+        md-input-container.addressBook_Filter
+            label Search for contacts
+            input(ng-model='FFilter.firstName', ng-minlength='1')
+
+        div(style='background:#505459;color:white;')
+            md-list-item.addressBook_item(
+                flex=100,
+                aria-label='navigat to',
+                title='Edit this rule'
+            )
+
+                .addressBook_item_blank &nbsp
+                p(flex=20) Name
+                p(flex=10) Ext.
+                p(flex=30) Mobile
+                p(flex=20) Location
+                md-button(flex=10,aria-label="settings")
+                    | &nbsp
+
+    md-list-item.addressBook_item(
+        aria-label='navigat to',
+        ng-repeat='(idx,user) in users | filter:FFilter as results',
+        flex=100,
+        title='{{[idx+": ",user.firstName,user.lastName, "Ext:", user.businessPhone, "Cell", user.cellPhone].join(" ")}}'
+    )
+
+        .mdi.mdi-account-circle
+        p(flex=20) {{ user.firstName + '  ' + user.lastName}}
+        p(flex=10, ng-bind='user.businessPhone')
+        p(flex=30, ng-bind='user.cellPhone')
+        p(flex=20, ng-bind='user.userId')
+        md-button(flex=10,aria-label="settings")
+            .mdi.mdi-dots-vertical

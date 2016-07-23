@@ -1,0 +1,24 @@
+div.rule-Dialog_form_leftArea(
+        layout='column',
+        flex-gt-xs=25,
+        flex-sm=25,
+        flex=30,
+        flex-gt-md=15
+    )
+    h1 Rules Settings
+    h6 Choose event, contidion and actions
+
+    h3 Notify me
+    include ./vmnr-interval
+
+    h3 Condition:
+    md-checkbox.md-hue-3(
+        aria-label='condition',
+        ng-hide='condition.hidden',
+        ng-repeat='condition in conditions',
+        title='{{condition.title}}',
+        ng-checked='condition.selected',
+        ng-click='toggleConditionsSwitch(condition)'
+    )
+        label(ng-bind='condition.label')
+

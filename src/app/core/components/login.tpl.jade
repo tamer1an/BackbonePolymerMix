@@ -1,0 +1,25 @@
+form.UP_login-form
+    fieldset.UP_login-form_fs.md-padding(layout='column', layout-align='center center')
+        .UP_login-form_logo
+            include ../../../assets/icons/svg/logo
+
+        md-input-container.UP_login-form_fs_input(md-no-float)
+            //label
+               .mdi.mdi-account
+               | &nbsp User name
+            input(ng-model='user.name', title='Please provide user name', placeholder='User name',style='text-transform: uppercase;')
+        md-input-container.UP_login-form_fs_input(md-no-float)
+            //label
+                  .mdi.mdi-account-key
+                  | &nbsp Password
+            input(type='password',title='Please provide password', ng-model='user.password', placeholder='Password',style='text-transform: uppercase;')
+
+        md-button.UP_login-form_fs_submit.md-raised.md-primary(
+            style='color:white;',
+            title='Submit log in request',
+            ng-click='login(user.name,user.password)'
+        ) 
+            | Log in
+            .mdi.mdi-login
+
+    p.UP_login-form_copyright © Copyright 2015 Zultys All Rights Reserved

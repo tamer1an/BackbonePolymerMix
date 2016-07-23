@@ -1,0 +1,31 @@
+td
+    span and
+td
+    h4(ng-bind='condition.label')
+
+td
+    md-menu
+        md-button.md-hue-2(
+            aria-label='Open demo menu',
+            ng-click='$mdOpenMenu($event)',
+            ng-bind='ruleWeakMap.get(ruleObj.Conditions.TimeFrame).parsed.title(ruleWeakMap.get(ruleObj.Conditions.TimeFrame).rule_item.TimeFrame)',
+        )
+        md-menu-content.md-padding(width='5')
+            md-menu-item(ng-repeat-start="item in ruleWeakMap.get(ruleObj.Conditions.TimeFrame).parsed.frames")
+                md-input-container
+                    label FROM
+                    input(aria-label='input destination', ng-model='item.from', type='time', min=0, ng-change="ruleWeakMap.get(ruleObj.Conditions.TimeFrame).parsed.change(ruleWeakMap.get(ruleObj.Conditions.TimeFrame))" )
+                md-input-container
+                    label TO
+                    input(aria-label='input destination', ng-model='item.to', type='time', min=0, ng-change="ruleWeakMap.get(ruleObj.Conditions.TimeFrame).parsed.change(ruleWeakMap.get(ruleObj.Conditions.TimeFrame))" )
+            md-divider(ng-repeat-end, style='margin: -2px 0 25px;')
+            md-menu-item
+                md-button.md-raised(ng-click='ruleWeakMap.get(ruleObj.Conditions.TimeFrame).parsed.more(ruleWeakMap.get(ruleObj.Conditions.TimeFrame)); $event.stopPropagation();')
+                    | More
+                md-button.md-raised(ng-click='ruleWeakMap.get(ruleObj.Conditions.TimeFrame).parsed.less(ruleWeakMap.get(ruleObj.Conditions.TimeFrame)); $event.stopPropagation();')
+                    | Less
+
+
+td
+    md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditionsSwitch(conditions[3])')
+        include ../../../assets/icons/svg/delete

@@ -1,0 +1,32 @@
+h2 apply this rule &nbsp
+
+table(style='width:100%;')
+    thead
+    tbody
+        tr(ng-if='triggers[0].selected && !triggers[2].selected')
+            td
+            td(style='width: 318px;')
+                h5(ng-bind='triggers[0].label')
+            td
+                md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditions(triggers[0],"Trigger")', style='margin-left: 17px; transform: translateY(-4px);')
+                    include ../../../assets/icons/svg/delete
+
+        tr(ng-if='triggers[1].selected && !triggers[2].selected')
+            td(style='transform:translateY(-15px);')
+                span(ng-if='triggers[0].selected && triggers[1].selected && !triggers[2].selected') or
+            td(layout='row')
+                    h5(style='width: 125px;',ng-bind='triggers[1].label')
+                    md-input-container.rule-Dialog_form_description_chr_duration
+                        label seconds
+                        input(type='number',min=0, ng-model='ruleObj.Triggers.NoAnswer[0]')
+            td(style='transform:translateY(-6px);')
+                md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditions(triggers[1],"Trigger")', style='margin-left: 17px; transform: translateY(-6px);')
+                    include ../../../assets/icons/svg/delete
+
+        tr(ng-if='triggers[2].selected')
+            td
+            td
+                h5(ng-bind='triggers[2].label', style='width: 314px;')
+            td
+                md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditions(triggers[2],"Trigger")', style='transform: translateY(-3px);')
+                    include ../../../assets/icons/svg/delete

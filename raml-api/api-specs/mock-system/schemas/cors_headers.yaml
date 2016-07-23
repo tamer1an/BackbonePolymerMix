@@ -1,0 +1,6 @@
+Access-Control-Allow-Origin:
+  example: "*"
+Access-Control-Allow-Methods:
+  example: "GET, POST, OPTIONS"
+Access-Control-Allow-Headers:
+  example: "Content-Type"

@@ -1,0 +1,15 @@
+md-menu.rule-Dialog_form_notifStatement_addMenu(
+        title='Add email/phone new notification statement',
+        ng-hide='interval.optionState===true'
+    )
+    md-button.m0.md-raised.md-hue-2(
+        aria-label='Open demo menu',
+        ng-click='$mdOpenMenu($event)'
+    ) Add notification
+    md-menu-content(width='3')
+        md-menu-item.rule-Dialog_form_notifStatement_addMail
+            md-button(ng-click='addNotif("e-mail")') Email Notify Statement
+        md-menu-item.rule-Dialog_form_notifStatement_addCall
+            md-button(ng-click='addNotif("call")') Call Notify Statement
+
+

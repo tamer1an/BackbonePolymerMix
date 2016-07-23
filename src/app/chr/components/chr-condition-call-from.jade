@@ -1,0 +1,39 @@
+td
+    span and
+td
+    h4(ng-bind='condition.label')
+td
+    md-menu.callFromMenu
+        md-button.md-hue-2(
+            aria-label='Open demo menu',
+            ng-click='$mdOpenMenu($event)',
+            ng-bind='!ruleObj.Conditions.CallFrom.toLocaleString()?"please select":ruleObj.Conditions.CallFrom.toLocaleString()'
+        )
+        md-menu-content.md-padding(width='2', style='height: 230px; width:300px; max-width:300px;')
+            md-menu-item(style='font-size: 86%;')
+                md-checkbox.md-hue-3(
+                    aria-label='any internal',
+                    ng-checked='conditions[1].incomingSrc.Internal',
+                    ng-click='callFromAny("Internal",conditions[1],ruleObj.Conditions)'
+                )
+                    label Any internal
+                md-checkbox.md-hue-3(
+                    aria-label='any external',
+                    ng-checked='conditions[1].incomingSrc.External',
+                    ng-click='callFromAny("External",conditions[1],ruleObj.Conditions)'
+                )
+                    label Any external
+
+            md-menu-item
+                md-chips(
+                    aria-label='call from chips',
+                    ng-model="ruleObj.Conditions.CallFrom",
+                    placeholder="+source",
+                    delete-button-label="Remove Tag",
+                    delete-hint="Press delete to remove tag",
+                    secondary-placeholder="add number or id"
+                )
+
+td
+    md-button.delete-btn.md-warn(aria-label='remove item', ng-click='toggleConditionsSwitch(conditions[1])')
+        include ../../../assets/icons/svg/delete

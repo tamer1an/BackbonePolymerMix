@@ -1,0 +1,11 @@
+md-input-container(flex=20, title='Pause')
+    label pause
+    md-select(aria-label='select pause', ng-model='notifRule.Transport[5].Pause[0]')
+        md-option(value='0') no pause
+        md-option(value='1') 1 minute
+        md-option(value='5') 5 minutes
+        md-option(value='10') 10 minutes
+        md-option(value='30') 30 minutes
+        md-option(value='60') 60 minutes
+        md-option(value='240') 240 minutes
+h6(ng-show='notifRule.Transport[0].Pause[0]!=0') &nbsp

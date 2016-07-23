@@ -1,0 +1,17 @@
+md-radio-group(ng-model='currentAction')
+    md-radio-button.md-hue-3(
+        ng-click='getDefaultForwardTo()',
+        value='ForwardTo'
+    ) Forward to
+    md-radio-button.md-hue-3(
+        ng-click='getDefaultForwardToVM()',
+        value='ForwardToVM'
+    ) Forward to voice mail
+    md-radio-button.md-hue-3(
+        ng-click='getDefaultFindMe()',
+        value='FindMe'
+    )  Find Me
+    md-radio-button.md-warn.md-hue-2(
+        ng-click='ruleObj.Actions = getDefaultReject()',
+        value='Reject'
+    ) Reject
