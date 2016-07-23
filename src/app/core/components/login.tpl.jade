@@ -1,0 +1,21 @@
+form.UP_login-form.md-whiteframe-z2
+    fieldset.UP_login-form_fs.md-padding(layout='column', layout-align='center center')
+
+        md-input-container.UP_login-form_fs_input
+            label
+               .mdi.mdi-account
+               | &nbsp User name
+            input(ng-model='user.name', title='Please provide user name')
+        md-input-container.UP_login-form_fs_input
+            label
+                .mdi.mdi-account-key
+                | &nbsp Password
+            input(type='password',title='Please provide password', ng-model='user.password')
+
+        md-button.UP_login-form_fs_submit.md-raised.md-primary(
+            style='color:white;',
+            title='Submit log in request',
+            ng-click='login(user.name,user.password)'
+        ) 
+            | Login
+            .mdi.mdi-login

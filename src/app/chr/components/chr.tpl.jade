@@ -1,0 +1,33 @@
+div
+    md-list(layout='row', layout-wrap, ng-cloak)
+        // .md-sticky
+        //md-subheader.md-no-sticky
+            md-button.md-raised Add new Rule
+
+        div(flex=100)
+        md-list-item(
+            ng-hide="user.chr.editState"
+            aria-label='navigat to',
+
+            ng-repeat='(idx,rule) in user.chr.rules',
+
+            flex=100,
+
+            title='Edit this rule'
+        ).rule
+            p.rule_name(flex=20,ng-bind='(idx+1)+": "+user.chr.RAW_rules[rule.number-1].ruleName')
+
+            md-button.md-raised(title='Edit this rule', ng-click='navigateTo(rule, $event, user.chr.RAW_rules[idx])')
+                | Edit
+                .mdi.mdi-pencil
+            md-button.md-raised.md-warn(title='Delete this rule',)
+                | Delete
+                .mdi.mdi-delete
+
+            //div(flex)
+            p(style='margin-left:7%;', flex).rule_short_description (for any incoming call, my presence is not avalible...)
+
+            md-divider
+
+md-button.md-primary.md-fab.rule_addNew(aria-label='Add new rule', title='Add new rule')
+    div.mdi.mdi-plus

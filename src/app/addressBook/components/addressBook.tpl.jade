@@ -1,0 +1,25 @@
+.addressBook
+    md-list(layout='row', layout-wrap, ng-cloak)
+        md-subheader(style='color:grey').md-sticky Find contact:
+            md-input-container.addressBook_Filter
+                label Filter:firstName
+                input(ng-model='FFilter.firstName',ng-minlength='1')
+
+        div(flex=100)
+        md-list-item(
+            aria-label='navigat to',
+
+            ng-repeat='(idx,user) in users | filter:FFilter as results',
+
+            flex=100,
+
+            title='Edit this rule'
+        )
+
+            .mdi.mdi-account-circle(style='margin-right:15px; font-size: 200%; color: lightgray;')
+            p {{ user.firstName + '  ' + user.lastName}}
+            p(ng-bind='user.email')
+            p(ng-bind='user.homePhone')
+            md-button(aria-label="settings")
+                .mdi.mdi-dots-vertical
+            md-divider

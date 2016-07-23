@@ -1,0 +1,14 @@
+md-menu
+    md-button.md-raised.md-hue-2(
+        aria-label='Open demo menu',
+        ng-click='$mdOpenMenu($event)',
+        ng-bind='msgClass.btnTitle()'
+    )
+    md-menu-content(width='2').md-padding
+        md-menu-item(ng-repeat='class in msgClass.classes')
+            md-checkbox(
+                title='{{class.title}}',
+                ng-checked='class.selected',
+                ng-click='toggleConditions(class)'
+            )
+                label(ng-bind='class.label')

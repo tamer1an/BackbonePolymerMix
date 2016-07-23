@@ -1,0 +1,11 @@
+fieldset(flex).rule-Dialog_form_description
+
+    div(layout='row', layout-wrap, layout-xs='column')
+        .rule-Dialog_form_description_item(
+            flex-xs='100'
+            ng-hide='condition.id=="older" && interval.optionState===true',
+            ng-show='condition.id=="interval" && interval.optionState===true',
+            ng-repeat='condition in conditions',
+            ng-if='condition.selected',
+            ng-include='["app/vmnr/components/vmnr-",condition.url,".html"].join("")'
+        )

@@ -1,0 +1,14 @@
+md-menu
+    md-button.md-raised.md-hue-2(
+        aria-label='Open demo menu',
+        ng-click='$mdOpenMenu($event)'
+        ng-bind='msgWeekDays.btnTitle()'
+    )
+    md-menu-content(style='max-height:450px!important', width='2').md-padding
+        md-menu-item(ng-repeat='day in msgWeekDays.weekDays',style='font-size:80%!important')
+            md-checkbox(
+            title='{{day.title}}',
+            ng-checked='day.selected',
+            ng-click='toggleConditions(day)'
+            )
+                label(ng-bind='day.label')

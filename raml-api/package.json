@@ -1,0 +1,39 @@
+{
+  "name": "localapi",
+  "version": "1.3.6",
+  "description": "Local API based on raml",
+  "main": "localApi.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:isaacloud/local-api.git"
+  },
+  "bugs": "https://github.com/isaacloud/local-api/issues",
+  "scripts": {
+    "premock-server": "npm i && cd api-specs/ && cp -a prod-api-spec/. v1/ && cp -a mock-system/. v1/",
+    "mock-server": "cd bin && node localapi run ../api-specs/v1/v1-spec.raml -d -p"
+  },
+  "author": "SoInteractive",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "localapi": "./bin/localapi"
+  },
+  "dependencies": {
+    "amanda": "0.5.*",
+    "body-parser": "^1.9.2",
+    "colors": "^1.0.3",
+    "commander": "^2.8.0",
+    "express": "^4.10.1",
+    "faker": "3.0.1",
+    "find-remove": "^0.2.5",
+    "fs-extra": "^0.13.*",
+    "lodash": "^2.4.1",
+    "minimist": "^1.1.0",
+    "openid-connect": "^1.2.2",
+    "q": "^1.1.2",
+    "raml-parser": "isaacloud/raml-js-parser",
+    "winston": "^1.0.0",
+    "cors": "^2.7.1"
+  },
+  "devDependencies": {}
+}

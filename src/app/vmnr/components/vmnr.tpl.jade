@@ -1,0 +1,29 @@
+div
+    md-list(layout='row', layout-wrap, ng-cloak)
+        div(flex=100)
+        md-list-item(
+        ng-hide="user.vmnr.editState"
+        aria-label='navigat to',
+
+        ng-repeat='(idx,rule) in user.vmnr.rules',
+
+        flex=100,
+
+        title='Edit this rule',
+        ).rule
+            p.rule_name(flex=20,ng-bind='(idx+1)+": "+user.vmnr.RAW_rules[rule.number-1].ruleName')
+
+            md-button.md-raised(title='Edit this rule', ng-click='navigateTo(rule, $event, user.vmnr.RAW_rules[idx])')
+                | Edit
+                .mdi.mdi-pencil
+            md-button.md-raised.md-warn(title='Delete this rule',)
+                | Delete
+                .mdi.mdi-delete
+
+            //div(flex)
+            p(style='margin-left:7%;', flex).rule_short_description (description...)
+
+            md-divider
+
+md-button.md-primary.md-fab.rule_addNew(aria-label='Add new rule', title='Add new rule')
+    div.mdi.mdi-plus

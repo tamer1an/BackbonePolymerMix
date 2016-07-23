@@ -1,0 +1,18 @@
+div(layout='row')
+    h4(flex=15) My presence is
+    md-menu
+        md-button.md-hue-2(
+        aria-label='Open demo menu',
+        ng-click='$mdOpenMenu($event)',
+        ng-bind='presence.btnTitle()'
+        )
+        md-menu-content(width='3').md-padding
+            md-menu-item(ng-repeat='class in presence.classes')
+                md-checkbox(
+                title='{{class.title}}',
+                ng-checked='class.selected',
+                ng-click='toggleConditions(class)'
+                )
+                    label(ng-bind='class.label')
+    div(flex)
+    md-button.md-warn(aria-label='remove item', ng-click='') x

@@ -1,0 +1,215 @@
+#%RAML 0.8
+title: "Zultys mx-admin"
+version: "v1"
+baseUri: "https://example.com/newapi"
+protocols: [HTTPS, HTTP]
+mediaType: "application/json"
+resourceTypes:
+  - collection:
+      description: Collection of available <<resourcePathName>>.
+      get?:
+        responses:
+          200:
+            description: Success!
+            body:
+              application/json:
+                example: "example"
+                schema: "schema"
+  - collection-item:
+      description: Entity representing a <<resourcePathName|!singularize>>
+      get?:
+        description: |
+          Get the <<resourcePathName|!singularize>>
+          with <<resourcePathName|!singularize>>Id =
+          {<<resourcePathName|!singularize>>Id}
+        responses:
+          200:
+            description: Success!
+            body:
+              application/json:
+                example: "example"
+                schema: "schema"
+
+
+/users:
+  displayName: Login page
+  post:
+    headers: !include schemas/cors_headers.yaml
+    body:
+      application/x-www-form-urlencoded:
+        formParameters:
+          data:
+            type: string
+    responses:
+      201:
+        body:
+          application/x-www-form-urlencoded:
+            schema: !include schemas/post_login.json
+            example: !include examples/post_login.json
+  options:
+    headers: !include schemas/cors_headers.yaml
+    responses:
+      200:
+        headers: !include schemas/cors_headers.yaml
+        body:
+          application/x-www-form-urlencoded:
+
+/profileDetails:
+  get:
+    headers: !include schemas/cors_headers.yaml
+    responses:
+      200:
+        body:
+          application/json:
+            schema: !include schemas/get_device_profile_details.json
+            example: !include examples/get_device_profile_details.json
+
+/system:
+
+  /status:
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/get_status.json
+              example: !include examples/get_status.json
+
+/config:
+
+  /address_book:
+    type: collection
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/get_address_book.json
+              example: !include examples/get_address_book.json
+
+  /vmnr_list:
+    type: collection
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/get_vmnr_list.json
+              example: !include examples/get_vmnr_list.json
+
+  /rules:
+    type: collection
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/get_chr_list.json
+              example: !include examples/get_chr_list.json
+  /chr_list:
+    type: collection
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/get_chr_list.json
+              example: !include examples/get_chr_list.json
+
+  /locations:
+    type: collection
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/get_locations.json
+              example: !include examples/get_locations.json
+
+  /users:
+    type: collection
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+        200:
+          body:
+            application/json:
+              schema: !include schemas/get_user_list.json
+              example: !include examples/get_user_list.json
+
+
+  /devices:
+    type: collection
+    get:
+      headers: !include schemas/cors_headers.yaml
+      responses:
+
+        200:
+          body:
+            application/json:
+              schema:  !include schemas/get_device_list.json
+              example: !include examples/get_device_list.json
+
+  /profiles:
+
+    /device:
+      get:
+        headers: !include schemas/cors_headers.yaml
+        responses:
+          200:
+            body:
+              application/json:
+                schema: !include schemas/get_device_profile_list.json
+                example: !include examples/get_device_profile_list.json
+
+    /user:
+      type: collection
+      get:
+        headers: !include schemas/cors_headers.yaml
+        responses:
+          200:
+            body:
+              application/json:
+                schema: !include schemas/get_profile_list.json
+                example: !include examples/get_profile_list.json
+
+    /admin:
+      type: collection
+      get:
+        headers: !include schemas/cors_headers.yaml
+        responses:
+          200:
+            body:
+              application/json:
+                schema: !include schemas/get_admin_profile_list.json
+                example: !include examples/get_admin_profile_list.json
+
+    /callrec:
+      type: collection
+      get:
+        headers: !include schemas/cors_headers.yaml
+        responses:
+          200:
+            body:
+              application/json:
+                schema: !include schemas/get_callrec_profile_list.json
+                example: !include examples/get_callrec_profile_list.json
+
+    /paging:
+      type: collection
+      get:
+        headers: !include schemas/cors_headers.yaml
+        responses:
+          200:
+            body:
+              application/json:
+                schema: !include schemas/get_paging_profile_list.json
+                example: !include examples/get_paging_profile_list.json
+
+

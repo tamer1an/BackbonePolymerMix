@@ -1,0 +1,520 @@
+/* MaterialDesignIcons.com */
+@import "_variables";
+
+@import "../../vendor/mdi/scss/path";
+@import "../../vendor/mdi/scss/core";
+@import "../../vendor/mdi/scss/icons";
+@import "../../vendor/mdi/scss/extras";
+
+
+$dialog-space : 10;
+$color-mail: #FFFCF0;
+$color-phone: #F5FFF8;
+
+.mr20px{
+  margin-right:20px;
+}
+.pl10px{
+  padding-left: 10px;
+}
+.pt10px{
+  padding-top: 10px;
+}
+.w100pc{
+  width: 100%;
+}
+.m0{
+  margin: 0;
+}
+.fl{
+  float: left;
+}
+
+@mixin mqSet($point) {
+  @if $point == xb-screen {
+    @media (max-width: 1980px) { @content; }
+  }
+  @if $point == b-screen {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == m-screen {
+    @media (max-width: 1250px) { @content; }
+  }
+  @else if $point == s-screen {
+    @media (max-width: 600px)  { @content; }
+  }
+  @else if $point == xs-screen {
+    @media (max-width: 300px)  { @content; }
+  }
+}
+
+.UP {
+  //max-width: 1024px;
+  //max-height: 768px;
+  //margin: 0 auto;
+	
+  &_head{
+    min-height: 120px;
+    color:black!important;
+
+    .md-toolbar-tools{
+      max-height:120px;
+      height:120px;
+      background: white;
+      border-bottom: 1px solid grey;
+
+      h2{
+        font-weight:bold;
+        padding-top:60px;
+        padding-left: 13px;
+        font-size: 120%;
+      }
+
+      .md-avatar{
+        background:grey;
+        width:70px;
+        height:70px;
+        text-align: center;
+      }
+    }
+
+    &_title{
+
+      @include mqSet(s-screen) {
+        font-size: 70%!important;
+      }
+
+      @include mqSet(m-screen) {
+        font-size: 88%!important;
+      }
+    }
+
+    &_logout{
+      text-align: right;
+    }
+
+    &_userTitle{
+      margin: 7px 7px;
+      font-style: italic;
+    }
+
+    &_logoText{
+      font-family: fantasy;
+      font-size: 165%;
+      color:white;
+      width:210px;
+      margin-top:40px;
+      text-align: center;
+    }
+    &_hamburger {
+      font-size:160%;
+      color: white!important;
+      transform: scale(1.7,1.2);
+      width:210px;
+      margin:0;
+    }
+  }
+
+  &_sidebar{
+    z-index: 50000;
+    max-width: 210px;
+    min-width: 210px;
+    background: #334663;
+    font-size: 85%;
+
+    md-content {
+      min-width: 100%;
+      overflow: hidden;
+    }
+
+    &_list{
+      //width: 100%;
+
+
+     > md-list-item{
+       width: 100%;
+
+       a,span{
+         width: 100%;
+       }
+
+       span{
+         height: 36px;
+       }
+
+     }
+    }
+
+    &_close{
+      min-width: 40px;
+      padding: 0;
+      transform: translateX(169px);
+      margin: 0;
+      z-index: 1;
+    }
+
+    > md-content {
+      //height: 500px;
+    }
+
+    a{
+      text-decoration: none;
+      color: grey;
+    }
+  }
+
+  &_login-form{
+    transform: translateY(35%);
+    margin: 0 auto;
+    width: 40%;
+
+    @include mqSet(m-screen) {
+      width:80%;
+    }
+
+    &_fs{
+      border: none;
+
+      &_input{
+        width: 94%;
+        margin: 15px auto;
+      }
+
+      &_submit{
+        width: 94%;
+        margin: 0 auto;
+      }
+    }
+  }
+  &_uiView{
+    margin-left: 3%;
+    width: 98%;
+    min-width: 350px;
+
+    md-backdrop.md-opaque.md-zultys-theme{
+      display: none!important;
+    }
+
+    @include mqSet(s-screen) {
+      min-width: 0;
+    }
+
+    &_body{
+      margin-top: 15px;
+
+      > button{
+        > .md-list-item-inner{
+
+          @include mqSet(b-screen) {
+            width:70%;
+              > p{
+                height: 35px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                word-break: normal;
+              }
+          }
+        }
+      }
+
+    }
+  }
+
+  &_footer{
+    min-height: 27px;max-height: 27px;
+
+    .copyright{
+      font-size: 62%;color: white;
+    }
+  }
+
+
+  .md-dialog-content{
+    min-height: 100%;
+  }
+
+  .md-dialog-container{
+    height: 100%!important;
+  }
+  //
+  //.md-dialog-container, .md-dialog-content{
+  //  height: 100%!important;
+  //  min-height: 100%;
+  //}
+}
+
+.md-subheader-wrapper{
+  width: 40%;
+  left: 50%;
+}
+
+.addressBook {
+  &_Filter{
+    margin: 0;
+  }
+}
+
+.rule {
+  &_addNew{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 180%;
+    color: white!important;
+  }
+
+  &_name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 17px;
+  }
+
+  &_short_description{
+    color:darkgray;
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 17px;
+  }
+
+  md-list-item > p{
+    margin: 9px;
+    overflow: hidden;
+    height: 15px;
+    text-overflow: ellipsis;
+  }
+
+  &-Dialog{
+     height:100%;
+     width:100%;
+     max-height:100%;
+     max-width: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     border-radius: 0;
+     font-size: 83%!important;
+
+    .md-button{
+      @include mqSet(s-screen) {
+        margin: 6px 1px;
+      }
+    }
+
+    @include mqSet(xb-screen) {
+      min-width: 999px;
+    }
+    @include mqSet(m-screen) {
+      min-width: 90%;
+    }
+
+    &_form{
+      overflow: hidden;
+      min-height: 100%;
+      height: 100%;
+      //min-height: 800px;
+
+      &_actions{
+        background: none;margin-top: -130px;padding-right: 28px;
+      }
+
+      > md-toolbar {
+        background: #6D6D6E!important;
+
+        h4 {
+          color:white;
+        }
+      }
+
+      &_leftArea{
+        //height: 100%;
+        //min-height: 100%;
+        background: lightgrey;
+        margin: 0;
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-bottom: 10%;
+
+        > h1{
+          margin: 5px 0;
+        }
+
+        > h3 {
+          margin-top:25px
+        }
+
+        > h7 {
+          color:#757575;
+        }
+      }
+
+      &_rightArea{
+        padding-top:5px;
+        width: 100%;
+
+         > h1 {
+           margin: 5px 0; font-size:19.92px;
+         }
+
+        > h7 {
+          color:#757575;
+        }
+      }
+
+      > md-dialog-content{
+        padding: 0;
+      }
+
+      &_headMenuItem{
+        padding-top:10px; padding-left:20px;font-size:90%;
+      }
+
+      fieldset{
+        //font-size: 83%!important;
+        border: none;
+
+        //&:hover{
+          //border: 2px solid #d5daf6;
+        //}
+      }
+
+      &_notifStatement{
+        padding-top: 12px;
+        padding-bottom: 10px;
+
+        &_addMenu{
+          top: 5px;
+          position: relative;
+          left: 10px;
+        }
+
+        &_addCall{
+          background-color: $color-phone;
+        }
+
+        &_addMail{
+          background-color: $color-mail;
+        }
+
+        &_item{
+          height: 46px;
+
+          &_call{
+            background-color: $color-phone;
+          }
+          &_email{
+            background-color: $color-mail;
+          }
+
+          &_destination{
+            min-width: 80px;
+          }
+        }
+        md-input-container{
+          margin: 9px 0;
+        }
+      }
+
+      &_condition {
+        > div {
+          height: 34px;
+        }
+
+        .md-button{
+          margin-top: 0;
+          margin-bottom: 0;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+
+        .md-menu{
+          //margin-top: -23px;
+          //transform: translateY(12px);
+          padding: 0;
+          color: dodgerblue!important;
+
+          button{
+            span{
+              float: left;
+            }
+          }
+        }
+      }
+
+      h4 {
+        margin: 0;
+        padding-top: 6px;
+      }
+
+      &_description{
+        width: 98%;
+        margin-right: 6px;
+
+        &_chr{
+
+          .action {
+            height: 24px;
+
+            .md-button{
+              margin-top: -15px;
+            }
+          }
+
+          > div[ng-include] {
+            margin-left: 13px;
+          }
+
+          h2 {
+            color:#BEBEBE;
+            font-weight: normal;
+          }
+
+          h5 {
+            margin: 0 0 10px 15px;
+            font-size: 14px;
+            font-weight: normal;
+            width: 190px;
+          }
+
+          //padding-top: 10px;
+          padding-left: 10px;
+
+          &_duration{
+            width:40px;
+            height: 30px;
+          }
+        }
+        &_item{
+          height: 53px;
+          margin-left: 10px;
+
+          button{
+            display: block;
+            width: 100%;
+          }
+
+          @include mqSet(m-screen) {
+            margin-left: 5px;
+          }
+        }
+        md-input-container{
+          margin: 13px 0 0 5px;
+          width: 100%;
+          height: 31px;
+        }
+      }
+
+      &_ruleName{
+        padding:0;margin:0;
+        transform: scale(0.9);
+
+        input{
+          transform: translateY(13px);
+          border-color: white!important;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,52 @@
+md-dialog(aria-label='{{rule.ruleName}}', ng-cloak).rule-Dialog
+    form.rule-Dialog_form
+        md-toolbar
+            .md-toolbar-tools
+                h4 Rule name:
+                md-input-container.rule-Dialog_form_ruleName(flex=50)
+                    input(
+                        aria-label='input name',
+                        ng-model='rule.ruleName',
+                        md-autofocus,
+                        title='Rule name'
+                    )
+
+        md-dialog-content.md-dialog-content(layout='row')
+            include ./vmnr-triggers-conditions
+
+            .rule-Dialog_form_rightArea.md-padding(layout='column')
+                h1 Rule Description
+                h7 Click on highlighted value to edit it
+
+                fieldset.rule-Dialog_form_description
+                    .rule-Dialog_form_description_chr(layout='column')
+                        h2(style='margin-top:35px') notify me &nbsp
+
+                        div(layout='column')
+                            fieldset.rule-Dialog_form_notifStatement
+
+                                div(ng-if='ruleObj.Notify.items.length > 0 && interval.optionState!==true')
+                                    .rule-Dialog_form_notifStatement_item(
+                                        layout='row',
+                                        flex,
+                                        ng-repeat='($index, notifRule) in ruleObj.Notify.items track by $index',
+                                        ng-switch='notifRule.Transport[0].By[0]'
+                                    )
+                                        include ./notif-email
+                                        include ./notif-call
+
+                                div(ng-if='ruleObj.Notify.items.length > 0 && interval.optionState===true')
+                                    .rule-Dialog_form_notifStatement_item(
+                                        layout='row',
+                                        flex,
+                                        ng-init='notifRule = ruleObj.Notify.items[0]',
+                                        ng-switch='notifRule.Transport[0].By[0]'
+                                    )
+                                        include ./notif-email
+
+                        include ./vmnr-addNewNotif
+
+                        h2(style='margin-top:35px') apply this rule when &nbsp
+                        include ./vmnr-description
+
+        include ./dialog-actions

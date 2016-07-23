@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org",
+  "id": "http://jsonschema.net",
+  "type": "array",
+  "items": {
+    "id": "http://jsonschema.net/0",
+    "type": "object",
+    "properties": {
+      "index": {
+        "type": "string"
+      },
+      "success": {
+        "type": "string"
+      },
+      "command": {
+        "type": "string"
+      },
+      "vmnr_rules": [{
+        "number": {
+          "type":"string"
+        },
+        "ownerType": {
+          "type":"string"
+        },
+        "ruleId": {
+          "type":"string"
+        },
+        "ruleName":{
+          "type":"string"
+        },
+        "userId": {
+          "type":"string"
+        },
+        "rule": [{
+            "Notify": [
+              {
+                "Transport": [
+                  {
+                    "By": {
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "Destination": {
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "CallMethod": {
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "Attempts": {
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "ToAttach": {
+                      "type": "array"
+                    }
+                  },
+                  {
+                    "Pause": {
+                      "type": "array"
+                    }
+                  }
+                ]
+              }
+            ]},{
+              "Enabled": {
+                "type": "array"
+              }
+            },{
+              "NotifInterval": [
+                {
+                  "Period": {
+                    "type": "array"
+                  }
+                },
+                {
+                  "StartFrom": {
+                    "type": "array"
+                  }
+                }
+              ]
+            },{
+              "IfUnread": {
+                "type": "array"
+              }
+            },{
+              "MessageFrom": {
+                "type": "array"
+              }
+            },{
+              "WhenTimeOfDay": {
+                "type": "array"
+              }
+            },{
+              "MessageMedia": {
+                "type": "array"
+              }
+            },{
+              "MessageClass": {
+                "type": "array"
+              }
+            },{
+              "DaysOfWeek": {
+                "type": "array"
+              }
+            },{
+              "MessageOlderThan": {
+                "type": "array"
+              }
+            }
+          ]
+      }]
+    }
+  }
+}
+

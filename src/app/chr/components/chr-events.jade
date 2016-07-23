@@ -1,0 +1,22 @@
+h2 apply this rule &nbsp
+
+div(layout='row',ng-if='triggers[0].selected && !triggers[2].selected').action
+    h5 {{ triggers[0].label }} &nbsp
+    div(flex)
+    md-button.md-warn(aria-label='remove item', ng-click='') x
+
+h5(ng-if='triggers[0].selected && triggers[1].selected && !triggers[2].selected', style='margin: 0;').action or &nbsp
+
+div(layout='row',ng-if='triggers[1].selected && !triggers[2].selected').action
+    h5(style='width: 125px;') {{ triggers[1].label }}
+    md-input-container(style='margin:-14px 0 0 0; width: 70px;').rule-Dialog_form_description_chr_duration
+        label seconds
+        input(type='number')
+    div(flex)
+    md-button.md-warn(aria-label='remove item', ng-click='') x
+
+
+div(layout='row',ng-if='triggers[2].selected').action
+    h5 {{ triggers[2].label }} &nbsp
+    div(flex)
+    md-button.md-warn(aria-label='remove item', ng-click='', style='margin-top: -10px;') x

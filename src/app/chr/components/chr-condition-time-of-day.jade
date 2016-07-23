@@ -1,0 +1,13 @@
+div(layout='row')
+    h4(flex=15) From
+    md-menu
+        md-button.md-hue-2(aria-label='Open demo menu' ng-click='$mdOpenMenu($event)') Time of day
+        md-menu-content(width='1').md-padding
+            md-menu-item FORM:
+                md-input-container(ng-click='toggleConditions(class)')
+                    input(aria-label='input destination', ng-model='new', type='number', min=0)
+            md-menu-item TO:
+                md-input-container(ng-click='toggleConditions(class)')
+                    input(aria-label='input destination', ng-model='new', type='number', min=0)
+    div(flex)
+    md-button.md-warn(aria-label='remove item', ng-click='') x

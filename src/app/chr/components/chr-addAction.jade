@@ -1,0 +1,5 @@
+md-radio-group(ng-model='group1')
+    md-radio-button.md-primary(ng-click='ruleObj.Actions = getDefaultForwardTo()', value='ForwardTo') Forward to
+    md-radio-button.md-primary(ng-click='ruleObj.Actions = getDefaultForwardToVM()', value='ForwardToVoiceMail') Forward to voice mail
+    md-radio-button.md-primary(ng-click='ruleObj.Actions = getDefaultFindMe()', value='FindMe')  Find Me
+    md-radio-button(ng-click='ruleObj.Actions = getDefaultReject()', value='Reject' ) Reject

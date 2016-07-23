@@ -1,0 +1,40 @@
+md-dialog(aria-label='{{rule.ruleName}}', ng-cloak).rule-Dialog
+    //md-is-locked-open='true'
+    form.rule-Dialog_form
+        md-toolbar
+            .md-toolbar-tools
+                h4 Rule name:
+                md-input-container.rule-Dialog_form_ruleName(flex=50)
+                    input(
+                        aria-label='input name',
+                        ng-model='rule.ruleName',
+                        md-autofocus,
+                        title='Rule name'
+                    )
+
+        md-dialog-content.md-dialog-content(layout='row')
+            include ./chr-triggers-conditions
+
+            .rule-Dialog_form_rightArea.md-padding(layout='column')
+                h1 Rule Description
+                h7 Click on highlighted value to edit it
+
+                fieldset.rule-Dialog_form_description
+                    .rule-Dialog_form_description_chr(layout='column', layout-fill)
+                        include ./chr-events
+
+                    .rule-Dialog_form_description_chr(layout='column')
+                        h2(style='margin-top:35px') and when: &nbsp
+                        div(
+                            ng-repeat='condition in conditions',
+                            ng-if='condition.selected',
+                            ng-include='["app/chr/components/chr-",condition.url,".html"].join("")'
+                        ).rule-Dialog_form_condition
+
+                fieldset.rule-Dialog_form_description
+
+                    .rule-Dialog_form_description_chr(layout='column')
+                        h2(style='margin-top:35px') do next &nbsp
+                        include ./chr-actions
+
+        include ./dialog-actions

@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org",
+    "id": "http://jsonschema.net",
+    "type": "object",
+    "properties": {
+        "command": {
+            "type": "string"
+        },
+        "index": {
+            "type": "string"
+        },
+        "profile": {
+            "type": "object"
+        },
+        "success": {
+            "type": "string"
+        }
+    }
+}

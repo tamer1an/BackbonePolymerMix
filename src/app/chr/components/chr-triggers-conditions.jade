@@ -1,0 +1,38 @@
+div.rule-Dialog_form_leftArea(
+        layout='column',
+        flex-gt-xs=25,
+        flex-sm=25,
+        flex=30,
+        flex-gt-md=15,
+        layout-fill
+    )
+    h1 Rules Settings
+    h7 Choose event, contidion and actions
+
+    h3 Events
+    md-checkbox(
+        ng-repeat='trigger in triggers',
+        title='{{trigger.title}}'
+        ng-checked='trigger.selected',
+        ng-click='toggleConditions(trigger)',
+        ng-disabled='triggers[2].selected && trigger != triggers[2]'
+    )
+        label(ng-bind='trigger.title')
+
+    h3 Condition:
+    md-checkbox(
+        ng-repeat='condition in conditions',
+        title='{{condition.title}}'
+        ng-checked='condition.selected',
+        ng-click='toggleConditions(condition)'
+    )
+        label(ng-bind='condition.label')
+
+    h3 Actions
+    include ./chr-addAction
+
+    md-checkbox(style='margin-top:40px; font-style: italic;'
+        title='Display ID Settings '
+    )
+        label Display my caller ID for external calls
+

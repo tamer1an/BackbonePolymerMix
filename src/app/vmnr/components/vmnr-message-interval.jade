@@ -1,0 +1,9 @@
+md-menu
+    md-button.md-raised.md-hue-2(aria-label='Open demo menu' ng-click='$mdOpenMenu($event)') Interval
+    md-menu-content(width='1').md-padding
+        md-menu-item FORM:
+            md-input-container(ng-click='toggleConditions(class)')
+                input(aria-label='input destination', ng-model='new', type='number', min=0)
+        md-menu-item TO:
+            md-input-container(ng-click='toggleConditions(class)')
+                input(aria-label='input destination', ng-model='new', type='number', min=0)

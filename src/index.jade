@@ -1,0 +1,84 @@
+extends skel
+
+////////////////////////////// HEADER
+block Header
+
+    md-toolbar.UP_head(md-theme='zultys-dark',layout='row')
+        md-button.UP_head_hamburger.md-primary(
+            title='Open sidebar',
+            ng-click='toggleLeft()',
+            hide-gt-md
+        ) ≡
+        .UP_head_logoText(hide-md,hide-sm,hide-xs) Zultys
+        .md-toolbar-tools(flex)
+            h1(style='margin-left: 30px;').UP_head_title.md-flex
+                div(style='margin-right:5px;' class='mdi {{ Settings.page.icon }}')
+                | {{ Settings.page.title }}
+            div(flex)
+            // layout-fill,
+            div(
+                layout='column',
+                ng-if='User.getSession().is_logged'
+            )
+                p(hide-xs,hide-sm, title='You are logged in as, {{ User.fullName }}').UP_head_userTitle Welcome, {{ User.fullName }}
+                md-button.UP_head_logout(
+                    title='Stop current session',
+                    style='color:black;',
+                    ng-click='logout()'
+                )
+                    | Logout
+                    .mdi.mdi-logout
+
+            div.mdi.mdi-account-circle(
+                ng-if='User.getSession().is_logged',
+                title='Press to change your avatar',
+                style='margin-left:19px; color: #334663;font-size: 350%;'
+            )
+
+
+/////////////////////////// LEFT SIDENAV
+block Sidenav
+
+    md-sidenav.UP_sidebar.md-sidenav-left.md-whiteframe-z2.md-hue-2(
+        md-component-id='left',
+        md-is-locked-open='$mdMedia("gt-md")',
+        ng-if='User.getSession().is_logged'
+    )
+        md-content(ng-controller='LeftCtrl',md-theme='zultys-dark')
+            md-button.UP_sidebar_close.md-primary(ng-click='close()', hide-gt-md, style='color: #FAFAFA;') x
+
+            md-list.UP_sidebar_list(ng-cloak)
+                //md-subheader.md-no-sticky Personal settings
+                md-list-item(
+                    aria-label='menu item',
+                    ng-href='{{menu.prefix+item.href}}',
+                    ng-style='{"background":loc.url()==item.href?"#252525":"none"}',
+                    ng-repeat='item in menu.items'
+                )
+                    div(class='{{menu.icon_prefix}} mdi-{{item.icon}}')
+                    | &nbsp
+                    span(ng-bind='item.title', title='{{item.desc}}')
+
+
+//////////////////////////////// BODY
+block Body
+
+    md-content(layout='row', flex)
+        block Sidenav
+
+        md-content(flex, layout-padding)
+            div(layout='column',  layout-align='top center')
+
+                .UP_uiView(ui-view)
+
+            .UP-clear(flex)
+
+
+/////////////////////////////// FOOTER
+block Footer
+
+    footer
+        md-toolbar.UP_footer
+            .md-toolbar-tools
+                div(flex)
+                .copyright © Copyright 2015 Zultys All Rights Reserved

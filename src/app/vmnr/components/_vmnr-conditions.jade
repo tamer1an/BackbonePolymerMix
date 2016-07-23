@@ -1,0 +1,12 @@
+fieldset.rule-Dialog_form_conditions.md-whiteframe-2dp
+    legend
+        h4 Message:
+    .pl10px.pt10px(layout='row')
+        div(flex-xs='50', flex)
+            md-checkbox(
+                title='{{condition.title}}'
+                ng-repeat='condition in conditions',
+                ng-checked='condition.selected',
+                ng-click='toggleConditions(condition)'
+            )
+                label(ng-bind='condition.label')

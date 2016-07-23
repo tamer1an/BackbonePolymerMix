@@ -1,0 +1,4949 @@
+{
+    "chr_rules": [
+        {
+            "address": "449 Jacobson Point",
+            "addresseeId": "06275-6462",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 1,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(458) 997-6892 x42767"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "W4VcurnFwX6pUPuLEqpq3esB",
+            "ruleName": "Cleta Denesik rule ",
+            "userId": 93307
+        },
+        {
+            "address": "87966 Kemmer Cliff",
+            "addresseeId": "75111",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 2,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "758-747-2065 x9070"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            40401
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "ta2xDtqHL4B4gwRQXUF8p3qK",
+            "ruleName": "Queenie Hermann rule ",
+            "userId": 74498
+        },
+        {
+            "address": "56195 Wehner Points",
+            "addresseeId": "18140",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 3,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    []
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    34447
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "assigned"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            53671
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "532.276.9419 x92763"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "YM6CZeH9MtbuYFE1X8qmUSUP",
+            "ruleName": "Charlotte Gislason rule ",
+            "userId": 11352
+        },
+        {
+            "address": "8410 Myriam River",
+            "addresseeId": "64343",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 4,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    []
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    45120
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "home"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            32324
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(307) 733-3273 x25323"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            78011
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "C4UwWl0R8Xsnqbpd3ej6xXWA",
+            "ruleName": "Carroll Botsford rule ",
+            "userId": 91785
+        },
+        {
+            "address": "5212 Dee Shore",
+            "addresseeId": "87550",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 5,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    [
+                                                        "0572",
+                                                        "9202"
+                                                    ]
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    47435
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "assigned"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            5
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "812.028.9645 x394"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            70993
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "8YI6shmb9jMXJsmTDx2NMcfS",
+            "ruleName": "Robin Greenholt rule ",
+            "userId": 49729
+        },
+        {
+            "address": "25563 Odessa Divide",
+            "addresseeId": "00936-1131",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 6,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(165) 357-1933 x57518"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            3719
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "GN3JV1iSlQO7cUWzjYKzgyBZ",
+            "ruleName": "Eleanora West rule ",
+            "userId": 57208
+        },
+        {
+            "address": "497 Troy Lane",
+            "addresseeId": "13736",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 7,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "596-006-9547 x20724"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            14028
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "qGoBfHxxnt1a8tvM2aMo82pY",
+            "ruleName": "Adolf Schowalter rule ",
+            "userId": 11739
+        },
+        {
+            "address": "795 Mayert Path",
+            "addresseeId": "97545",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 8,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-762-545-3486"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            70310
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "pK9Vq7unfq91VzkHrwEaQ2At",
+            "ruleName": "Audra Botsford rule ",
+            "userId": 95096
+        },
+        {
+            "address": "0768 Rosina Green",
+            "addresseeId": "22040-8370",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 9,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "230.203.7548"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "Qu44ZJYp6UQZvpA8z8KwDhke",
+            "ruleName": "Cecil Wilderman rule ",
+            "userId": 96649
+        },
+        {
+            "address": "1496 Doyle Walk",
+            "addresseeId": "41235-1793",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 10,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(198) 654-8928 x63175"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "hj9tc1BiYPsc6zE6JnzfY79k",
+            "ruleName": "Noe Hackett rule ",
+            "userId": 22420
+        },
+        {
+            "address": "0938 Windler Mill",
+            "addresseeId": "20908",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 11,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "794-401-5339 x4388"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            98742
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "Kxc2LKjnwoAA8ORtc52fNz5Y",
+            "ruleName": "Raphaelle Bednar rule ",
+            "userId": 85797
+        },
+        {
+            "address": "33693 Deanna Walk",
+            "addresseeId": "55066-4245",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 12,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "024.850.9118 x2178"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            50734
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "l1DVwFbwYlbCKdbrhH9DwA5v",
+            "ruleName": "Madonna Fahey rule ",
+            "userId": 20828
+        },
+        {
+            "address": "0414 Fahey Circles",
+            "addresseeId": "40235",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 13,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    [
+                                                        "4646"
+                                                    ]
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    14604
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "home"
+                                                ]
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            68086
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-423-464-2230"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "8VEUEnH9U3UOChQTQuvu7xnT",
+            "ruleName": "Timmothy Ernser rule ",
+            "userId": 5457
+        },
+        {
+            "address": "108 Benton Unions",
+            "addresseeId": "14534-8413",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 14,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    [
+                                                        "6397",
+                                                        "5461"
+                                                    ]
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    31309
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "bound"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            44736
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "202.950.5046 x654"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "GfwOT3MgPbGNm96xqL7ksmlc",
+            "ruleName": "Annamae Kunze rule ",
+            "userId": 76348
+        },
+        {
+            "address": "340 Arthur Prairie",
+            "addresseeId": "11570-6643",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 15,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    []
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    55712
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "cell"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            74832
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "953-932-1226 x2794"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            23213
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "YDnDouagXMOLE1S9l5GIoqs9",
+            "ruleName": "Dayana Rogahn rule ",
+            "userId": 25936
+        },
+        {
+            "address": "482 Reinger Drives",
+            "addresseeId": "80831",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 16,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-876-173-5760"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "Jzv0BLqC1zLfJGCC42KgdYR3",
+            "ruleName": "Imani Marks rule ",
+            "userId": 31689
+        },
+        {
+            "address": "7802 Americo Circle",
+            "addresseeId": "11195",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 17,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "189-997-4214"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "CrhUSt7g9gDC99znK3YgCfaQ",
+            "ruleName": "Lonny Hyatt rule ",
+            "userId": 64222
+        },
+        {
+            "address": "7616 Verner Circles",
+            "addresseeId": "51585-9328",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 18,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "758-167-0711 x8762"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            68580
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "YGtOibeOpPkhjCZmNP3VZspg",
+            "ruleName": "Demarcus Orn rule ",
+            "userId": 3321
+        },
+        {
+            "address": "7263 Jarrell Haven",
+            "addresseeId": "70122-8393",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 19,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-038-386-3108 x1701"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            77012
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "Po9d0GcO0AisPXMB4Av2vEVj",
+            "ruleName": "Cheyanne Kerluke rule ",
+            "userId": 8587
+        },
+        {
+            "address": "547 Skiles Parks",
+            "addresseeId": "62024",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 20,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "127-070-9474"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            95950
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "dpShmxXp2om4RrCGll4Sp6a8",
+            "ruleName": "Jett Schmitt rule ",
+            "userId": 84275
+        },
+        {
+            "address": "784 Ima Mountains",
+            "addresseeId": "32998-4549",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 21,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    []
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    34824
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "bound"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            99090
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "918-410-5152 x11392"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "rG8vU0r6AN3pyGOANvmRsJtq",
+            "ruleName": "Nyasia Walter rule ",
+            "userId": 13313
+        },
+        {
+            "address": "349 Brad Junction",
+            "addresseeId": "35671",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 22,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "101.153.7887 x68506"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "fGxP1nGL5xL9WMLSpsaFtQKF",
+            "ruleName": "Vella Mante rule ",
+            "userId": 58279
+        },
+        {
+            "address": "338 Jabari Knolls",
+            "addresseeId": "03608",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 23,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    []
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    2436
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "cell"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            57312
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "514.836.8888 x78974"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            77379
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "2qlJBwWIvFltDSo6rIMIyQdz",
+            "ruleName": "Justus Hansen rule ",
+            "userId": 89438
+        },
+        {
+            "address": "7297 Hillary Islands",
+            "addresseeId": "87286-2857",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 24,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    []
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    49253
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "home"
+                                                ]
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            57688
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "702-529-4832 x259"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            10700
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "S2amtXB77Ib0gWTViCYB26c5",
+            "ruleName": "Leola Runte rule ",
+            "userId": 96130
+        },
+        {
+            "address": "100 Klein Ridge",
+            "addresseeId": "18406-0373",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 25,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-877-825-4591 x90487"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "YZHAUn3M89JozDrKJy5WwzYy",
+            "ruleName": "Mervin Von rule ",
+            "userId": 68153
+        },
+        {
+            "address": "446 Karen Ports",
+            "addresseeId": "91982",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 26,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "171.537.3740"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "mw3Uk9ylm5LmehpMuoL47P3a",
+            "ruleName": "Branson Tremblay rule ",
+            "userId": 46502
+        },
+        {
+            "address": "36134 Melany Ways",
+            "addresseeId": "33956",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 27,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "607-621-6279 x7811"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "bn2NwIPjFXLviO5XCUzOV8tB",
+            "ruleName": "Jayme Hodkiewicz rule ",
+            "userId": 31963
+        },
+        {
+            "address": "6771 Anne Divide",
+            "addresseeId": "74836-0813",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 28,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    []
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    91726
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "home"
+                                                ]
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            12677
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(729) 484-7936"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            55131
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "Qv3Urj0vFCUUdGuoIUlJc5tU",
+            "ruleName": "Della Schmeler rule ",
+            "userId": 16344
+        },
+        {
+            "address": "065 Pat Ridges",
+            "addresseeId": "47465",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 29,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    []
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    61233
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "assigned"
+                                                ]
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            82822
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-024-038-8998"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "daXDSnqYi5frja7PEskPhnRM",
+            "ruleName": "Hans Kulas rule ",
+            "userId": 3961
+        },
+        {
+            "address": "3648 Estella Isle",
+            "addresseeId": "14465",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 30,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(415) 041-7607"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            12396
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "4gDrSaWgIdUYgkibTtUBp3BV",
+            "ruleName": "Bobbie McClure rule ",
+            "userId": 25094
+        },
+        {
+            "address": "315 Bogan Hollow",
+            "addresseeId": "08980",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 31,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "551-385-7063 x6907"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            26280
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "PTsHlNuPdix6rVZC75WMPgLA",
+            "ruleName": "Jana Heaney rule ",
+            "userId": 514
+        },
+        {
+            "address": "390 Ariel Station",
+            "addresseeId": "80927-7257",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 32,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-259-245-4485 x95479"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            44132
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "Npe3LzCJNuwY6kPOEZ4rgfEk",
+            "ruleName": "Karelle Crist rule ",
+            "userId": 97972
+        },
+        {
+            "address": "49789 Karolann Oval",
+            "addresseeId": "52152",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 33,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "343.442.7577 x8498"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            45744
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "IRrZuYx3U1Ntrgmp3amEAG8p",
+            "ruleName": "Kamille Cormier rule ",
+            "userId": 98074
+        },
+        {
+            "address": "4246 Donnie Lakes",
+            "addresseeId": "11499-5019",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 34,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "012-369-7514 x22230"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            56641
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "WFTXSXvHf5eP0iZUPFPgOhyf",
+            "ruleName": "Michael Ernser rule ",
+            "userId": 67212
+        },
+        {
+            "address": "61775 Hoeger Motorway",
+            "addresseeId": "21682-9865",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 35,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "343.930.2190 x1688"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "1FbG1EkcRKtVQYu3DaxbhSAN",
+            "ruleName": "Jaime Wuckert rule ",
+            "userId": 3792
+        },
+        {
+            "address": "4597 Clifton Circle",
+            "addresseeId": "94809-3144",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 36,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(295) 094-7213"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            98327
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "BHKLNURkjqHidyhbutApQH30",
+            "ruleName": "Geovanni Kulas rule ",
+            "userId": 60805
+        },
+        {
+            "address": "0320 Purdy Shoal",
+            "addresseeId": "85399-6027",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 37,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "226-004-8416 x509"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            25036
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "viNQUYqzv0bdLNeEeqIPF7oF",
+            "ruleName": "Ray Daugherty rule ",
+            "userId": 25999
+        },
+        {
+            "address": "16861 Chauncey Lake",
+            "addresseeId": "12111",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 38,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    []
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    13920
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "bound"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            70025
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-682-271-1066 x4598"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            7836
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "N5BMrel8JBVOkdEqqE3G49rT",
+            "ruleName": "Eriberto Bailey rule ",
+            "userId": 33631
+        },
+        {
+            "address": "82008 Hand Land",
+            "addresseeId": "53570-6711",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 39,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "376.508.6397 x6249"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "3K68OEmtuAxVQiVSfdkYu2nD",
+            "ruleName": "Edwina Mitchell rule ",
+            "userId": 5152
+        },
+        {
+            "address": "51901 Aletha Expressway",
+            "addresseeId": "16501",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 40,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(449) 284-4088"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "zxGcnMhR36Weilax5Kr8BJIG",
+            "ruleName": "Donato DuBuque rule ",
+            "userId": 19950
+        },
+        {
+            "address": "97328 Johnson Trail",
+            "addresseeId": "91845-5679",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 41,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "956.469.4716"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            95429
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "nCXGKYOVc6caCVYU593gkqa5",
+            "ruleName": "Madaline Koelpin rule ",
+            "userId": 22667
+        },
+        {
+            "address": "245 Juston Estate",
+            "addresseeId": "26752-7523",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 42,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(292) 851-4800 x2563"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            2906
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "9vQSi9uAWWs6iHXb5roW4ecj",
+            "ruleName": "Claud McClure rule ",
+            "userId": 5415
+        },
+        {
+            "address": "2095 Kerluke Branch",
+            "addresseeId": "58457",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 43,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-874-764-8279 x3602"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            93213
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "xFU9UbAXEYMCTSpGB5oO7mJC",
+            "ruleName": "Dane Hammes rule ",
+            "userId": 46692
+        },
+        {
+            "address": "85256 Neil Walk",
+            "addresseeId": "39716",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 44,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(325) 143-0702"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            71682
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "4amhWXMf7FVLjcTCHIsiBL2R",
+            "ruleName": "Rosina Gerlach rule ",
+            "userId": 97969
+        },
+        {
+            "address": "06562 Talia Neck",
+            "addresseeId": "30376-4122",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 45,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(149) 671-3320 x519"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "PNBN9wVsmJyYLehI0ejVDxA4",
+            "ruleName": "Dortha O'Conner rule ",
+            "userId": 33056
+        },
+        {
+            "address": "48347 Margaret Burg",
+            "addresseeId": "03315",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 46,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(533) 794-7077 x9688"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "UHNSW6MPPrgcan98iJQlF62M",
+            "ruleName": "Pat Cruickshank rule ",
+            "userId": 3488
+        },
+        {
+            "address": "296 Ratke Shoal",
+            "addresseeId": "18857",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 47,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(151) 543-1937"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            6267
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "5hO8AJCYRic7IRkyw3RvVHsU",
+            "ruleName": "Abdiel Brekke rule ",
+            "userId": 7126
+        },
+        {
+            "address": "3341 Deckow Drive",
+            "addresseeId": "02093",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 48,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    [
+                                                        "8498",
+                                                        "9262"
+                                                    ]
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    76042
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "bound"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            72854
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "629.122.1933"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "3bdGiV2o5wSiNwYhBVRP18VB",
+            "ruleName": "Carolyne West rule ",
+            "userId": 3659
+        },
+        {
+            "address": "08125 Ezequiel Ways",
+            "addresseeId": "80553-2180",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 49,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    [
+                                                        "2827",
+                                                        "1912",
+                                                        "3200"
+                                                    ]
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    89137
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "bound"
+                                                ]
+                                            },
+                                            {
+                                                "All": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            12880
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "865.294.3477 x160"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            15002
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "0z8aelIjOAqgdhC9WMULBytb",
+            "ruleName": "Eleazar Schmitt rule ",
+            "userId": 23447
+        },
+        {
+            "address": "9192 Maxime Trafficway",
+            "addresseeId": "83549",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 50,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-744-090-2032"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                2,
+                                5,
+                                7
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            46948
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "NnxL74VLQJDZCCHh8mugJq0e",
+            "ruleName": "Rosario Larson rule ",
+            "userId": 92861
+        },
+        {
+            "address": "2021 Halvorson Shores",
+            "addresseeId": "15338-3929",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 51,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "562.358.6153 x708"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "uR5ySwDsMnbM5dRWhAiOrvE1",
+            "ruleName": "Jalen Bayer rule ",
+            "userId": 93195
+        },
+        {
+            "address": "514 Emmanuelle Meadows",
+            "addresseeId": "64346",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 52,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "048-565-3140 x325"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "iB88dQ6iJBx4tFOlxwzdjrUI",
+            "ruleName": "Dewayne Pollich rule ",
+            "userId": 77562
+        },
+        {
+            "address": "715 Rhiannon Square",
+            "addresseeId": "23984-5713",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 53,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "Reject": []
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "1-941-781-5490 x292"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            62786
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "Jq32hxHorNhXtCZwSIlMWFKN",
+            "ruleName": "Nakia Heller rule ",
+            "userId": 36914
+        },
+        {
+            "address": "26039 Jordi Trace",
+            "addresseeId": "30684-2344",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 54,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    [
+                                                        "4032"
+                                                    ]
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    33397
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "home"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            94336
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            0
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(490) 676-4063 x048"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            4366
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "t4aCdzAlSKgU6MAiBu4aZP2x",
+            "ruleName": "Rickey Stanton rule ",
+            "userId": 84010
+        },
+        {
+            "address": "033 Volkman Meadows",
+            "addresseeId": "93895",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 55,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "065-037-9406 x139"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    },
+                    {
+                        "NoAnswer": [
+                            78230
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "aqJDLnMSR1XlkLiPVpAi30Oj",
+            "ruleName": "Benedict O'Hara rule ",
+            "userId": 9914
+        },
+        {
+            "address": "308 Koelpin Landing",
+            "addresseeId": "04815-1733",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 56,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "142.241.7990 x39857"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "kH4xn2Q7c9qLKVtWjFgMLqSu",
+            "ruleName": "Retta Gleichner rule ",
+            "userId": 11509
+        },
+        {
+            "address": "9364 Upton Orchard",
+            "addresseeId": "63084-7068",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 57,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardToVM": [
+                            "0.p"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(268) 884-3638"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            66417
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "n9mbYO9W3Bg5DxtyrhiQrFBC",
+            "ruleName": "Earl Dickens rule ",
+            "userId": 59834
+        },
+        {
+            "address": "008 Jaime Circles",
+            "addresseeId": "74202",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 58,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(503) 471-5412"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Busy": []
+                    }
+                ]
+            },
+            "ruleId": "qLBfFzOTcvma6wdCKwl7kGAJ",
+            "ruleName": "Myles Crona rule ",
+            "userId": 93816
+        },
+        {
+            "address": "602 Koelpin Radial",
+            "addresseeId": "03248",
+            "displayUserIDForExCall": false,
+            "enabled": true,
+            "number": 59,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "926-748-5417 x469"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            53223
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "mHR3ySDztxLgwKFJYJw1F2AS",
+            "ruleName": "Regan Volkman rule ",
+            "userId": 69495
+        },
+        {
+            "address": "5282 Malinda Manor",
+            "addresseeId": "79322-5050",
+            "displayUserIDForExCall": true,
+            "enabled": false,
+            "number": 60,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "(613) 317-8730"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                3,
+                                4,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            50067
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "UwuvAy6Yi2X5VEdwOBghHfRm",
+            "ruleName": "London Trantow rule ",
+            "userId": 17781
+        },
+        {
+            "address": "75877 Dena Canyon",
+            "addresseeId": "65751",
+            "displayUserIDForExCall": false,
+            "enabled": false,
+            "number": 61,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "FindMe": [
+                            {
+                                "Try": [
+                                    {
+                                        "To": [
+                                            {
+                                                "Ext": [
+                                                    [
+                                                        "8769",
+                                                        "2269"
+                                                    ]
+                                                ]
+                                            },
+                                            {
+                                                "Id": [
+                                                    54157
+                                                ]
+                                            },
+                                            {
+                                                "Assigned": [
+                                                    "bound"
+                                                ]
+                                            },
+                                            {
+                                                "All": [
+                                                    true
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "For": [
+                                            44514
+                                        ]
+                                    },
+                                    {
+                                        "Ask": [
+                                            1
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "Bad": [
+                                    {
+                                        "ForwardToVM": [
+                                            "0"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "328.623.1572"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                1,
+                                3,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "AnyCall": []
+                    }
+                ]
+            },
+            "ruleId": "XqVGtPjgTnobuc8Hguwmas6V",
+            "ruleName": "Jerrod Yost rule ",
+            "userId": 5483
+        },
+        {
+            "address": "1227 Dibbert Rue",
+            "addresseeId": "49541",
+            "displayUserIDForExCall": true,
+            "enabled": true,
+            "number": 62,
+            "ownerType": "User",
+            "rule": {
+                "Actions": [
+                    {
+                        "ForwardTo": [
+                            "1001"
+                        ]
+                    },
+                    "Updates"
+                ],
+                "Conditions": [
+                    {
+                        "DateRange": [
+                            "",
+                            "9/9/2015"
+                        ]
+                    },
+                    {
+                        "TimeFrame": [
+                            "00:00",
+                            "15:10"
+                        ]
+                    },
+                    {
+                        "Holidays": []
+                    },
+                    {
+                        "Presence": [
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5,
+                            6,
+                            7,
+                            10
+                        ]
+                    },
+                    {
+                        "CallFrom": [
+                            "845-562-9065 x8078"
+                        ]
+                    },
+                    {
+                        "WeekDays": [
+                            [
+                                4,
+                                5,
+                                6
+                            ]
+                        ]
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "NoAnswer": [
+                            73056
+                        ]
+                    }
+                ]
+            },
+            "ruleId": "zVGQk537RTa5xnZJqRvk4HBJ",
+            "ruleName": "Nick Wiegand rule ",
+            "userId": 2471
+        }
+    ],
+    "command": "get_chr_list",
+    "index": 0,
+    "success": true
+}
