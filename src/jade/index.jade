@@ -1,0 +1,62 @@
+extends ~layout
+
+block metaBlock
+    meta(charset="utf-8")
+    title Interactive client
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.9, user-scalable=yes")
+    link(href='img/icons/favicon.ico', rel='shortcut icon', type='image/x-icon')
+
+
+block inc_libs
+    script(src="js/vendor/underscore/underscore.js")
+    script(src="js/vendor/angular/angular.js")
+    script(src="js/vendor/angular-cookies/angular-cookies.js")
+    script(src="js/vendor/angular-md5/angular-md5.js")
+    script(src="js/vendor/angular-translate/angular-translate.min.js")
+    script(src="js/vendor/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js")
+    script(src="js/vendor/messageformat/messageformat.js")
+    script(src="js/vendor/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js")
+    script(src="js/vendor/restangular/dist/restangular.js")
+    script(src="js/vendor/angular-route/angular-route.js")
+    script(src="js/vendor/angular-poller/angular-poller.js")
+    script(src="js/vendor/lodash/lodash.min.js")
+
+
+block inc_libs_min
+    script(src="js/vendor/underscore/underscore-min.js")
+    script(src="js/vendor/angular/angular.min.js")
+    script(src="js/vendor/restangular/dist/restangular.min.js")
+    script(src="js/vendor/angular-route/angular-route.min.js")
+    script(src="js/vendor/angular-poller/angular-poller.min.js")
+
+
+block ng-material_dep
+    script(src="js/vendor/angular-aria/angular-aria.js")
+    script(src="js/vendor/angular-animate/angular-animate.js")
+    script(src="js/vendor/angular-material/angular-material.js")
+
+
+block styles
+    link(rel='stylesheet', href='css/main.css' ,type="text/css")
+
+
+block application
+    script(src="js/app.js")
+
+
+block application_lib
+    if application_env == "development"
+        block inc_libs
+    else
+        block inc_libs_min
+    block application
+
+
+block Index
+    head
+        block metaBlock
+        link(rel='stylesheet',href="js/vendor/angular-material/angular-material.css")
+        block styles
+        block application_lib
+        block ng-material_dep
+        noscript <h1 style="text-align: center;">Please enable JavaScript in your browser.</h1>

@@ -1,0 +1,20 @@
+div
+    div
+        table.table
+            thead
+                tr
+                    th {{"ID"|translate}}
+                    th {{"Event Name"|translate}}
+                    th {{"Location"|translate}}
+                    th {{"Time"|translate}}
+                    th.tableCellCenter {{"Related"|translate}}
+            tbody
+                tr(
+                    event,
+                    ng-event="event"
+                    ng-class-even="'tableRowEven'"
+                    ng-repeat="(key,event) in events"
+                )
+
+div( ng-if="events.length == 0" )
+    | {{"Events list is empty"|translate}}

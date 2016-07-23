@@ -1,0 +1,33 @@
+/* MAIN LAYOUT */
+body
+  min-width $main-min-width
+
+.main
+  height 100%
+
+  > div
+    margin-top -104px
+    padding-top 104px
+
+  md-sidenav.md-locked-open
+    width     $nav-width
+    min-width $nav-width
+    max-width $nav-width
+
+  @import 'mainLayout/_view'
+  @import 'mainLayout/_head'
+  @import 'mainLayout/_nav'
+
+  &Container
+    border-left 0 solid blue
+    /*overflow hidden*/
+    /*padding-top 0!important*/
+    /*padding-right 0!important*/
+
+  &Content
+    border-left 0 solid red
+    /*overflow auto*/
+    /*min-height 900px*/
+    /*max-height 1500px*/
+    /*max-height 828pxpx*/
+    /*height 600px*/

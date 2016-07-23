@@ -1,0 +1,9 @@
+{
+  "name" : "rest-helpers",
+  "version": "0.0.1",
+  "description": "Package of helpers for Visonic Intractive web-app",
+
+  "dependencies": {
+      "dateformat": "*"
+  }
+}

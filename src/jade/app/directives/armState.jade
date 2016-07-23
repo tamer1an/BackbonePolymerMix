@@ -1,0 +1,20 @@
+div(layout="row",layout-align="end center")
+    div( arm-state-button-arm )
+    div( arm-state-button-home )
+    div( arm-state-button-disarm )
+
+    div.armStateStatus(
+        layout="column",
+        layout-align="center start"
+    )
+
+        span
+            md-tooltip(hide-gt-md,md-direction='top') {{ connectedStatus }}
+            div.armStateStatusConnected(ng-style="{background: getBulletColor('getConnectionState') }")
+            h4.armStateStatusText(hide-sm,hide-md) {{ connectedStatus }}
+
+        span
+            md-tooltip(hide-gt-md,md-direction='top') {{ readyStatus }}
+            div.armStateStatusReady(ng-style="{background: getBulletColor('getReadyState') }")
+            h4.armStateStatusText(hide-sm hide-md) {{ readyStatus  }}
+

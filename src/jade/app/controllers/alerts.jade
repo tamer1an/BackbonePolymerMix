@@ -1,0 +1,13 @@
+.cards-list(flex)
+    div(layout="row", layout-wrap)
+        div(
+            ng-repeat="alert in alerts",
+            alert="alert"
+            flex-sm="100",
+            flex-md="50",
+            flex-lg="33",
+            flex-gt-lg="25",
+        )
+
+div( ng-if="alerts.length == 0" )
+    | There is no alerts

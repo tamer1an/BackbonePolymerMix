@@ -1,0 +1,59 @@
+div.login( layout-fill, ng-if="! isLoggedIn", layout="row", layout-align="center center" )
+    md-content.md-padding
+        form.loginForm(
+              layout="column",
+              layout-padding,
+              layout-align="center center",
+              name="authForm",
+              ng-submit="signIn()",
+              ng-controller="AuthFormController" )
+
+            md-icon.logo(md-svg-src="img/icons/svg/logo.svg")
+
+            .md-warn( ng-show="form.pristine && signInError" ) {{"Error"|translate}}: {{ signInError }}
+
+            md-input-container.loginFormInput
+                label {{"Panel's Web Name"|translate}}
+
+                input.loginFormInputName( ng-model="webName"
+                       name="webName"
+                       required
+                       maxlength="32" )
+
+                div( ng-messages="authForm.webName.$error" )
+                    div( ng-message="required"
+                         ng-show="authForm.webName.$error.required && !authForm.$pristine" )
+                        | {{"Panel's Web Name is required"|translate}}
+
+                    div( ng-message="maxlength",
+                         ng-show="authForm.webName.$error.maxlength" )
+                        | {{"Panel's Web Name must be no longer than 32 symbols"|translate}}
+
+
+            md-input-container.loginFormInput
+                label {{"Code"|translate}}
+                input.loginFormInputCode( type="number"
+                       ng-maxlength="4"
+                       name="code"
+                       required
+                       ng-model="code" )
+
+                div( ng-messages="authForm.code.$error" )
+                    div( ng-message="required"
+                         ng-show="authForm.code.$error.required && !authForm.$pristine" )
+                        | {{"Code is required"|translate}}
+
+                    div( ng-message="ng-maxlength",
+                         ng-show="authForm.code.$error.maxlength" )
+                        | {{"Code have to be 4 symbols length"|translate}}
+
+                    div( ng-message="number",
+                         ng-show="authForm.code.$error.number" )
+                        | {{"Code has to contain only numbers"|translate}}
+
+                    div( ng-message="wrong"
+                         ng-show="authForm.code.$error.wrong" )
+                        | {{"Code is incorrect"|translate}}
+
+            md-button.loginFormButton.md-raised.md-ripple-full.md-primary( ng-click="authForm.submit()" )
+                | {{"Login"|translate}}

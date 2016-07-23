@@ -1,0 +1,28 @@
+div(layout-align="center center",layout="row",ng-init="active=0")
+
+    span.videoPlayerArrowPrev(
+        ng-class="{disabledArrow:!(active>0)}",
+        ng-click="active= (active>0)? active-1 : active"
+    )
+
+    div.videoPlayerContent(flex=90)
+        div
+            img.videoPlayerContentFrame(
+                ng-repeat="(key,frame) in frames",
+                ng-hide="active != key",
+                ng-src="{{frame+noCache}}"
+                alt="{{key}}"
+            )
+
+            div.videoPlayerContentNav(layout="row",layout-align="center center")
+                div.videoPlayerContentNavFrame(ng-repeat="(key,frame) in frames")
+                    img.videoPlayerContentNavFrameImg(
+                        ng-class="{'active':active == key}",
+                        ng-src="{{frame+noCache}}",
+                        ng-click="activateFrame(key)"
+                    )
+
+    span.videoPlayerArrowNext(
+        ng-class="{disabledArrow:!(active<frames.length-1)}",
+        ng-click="active= (active<frames.length-1)? active+1 : active"
+    )

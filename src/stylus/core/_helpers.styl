@@ -1,0 +1,53 @@
+/* HELPERS */
+br()
+  border-radius arguments
+
+bg()
+  background arguments
+
+corporate-black()
+  color black
+
+cp()
+  cursor pointer
+
+db()
+  display block
+
+.owh
+  overflow hidden
+
+/* NO TEXT SELECT */
+noselect()
+  -webkit-touch-callout none
+  -webkit-user-select none
+  -khtml-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  user-select none
+
+/* SVG BG */
+svgBgFile(file, x, y)
+  background-image url($pathToSvg+file)
+  background-position x y
+  background-repeat no-repeat
+
+multiSvgBgFile(file, x, y, secondLayer)
+  background url($pathToSvg+file),secondLayer
+  background-position x y
+  background-repeat no-repeat
+
+/* ARROWS */
+arrow-right(varColor)
+  width 0
+  height 0
+  border-top 15px solid transparent
+  border-bottom 15px solid transparent
+  border-left 15px solid varColor
+
+arrow-left(varColor)
+  width 0
+  height 0
+  border-top 15px solid transparent
+  border-bottom 15px solid transparent
+  border-right 15px solid varColor

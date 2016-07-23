@@ -1,0 +1,9 @@
+div.armStateHome(ng-class="[class, {'md-raised': class == 'active'}]")
+    md-select.armStateSelect(
+        ng-disabled="isBlocked",
+        ng-model="state",
+        ng-class="{mdPrimary: isCurrent}",
+        placeholder="{{selectedOpt}}"
+    )
+        md-option( value="home" ) {{"Home"|translate}}
+        md-option( value="home.instant" ) {{"Home Instant"|translate}}

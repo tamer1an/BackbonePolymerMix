@@ -1,0 +1,90 @@
+/*ARM TOOLS IN HEADER*/
+.armState
+  font-family CorporateSemiBold
+  width 93%
+  margin-top 15px
+
+  &Container
+    min-width 435px
+
+  &Home,&Arm,&Disarm
+    &.activating
+      blink()
+
+  &Home,&Arm
+    br(4px)
+    overflow hidden
+    height $armState-elem-height
+    margin-top 17px
+    background-size auto 89%
+    padding-left 44px
+
+  &Home
+    svgBgFile('menu/ic_home.svg', 3px , 1px)
+    margin-left 35px
+
+    &.md-raised
+      multiSvgBgFile('menu/ic_home_blue.svg', 3px, 1px, $armState-active-bg)
+      background-size auto 89%
+
+      .armStateSelect
+        background $armState-active-bg
+
+        .md-select-label
+          color $armState-active-elem!important
+          height $armState-select-height
+
+  &Select
+    width 85px
+    font-size 72%
+    margin-top 0
+    vertical-align middle
+
+    &:disabled
+      cursor not-allowed
+
+    .md-select-label
+      letter-spacing 0.3px
+      line-height 0.9em
+      height $armState-select-height
+      color $armState-active-bg!important
+      border none!important
+
+  &Disarm
+    text-transform lowercase!important
+    margin-top 20px
+    margin-left 35px
+    min-width 110px
+    min-height 30px
+
+    &:first-letter
+      text-transform uppercase
+
+    &:disabled
+      cursor not-allowed
+
+    &Text
+      width 150px
+
+  &Status
+    margin-left 45px
+    margin-top 20px
+    font-size 60%
+    text-align right
+    width 120px
+
+    span
+      margin-top 2px
+
+    &Connected, &Ready
+      border-radius 50%
+      width  11px
+      height 11px
+      display inline-block
+      vertical-align middle
+
+    &Text
+      display inline-block
+      padding 0
+      margin 0
+

@@ -1,0 +1,41 @@
+/*MAIN LAYOUT VIEW*/
+&View
+  width $main-view-width
+
+  md-toolbar
+    bg(none)
+    corporate-black()
+    box-shadow none
+    padding    10px
+
+  &Section
+    backgound $color-main-bg
+
+  &Toolbar
+    min-height 52px!important
+
+  &ToolbarFilter
+    font-size 60%
+
+    &Label
+      margin 0 8px
+
+      h7
+        corporate-black()
+        margin-right 12px
+
+      &:first-child
+        h7
+          color white
+
+      .md-button
+        padding-left 40px
+        border-bottom 2px solid white
+
+        @import 'alarms/_filterIcons'
+
+        &.activeFilter
+          border-bottom 2px solid red
+
+        span
+          corporate-black()

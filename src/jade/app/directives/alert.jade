@@ -1,0 +1,10 @@
+md-item.card(layout="column")
+    md-item-content(flex)
+        md-icon.card-icon(ng-if="icon", md-svg-src="img/icons/svg/alerts/{{icon}}.svg", title="alert_type: {{alert.alert_type}}")
+
+        .md-tile-content
+            h3( ng-bind="title" )
+
+            p.card-info
+                strong( ng-bind="alert.zone_type" )
+                span {{alert.datetime|datetimeFilter}}

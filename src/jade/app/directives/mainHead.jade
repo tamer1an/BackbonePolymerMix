@@ -1,0 +1,17 @@
+header
+    md-toolbar(ng-controller="StatusController")
+        md-progress-linear( md-mode="indeterminate", flex="100", ng-show="isProgress" )
+
+        div.md-toolbar-tools
+            md-icon.mainHeadLogo(md-svg-src="img/icons/svg/logo.svg", hide-sm hide-md)
+
+            div.fill-height(layout="row",flex)
+                div.armState
+
+            md-button.mainHeadMenu(ng-click="logout()", aria-label="Profile")
+                span(hide-sm, hide-md) Logout
+                span(hide-gt-md)
+                    embed(style="width:40px;",type="image/svg+xml", src="img/icons/svg/ic_exit.svg")
+                md-tooltip(hide-gt-md,md-direction='top') {{"Logout"|translate}}
+
+

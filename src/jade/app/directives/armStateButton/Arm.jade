@@ -1,0 +1,11 @@
+div.armStateArm(ng-class="[class, {'md-raised': class == 'active'}]")
+    md-icon(md-svg-src="img/icons/svg/menu/ic_full-lock.svg")
+
+    md-select.armStateSelect(
+        ng-disabled="isBlocked",
+        ng-model="state",
+        placeholder="{{selectedOpt}}"
+    )
+        md-option( value="away" ) {{"Arm Away"|translate}}
+        md-option( value="away.instant" ) {{"Arm Instant"|translate}}
+        md-option( value="away.latchkey" ) {{"Arm Latchkey"|translate}}

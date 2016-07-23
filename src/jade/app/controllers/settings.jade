@@ -1,0 +1,41 @@
+md-content.md-padding
+    div( layout-fill )
+        form( layout="column",
+              layout-padding,
+              name="settingsForm",
+              ng-controller="SettingsFormController" )
+
+            h1 Settings
+
+            md-input-container
+                label {{"Idle timer"|translate}}
+
+                input( name="idleTimer"
+                       ng-model="idleTimer",
+                       ng-model-options="{ debounce: 500 }",
+                       min="60",
+                       max="300",
+                       type="number",
+                       required )
+                div( ng-messages="settingsForm.idleTimer.$error" )
+                    div( ng-message="required",
+                         ng-show="settingsForm.idleTimer.$error.required" )
+                        | {{"Idle timer value is required"|translate}}
+                    div( ng-message="min",
+                        ng-show="settingsForm.idleTimer.$error.min" )
+                        | {{"Idle timer must not be less than 60 seconds"|translate}}
+                    div( ng-message="max",
+                        ng-show="settingsForm.idleTimer.$error.max" )
+                        | {{"Idle timer must not be more than 300 seconds"|translate}}
+
+            md-input-container
+                label {{"Language"|translate}}
+
+                md-select( ng-model="language" )
+
+                    md-select-label
+                        | {{ language ? language.name : "Select Language"|translate }}
+
+                    md-option( ng-value="language",
+                               ng-repeat="language in languages" )
+                        | {{ language.name }}

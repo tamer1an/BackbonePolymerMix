@@ -1,0 +1,152 @@
+.video
+
+  &Dialog
+    width     $dialog-video-width
+    max-width $dialog-video-max-width
+    min-width $dialog-video-min-width
+
+    &.ng-enter, &.ng-leave
+      border-radius 100% !important
+
+    &Content
+      padding 0
+
+      div.md-actions
+        background $dialog-color!important
+
+    &Close
+      margin-top -6px
+      color $white
+
+    &Header
+      background $dialog-color
+
+    .dialog-content
+      background $dialog-color
+      height 500px
+      overflow hidden
+      margin 0
+      margin-top -20px
+
+    .md-actions
+      margin 0
+      padding 0
+
+  &Header
+    margin-left 14px
+
+    &CameraID
+      margin 0
+      color $white
+      font-size  110%
+
+    &Location
+      margin 0
+      color #818E95
+      font-size  80%
+
+  &Container
+    color $white
+
+  &Player
+    noselect()
+    width 100%
+
+    &ArrowNext
+      arrow-right($grey)
+      margin-left 5px
+
+      &:hover
+        border-left 15px solid $lightgrey
+
+      &.disabledArrow
+        opacity 0.1
+
+
+    &ArrowPrev
+      arrow-left($grey)
+      margin-right 5px
+
+      &:hover
+        border-right 15px solid $lightgrey
+
+      &.disabledArrow
+        opacity 0.1
+
+    &Content
+      height 405px
+      max-width 509px
+      width  100%
+
+      &Nav
+        bottom 62px
+        position relative
+        padding 8px 5px 5px 0
+        background rgba(255,255,255,0.3)
+
+        &Frame
+          margin-left 5px
+          height 40px
+          width 40px
+          background grey
+
+          &Img
+            height 100%
+            width 100%
+            border 1px solid $black
+            cursor pointer
+
+            &.active
+              border 2px solid $red
+
+      &Frame
+        width  100%
+        height 385px
+        margin-bottom 5px
+        margin-top 8px
+        border 1px solid $grey
+
+    &FrameButtons
+      display block
+      position absolute
+      top 90.1%
+      left 29%
+
+  &List
+    color $white
+    padding-top 0
+
+    &Box
+      height 463px
+      padding 0
+      margin-top 18px
+      padding-top 15px
+      background none!important
+
+    &Divider
+      border-top-color rgba(255, 255, 255, 0.12)
+      width 90%
+
+    &Item
+      color $white
+      border-bottom 1px solid $grey
+      cp()
+
+      &.activeItem
+        background #3F3F40
+
+      .md-tile-content
+        padding 0
+
+      &Title
+        font-size 80%
+
+      &Time
+        color $lightgrey
+        font-size 60%
+
+      &Img
+        margin-left 4px!important
+
+        &Body
+          width 50px

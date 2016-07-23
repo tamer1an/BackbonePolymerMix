@@ -1,0 +1,15 @@
+extends dialog
+
+block content
+    div.dialog-content.alarmVideo( layout="row", layout-wrap )
+        div( flex="70")
+            div( video-player, source="selected" )
+
+        div(layout-padding, flex="30" )
+            md-content.videoListBox(layout="column")
+                md-list.videoList
+                    div( video-preview,
+                         ng-preview="preview",
+                         selected="selected",
+                         ng-click="select(preview)",
+                         ng-repeat="preview in previews" )

@@ -1,0 +1,10 @@
+md-item
+    md-item-content.videoListItem(ng-class="{activeItem:(preview == selected)}")
+        div(layout="row", layout-margin, layout-fill="layout-fill")
+            div.videoListItemImg.md-tile-left(flex=20,layout="row",layout-align="center center")
+                img.videoListItemImgBody(ng-src="{{preview.path}}")
+
+            div.md-tile-content(flex=80)
+                h3.videoListItemTitle( ng-bind="preview.name" )
+                h4.videoListItemTime( ng-bind="preview.time.toDateString()" )
+    md-divider.videoListDivider(inset)

@@ -1,0 +1,22 @@
+md-tabs(flex, layout="column")
+    md-tab(ng-repeat="filter in filters")
+        md-tab-label
+            md-icon(md-svg-src="{{filter.getName()|iconFilter:'alerts'}}")
+
+            |  {{filter.getName()}}
+            small(style="margin-left: 4px;")
+                | (
+                b {{filter.getCount()}}
+                | )
+
+        .cards-list(layout="row", layout-wrap)
+            div(
+                ng-repeat="alarm in alarms | listFilter:filter:filters.targetField",
+                alarm="alarm",
+                flex-sm="100",
+                flex-md="50",
+                flex-lg="33",
+                flex-gt-lg="25"
+            )
+
+div( ng-if="alarms.length == 0") {{"There is no alarms"|translate}}

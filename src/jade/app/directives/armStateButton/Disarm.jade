@@ -1,0 +1,8 @@
+div
+    md-button.armStateDisarm(
+        ng-class="[class, {'md-raised': class == 'active'}]",
+        aria-label="Disarm",
+        ng-click="disarm()"
+    )
+        md-icon(md-svg-src="img/icons/svg/menu/ic_open-lock.svg")
+        |  {{"Disarm"|translate}}

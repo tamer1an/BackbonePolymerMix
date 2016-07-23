@@ -1,0 +1,4 @@
+div
+    div.videoPlayerContent
+        video(width="100%", height="100%", controls, ng-if="path", autoplay)
+            source(ng-src="{{path}}", type="video/mp4")

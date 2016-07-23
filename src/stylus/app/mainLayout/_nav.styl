@@ -1,0 +1,50 @@
+/*MAIN LAYOUT LEFT SIDEBAR*/
+&Nav
+  background $main-nav-bg
+
+  &BackBtn
+    font-size 150%
+    top -17px
+
+  md-content.md-padding
+    padding 0
+
+  &Item
+    background $main-nav-bg
+    db()
+    cp()
+    width $nav-item-width
+    height $nav-item-height
+    font-size $nav-font-size
+    font-weight $nav-font-weight
+    border-radius 0 !important
+    text-align left
+
+    md-icon
+      margin 0 20px 0 5px
+      width 24px
+
+    &Container:last-child
+      margin-top 45px
+      width 100%
+      float left
+
+    &Link
+      text-decoration none
+      font-weight 600
+      color #2b3a41
+      width 100%
+      height 40px
+      line-height 42px
+      display block
+
+  .mActive
+    background-color rgba(158,158,158,0.2)
+
+    .mainNavItemLink
+      color: #f00000
+
+[ng-controller='MainNavController']
+  background #f6f8fa!important
+
+

@@ -1,0 +1,8 @@
+tr
+    td(ng-bind="event.event")
+    td(ng-bind="event.description")
+    td(ng-bind="event.appointment")
+    td(ng-bind="event.datetime | datetimeFilter")
+    td.tableCellCenter
+        md-icon.tableIconPlay(md-svg-src="img/icons/svg/ic_play_small.svg", ng-if="event.video")
+        span.tableCellEmpty(ng-if="! event.video") {{"Empty"|translate}}

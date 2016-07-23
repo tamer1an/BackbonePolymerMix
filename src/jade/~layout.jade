@@ -1,0 +1,18 @@
+- var application_env = "development"
+doctype html
+html(lang="en")
+    block Index
+    body(ng-app="InteractiveApplication")
+        div( auth )
+
+        main.main(ng-controller="MainController", ng-show="showContent", ng-click="click()")
+            header.mainHead
+            div(layout="column", layout-fill)
+                section(layout="row", flex)
+                    aside.mainNav
+                    md-content.mainContainer(flex, layout="column")
+                        div
+                            md-button.mainNavBackBtn(ng-click="toggleLeft()", hide-gt-lg)
+                                md-icon.s48(md-svg-src="img/icons/svg/menu/ic_3lines.svg", alt="Show sidebar")
+
+                        div(ng-controller="WorkspaceController", flex, layout="column", ng-view)

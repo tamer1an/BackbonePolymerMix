@@ -1,0 +1,16 @@
+md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id="left", md-is-locked-open="$mdMedia('gt-lg')")
+    md-content.md-padding(ng-controller="MainNavController")
+        md-button.mainNavCloseBtn(ng-click="close()",hide-gt-lg) X
+        md-list
+            md-item.mainNavItemContainer(
+                    ng-repeat="menu in menuList",
+                    ng-init="HREF = menu.toLowerCase()"
+                )
+                md-button(
+                        ng-href="{{'#'+HREF}}",
+                        ng-class="['mainNavItem', (location.path().slice(1)==HREF?'mActive':'')]",
+                        ng-click="close()"
+                    )
+                    span.mainNavItemLink
+                        md-icon(md-svg-src="{{ HREF | iconFilter:'menu' }}", aria-label="")
+                        | {{ menu }}

@@ -1,0 +1,15 @@
+div.videoContainer(layout="column", layout-align="center start")
+    div.videoHeader(flex=15)
+        p.videoHeaderCameraID {{ source.name }} &nbsp;
+        //p.videoHeaderLocation( ng-bind="source.time" )
+
+    div.videoPlayer(flex=70, layout="column", layout-align="center center", video-player-video, ng-if="isVideo()", source="source.provider.getVideo" )
+    div.videoPlayer(flex=70, video-player-frame, ng-if="isFrame()", source="source.provider.getFrames" )
+
+    div(flex=15)
+        md-switch( ng-model="mode"
+                   ng-true-value="'frame'"
+                   ng-false-value="'video'"
+                   aria-label="Player Mode" ) {{ mode | translate }}
+
+

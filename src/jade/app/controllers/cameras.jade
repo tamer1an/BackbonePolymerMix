@@ -1,0 +1,22 @@
+md-tabs(flex, layout="column")
+    md-tab(ng-repeat="filter in filters")
+        md-tab-label
+            md-icon(md-svg-src="{{'All'|iconFilter:'cameras'}}", ng-show="'All' == filter.getName()")
+
+            |  {{filter.getName()}}
+            small(style="margin-left: 4px;")
+                | (
+                b {{filter.getCount()}}
+                | )
+
+        .cards-list(layout="row", layout-wrap)
+            div(
+                ng-repeat="camera in cameras | listFilter:filter:filters.targetField",
+                camera="camera",
+                flex-sm="100",
+                flex-md="50",
+                flex-lg="33",
+                flex-gt-lg="25",
+            )
+
+div( ng-if="cameras.length == 0" ) {{"No cameras"|translate}}

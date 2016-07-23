@@ -1,0 +1,15 @@
+div.mainViewToolbarFilter( ng-if="filters.length" )
+    div(layout="row", layout-align="start start")
+        label.mainViewToolbarFilterLabel( ng-repeat="filter in filters" )
+
+            md-tooltip(hide-gt-md,md-direction='top') {{ filter.getName() }}
+
+            md-button(
+                type='radio',
+                name='filter',
+                ng-model="filter._isSelected",
+                data-ng-value="true",
+                ng-class="[ (filter.isSelected()?'activeFilter':'') , ('filter_'+filter.getName().replace(' ','')) ]",
+                ng-click="activate(filter)" ) <span hide-sm hide-md>{{ filter.getName() }}</span> ({{ filter.getCount() }})
+
+            //span( ng-if="filter.isSelected()" ) !

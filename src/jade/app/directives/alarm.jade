@@ -1,0 +1,13 @@
+md-item.card(layout="column")
+    md-item-content(flex)
+        md-icon.card-icon(ng-if="icon", md-svg-src="img/icons/svg/alerts/{{icon}}.svg")
+
+        .md-tile-content
+            h3( ng-bind="title" )
+
+            p.card-info
+                strong( ng-bind="alarm.location" )
+                span {{alarm.datetime|datetimeFilter}}
+
+            p.actions(ng-show="!! alarm.has_video")
+                md-button.md-accent(ng-click="showAdvanced($event)") {{"VIDEO AVAILABLE"|translate:'{ count: '+ videosCount + '}'}}

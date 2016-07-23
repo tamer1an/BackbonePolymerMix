@@ -1,0 +1,36 @@
+.login
+  position absolute
+  z-index 100
+  background-color rgba(255,255,255,.9)
+
+  md-toolbar.md-default-theme
+    min-height $head-height
+    background $head-color
+    padding-left  15px
+
+  .logo
+    width 300px
+    color #1e88e5
+    margin 0 0 20px
+
+  .md-warn
+    color rgb(255,82,82)
+    margin-bottom 20px
+
+  &Form
+    width  490px
+    height 373px
+
+    &Input
+      width  390px
+
+      &Name
+        background url($pathToSvg + "menu/ic_lock_grey.svg") 100% no-repeat!important
+
+      &Code
+        width 100%
+        background url($pathToSvg + "menu/ic_key_grey.svg") 100% no-repeat!important
+
+    &Button
+      margin-top 40px
+      background $head-color!important

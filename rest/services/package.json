@@ -1,0 +1,5 @@
+{
+  "name" : "rest-services",
+  "version": "0.0.1",
+  "description": "Package of rest services for Visonic Intractive web-app"
+}

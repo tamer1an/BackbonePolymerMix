@@ -1,0 +1,20 @@
+md-item.card(ng-class="{'card-selected':isSelected}")
+    md-item-content(flex)
+        .card-image.no-image(ng-if="! preview")
+            md-icon(md-svg-src="img/icons/svg/ic_noplay.svg")
+
+        .card-image(ng-if="preview", style="background-image: url({{preview}})")
+            md-icon(md-svg-src="img/icons/svg/ic_play.svg")
+
+        .md-tile-content
+            h3( ng-bind="camera.zone_name" )
+
+            p.card-info
+                strong( ng-bind="camera.location" )
+                span(ng-if="camera.timestamp") {{camera.timestamp|datetimeFilter}}
+
+        p.actions
+            md-button.md-accent(ng-click="showAdvanced($event)", ng-show="!! videosCount") {{ videosCount }} VIDEO AVAILABLE
+            md-button(ng-disabled="true", ng-if="! videosCount") NO VIDEO AVAILABLE
+
+            md-button.md-primary(ng-click="showAdvanced($event)") VIDEO ON DEMAND

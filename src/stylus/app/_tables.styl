@@ -1,0 +1,64 @@
+.table
+  border-collapse collapse
+  width 100%
+  color: #424e54
+
+  th, td
+    padding 15px 20px
+    font-size 13px
+
+  &RowEven
+    bg(#f6f8fa)
+
+  &ColumnSort
+    cursor: pointer
+
+  &SortIcon
+    width 20px
+    position relative
+    display inline-block
+    vertical-align middle
+
+    &:before, &:after
+      content ''
+      position absolute
+      right 0
+      border 5px solid transparent
+
+    &:before
+      bottom: 50%
+      margin-bottom 2px
+      border-bottom-color white
+
+    &:after
+      top 50%
+      margin-top 2px
+      border-top-color white
+
+    &Asc:after
+      opacity: 0
+
+    &Asc:before
+      margin-bottom -2px
+
+    &Desc:before
+      opacity: 0
+
+    &Desc:after
+      margin-top -2px
+
+  thead
+    text-align left
+    font-size 15px
+    color: white
+    bg(#aab6c4)
+
+  &CellCenter
+    text-align center
+
+  &CellEmpty
+    color #9e9e9e
+
+  &IconPlay
+    height  20px
+    width   20px

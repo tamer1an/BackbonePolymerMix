@@ -1,0 +1,19 @@
+md-item.card(layout="column")
+    md-item-content(flex)
+        .card-image.card-image--contain(style="background-image: url({{ device.type|deviceImageFilter }})" title="device_type: {{device.device_type}}, type: {{device.type}}, subtype: {{device.subtype}}")
+
+        .md-tile-content
+            h3( ng-bind="device.subtype" )
+
+            p.card-info
+                strong( ng-bind="device.location" )
+
+            p.card-info
+                span(ng-repeat="trouble in device.troubles track by $index")
+                    md-icon.card-icon-small(md-svg-src="{{trouble|iconFilter:'alerts'}}")
+                    md-tooltip {{trouble}}
+
+                span(ng-if="! device.troubles") {{"NO TROUBLES"|translate}}
+
+            p.actions(ng-if="device.bypass_availability")
+                md-button(ng-click="bypass()", ng-class="{ 'md-primary':device.bypass, blink: bypassProccess }") {{ bypassLabel }}

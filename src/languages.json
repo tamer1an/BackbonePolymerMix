@@ -1,0 +1,8 @@
+[{ "code": "ru",
+   "name": "Русский" },
+  { "code": "en",
+    "name": "English" },
+  { "code": "de",
+    "name": "Deutch" },
+  { "code": "es",
+    "name": "Espaniol" }]

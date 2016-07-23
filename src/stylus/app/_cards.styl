@@ -1,0 +1,152 @@
+.cards-list
+  padding 5px
+  background-color #f5f5f5
+
+.card
+  padding 8px
+
+  .blink
+    blink()
+
+  > md-item-content
+    border-radius 1px
+    background-color white
+    align-items flex-start
+    flex-wrap wrap
+    border-bottom 1px solid rgba(0,0,0,0.1)
+
+  .md-tile-content
+    padding 10px
+
+    h3
+      overflow hidden
+      text-overflow ellipsis
+
+    .actions
+      padding 5px 0 0
+      width auto
+      margin 0 -10px -5px -5px
+
+  &-icon-small
+    width 16px
+    height 16px
+    margin-right 4px
+    vertical-align middle
+
+  .actions
+    border-top 1px solid rgba(0,0,0,0.05)
+    padding 5px
+    font-size 12px
+    margin 0
+    width 100%
+
+    .md-button
+      padding 0 5px
+
+  &-image
+    height 75px
+    text-align center
+    line-height 75px
+    //align-self flex-start
+    width 100px
+    margin 8px
+    position relative
+    background-size cover
+    background-position center
+    background-repeat no-repeat
+    color rgba(255,255,255, .8)
+    cursor pointer
+
+    &--contain
+      align-self stretch
+      cursor default
+      height auto
+      background-size contain
+
+    md-icon
+      width 40px
+      height 40px
+
+    ~ .md-tile-content
+      padding 8px 10px 8px 5px
+
+    &.no-image
+      background-color #f8f8f8
+      color: #ddd
+      cursor default
+
+      md-icon
+        width 50px
+        height 36px
+
+  &-selected:after
+    content ''
+    position absolute
+    bottom 0
+    left 50%
+    margin-left -10px
+    margin-bottom -1px
+    border 10px solid transparent
+    border-bottom-color #1E292F
+
+  .md-fab.md-default-theme.md-button:not([disabled])
+    box-shadow 0 1px 2px rgba(black, .1)
+    right 10px
+    bottom -5px
+    position absolute
+
+    &:hover, &:focus
+      box-shadow 0 4px 8px 0 rgba(black, 0.4)
+
+  &-record-fab
+    > i
+      background-color #f44444
+      display inline-block
+      width 18px
+      height 18px
+      border-radius 100%
+      vertical-align -4px
+
+
+  &-play-fab
+    > i
+      color #f00000
+      font-weight bold
+      font-style normal
+      font-size 13px
+      padding-bottom 10px
+
+      &:before
+        content ''
+        border solid transparent
+        border-width 5px 0 5px 6px
+        //margin-left 4px
+        margin-right 4px
+        display inline-block
+        //vertical-align -1px
+        border-left-color #f00000
+
+  &-info
+    font-size 11px
+    color rgba(black, .5)
+    margin-bottom -10px
+
+    > span
+      display inline-block
+
+    > strong
+      color: rgb(255,82,82)
+      margin-right 6px
+      font-weight 600
+
+  &-icon
+    position absolute
+    top 12px
+    left 15px
+
+    ~ .md-tile-content
+      padding-left 50px
+
+md-tabs
+  background-color #f5f5f5
+
