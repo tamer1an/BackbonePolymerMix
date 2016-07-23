@@ -1,0 +1,58 @@
+{
+    "$schema": "http://json-schema.org",
+    "id": "http://jsonschema.net",
+    "type": "object",
+    "properties": {
+        "command": {
+            "type": "string"
+        },
+        "downloadState": {
+            "type": "string"
+        },
+        "index": {
+            "type": "string"
+        },
+        "mxGMember": [{
+            "addRpm" : {
+                "type": "string"
+            },
+            "fsRpm" :{
+                "type": "string"
+            },
+            "kernelRpm" : {
+                "type": "string"
+            },
+            "mxMemberId" : {
+                "type": "string"
+            },
+            "mxMemberName" : {
+                "type": "string"
+            },
+            "mxMemberRpm" : [
+                {
+                    "rpmType" : {
+                        "type": "string"
+                    },
+                    "version" : {
+                        "type": "string"
+                    }
+                }
+            ],
+            "mxMemberSystem" : {
+                "type": "string"
+            }
+        }],
+        "mxGroupId": {
+            "type": "string"
+        },
+        "mxGroupRole": {
+            "type": "string"
+        },
+        "mxState": {
+            "type": "string"
+        },
+        "success": {
+            "type": "string"
+        }
+    }
+}

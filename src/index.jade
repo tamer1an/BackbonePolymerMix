@@ -1,0 +1,54 @@
+doctype html
+html(lang='en', itemscope, itemtype='http://schema.org/WebPage' )
+    head
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        title Boat
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.9, user-scalable=yes')
+        meta(name='apple-mobile-web-app-capable',            content='yes' )
+        meta(name='apple-mobile-web-app-status-bar-style',    content='black-translucent')
+
+
+        // inject:css
+        // Note that inject and endinject must be surrounded by a space on both sides
+        // endinject
+
+        // inject:js
+        // Note that inject and endinject must be surrounded by a space on both sides
+        // endinject
+
+
+
+        include polymer-components.jade
+
+        body.UP(ng-app='app', ng-controller='AuthController', layout='column', ng-style='textSize')
+            md-toolbar
+                .md-toolbar-tools
+                    md-button.UP_head_hamburger.md-primary(ng-click='toggleLeft()', hide-gt-md) ≡
+                    h2.UP_head_logoText.md-flex Boat
+
+            div(layout='column',  ng-cloak, flex="100")
+                section(layout='row', flex)
+                    md-sidenav.md-sidenav-left.md-whiteframe-z2(
+                        md-component-id='left',
+                        md-is-locked-open="$mdMedia('gt-md')"
+                    )
+                        md-content(ng-controller='LeftCtrl')
+                            md-button.UP_navLeft_close.md-primary(ng-click='close()', hide-gt-md) x
+
+                            md-list.UP_navLeft_list(ng-cloak)
+                                md-subheader.md-no-sticky Personal settings
+                                md-list-item(
+                                    aria-label='menu item',
+                                    ng-href='{{menu.prefix+item.href}}',
+                                    ng-style="{'background':loc.url()==item.href?'lightgrey':'none'}",
+                                    ng-repeat='item in menu.items'
+                                )
+                                    span(ng-bind='item.title')
+
+
+                    md-content(flex, layout-padding)
+                        div(layout='column', layout-fill, layout-align='top center')
+
+                            .UP_uiView(ui-view)
+
+                        .UP-clear(flex)

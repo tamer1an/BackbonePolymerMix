@@ -1,0 +1,16 @@
+extends layout
+
+block application
+    body.app(itemprop="mainContentOfPage")
+
+        .app_toolbar
+
+        nav.app_tabs
+            a(href="#todo").app_tabs_tab Task-list
+            a(href="#search/true").app_tabs_tab Done-list
+            a(href="#help").app_tabs_tab ...
+
+        add-items-section
+        completed-items
+
+

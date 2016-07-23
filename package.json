@@ -1,0 +1,49 @@
+{
+  "name": "Offline",
+  "version": "0.0.1",
+  "author": "Andrii Trybynenko",
+  "scripts": {
+    "premock-server": "cd raml-api/ && npm i && cd api-specs/ && cp -a prod-api-spec/. v1/ && cp -a mock-system/. v1/",
+    "mock-server": "cd raml-api/bin && node localapi run ../api-specs/v1/v1-spec.raml -d -p",
+    "local-server": "coffee app.coffee"
+  },
+  "dependencies": {
+    "bower": "*",
+    "jade": "*",
+    "babel": "*",
+    "path": "*",
+    "gulp": "*",
+    "gulp-changed": "*",
+    "gulp-concat": "*",
+    "gulp-connect": "*",
+    "gulp-filter": "*",
+    "gulp-if": "*",
+    "gulp-inject": "*",
+    "stream-series": "*",
+    "gulp-jade": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "gulp-babel": "*"
+  },
+  "devDependencies": {
+    "babel-plugin-uglify": "^1.0.2",
+    "chai": "*",
+    "chai-backbone": "*",
+    "coffee-script": "*",
+    "express": "*",
+    "gulp-coffee": "*",
+    "gulp-karma": "*",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-minify-html": "^1.0.5",
+    "gulp-uglify": "^1.5.1",
+    "karma": "*",
+    "karma-chrome-launcher": "*",
+    "karma-jasmine": "*",
+    "karma-phantomjs-launcher": "*",
+    "mocha": "*"
+  }
+}

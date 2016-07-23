@@ -1,0 +1,31 @@
+link(rel="import", href="/vendor/polymer/polymer.html")
+
+dom-module(id="add-items-section", attributes="")
+  template
+    style(rel="stylesheet", href="/style/add-items-section.css")
+
+    h3 {{ title }}
+    form(action="#submit")
+        paper-input(
+            type="text",
+            value="{{ newTask }}",
+            placeholder="{{ title }}",
+            reqired
+            )
+
+script.
+    (function () {
+        Polymer({
+            is: "add-items-section",
+            properties: {
+                title: {
+                    type: String,
+                    value: "Add new Task"
+                },
+                newTask: {
+                    type: String,
+                    value: ""
+                }
+            }
+        });
+    })();

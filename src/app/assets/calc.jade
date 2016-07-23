@@ -1,0 +1,195 @@
+link(rel="import", href="/vendor/polymer/polymer.html")
+link(rel="import" href="/vendor/iron-flex-layout/iron-flex-layout.html")
+
+dom-module(id="calc-work", attributes="")
+    template
+        style.
+            paper-input {
+                width: 100%;
+            }
+
+            :host {
+                @apply(--layout-vertical);
+                @apply(--paper-font-body2);
+            }
+
+            #perimetr {
+                @apply(--layout-horizontal);
+            }
+
+        span Площа озера
+        form(id="perimetr" action="#submit" )
+            paper-input(
+            type="number",
+            placeholder="Ширина",
+            bind-value="{{ WidthValue }}",
+            reqired
+
+            )
+            | x
+            paper-input(
+            type="number",
+            placeholder="Довжина",
+            bind-value="{{ HeightValue }}",
+            reqired
+            )
+
+            div(style="margin-left:20px;")
+                div(style="font-size: 240%;margin: 25px;") P={{ Perimeter }}
+                |   Вартість робіт з поглиблення и очищення озера котра перевищує 165 000 грн. автоматично пропонує купити обладнання міні земснаряд EcoLake
+                |   [100-500м.2(250грн.), 500-750м.2(200грн.), 750-1250м.2(150грн.)]
+
+                div </br > </br >  Очистка озера від мулу 1м2 </br >  [100-500м.2(150грн.), 500-750м.2(125грн.), 750-1250м.2(100грн.), 1250-1500м.2(80грн.)]
+                div </br > </br >  від подорослів </br >  [100-500м.2(50грн.), 500-750м.2(35грн.), 750-1250м.2(25грн.), 1250-1500м.2(20грн.)]
+                div </br > </br >  поглибленя озера . намив ґрунту м3 </br > [100-500м.2(150грн.), 500-750м.2(125грн.), 750-1250м.2(100грн.), 1250-1500м.2(80грн.)]
+        div(style="position: fixed;top: 100;bottom: 25px;left: 30px; z-index: 500;") Укріплення берега по периметру озера.
+            div
+                paper-input(
+                type="number",
+                placeholder="Дубовий шпунтг 5000",
+                bind-value="{{ Oak }}",
+                reqired
+                )
+
+            div
+                paper-input(
+                type="number",
+                placeholder="Дубовий циліндр 6000",
+                bind-value="{{ OakCylinder }}",
+                reqired
+                )
+
+            div
+                paper-input(
+                type="number",
+                placeholder="Габіон 3500",
+                bind-value="{{ Gabion }}",
+                reqired
+                )
+
+            div
+                paper-input(
+                type="number",
+                placeholder="Залізо бетон 13000",
+                bind-value="{{ Iron }}",
+                reqired
+                )
+
+            div
+                paper-input(
+                type="number",
+                placeholder="Шпунг ПВХ 12000",
+                bind-value="{{ PBX }}",
+                reqired
+                )
+
+            div
+                paper-input(
+                type="number",
+                placeholder="Георешітка 1500",
+                bind-value="{{ Geo }}",
+                reqired
+                )
+
+
+
+script.
+    (function () {
+        Polymer({
+            is: "calc-work",
+            _changedPerimeter: function (perim) {
+                //console.log(this, perim);
+
+
+                // [100 - 500, 500 - 750, 750 - 1250, 1250 - 1500]
+                // div [150, 125, 100, 80] - Очистка
+                // озера
+                // від
+                // мулу
+                // 1
+                // м2
+                // div [50, 35, 25, 20] - від
+                // подорослів
+                // div [150, 125, 100, 80] - поглибленя
+                // озера.намив
+                // ґрунту
+                // м3
+            },
+
+            properties: {
+                //
+                WidthValue: {
+                    type: Number,
+                    value: "",
+                    observer: '_changedPerimeter'
+                },
+                HeightValue: {
+                    type: Number,
+                    value: "",
+                    observer: '_changedPerimeter'
+                },
+                Oak: {
+                    type: Number,
+                    value: ""
+                },
+                OakCylinder: {
+                    type: Number,
+                    value: ""
+                },
+                Gabion: {
+                    type: Number,
+                    value: ""
+                },
+                Iron: {
+                    type: Number,
+                    value: ""
+                },
+                PBX: {
+                    type: Number,
+                    value: ""
+                },
+                Geo: {
+                    type: Number,
+                    value: ""
+                },
+                Perimeter: {
+                    type: Number,
+                    notify: true,
+                    value: "0",
+                    cleanUp1: 0
+                }
+            },
+
+            observers: [
+                '_computeValue(WidthValue, HeightValue)'
+            ],
+
+            _computeValue: function (WidthValue, HeightValue) {
+                //console.log('observe', WidthValue, HeightValue)
+
+                this.Perimeter = WidthValue * HeightValue;
+
+                var perim = this.Perimeter, x = [150, 125, 100, 80], y = [50, 35, 25, 20], z = [150, 125, 100, 80];
+
+                //console.log('perim > 100 && perim < 500', perim > 100 && perim < 500);
+
+                if (perim > 100 && perim < 500) {
+
+                    //console.log(                            x[0],                            y[0],                            z[0]                    );
+
+                } else if (perim > 500 && perim < 750) {
+
+                    //console.log(                            x[1],                            y[1],                            z[1]                    );
+
+                } else if (perim > 750 && perim < 1250) {
+
+                    //console.log(                            x[2],                            y[2],                            z[2]                    );
+
+                } else if (perim > 1250 && perim < 1500) {
+
+                    //console.log(                            x[3],                            y[3],                            z[3]                    );
+
+                }
+            }
+        });
+    })();

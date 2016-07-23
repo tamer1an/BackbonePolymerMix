@@ -1,0 +1,10 @@
+form.UP_login-form
+    fieldset.UP_login-form_fs(layout='column', layout-align='center center')
+        md-input-container
+            label User name
+            input(ng-model='user.name')
+        md-input-container
+            label Password
+            input(type='password' ng-model='user.password')
+
+        md-button.UP_login-form_fs_submit(ng-click='login()').md-raised Submit

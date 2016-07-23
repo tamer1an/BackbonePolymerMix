@@ -1,0 +1,147 @@
+{
+    "number": "1.68",
+    "ownerType": "User",
+    "rule": [
+        {
+            "Enabled": [
+                false
+            ]
+        },
+        {
+            "IfUnread": [
+                "delete"
+            ]
+        },
+        {
+            "NotifInterval": [
+                {
+                    "Period": []
+                },
+                {
+                    "StartFrom": []
+                }
+            ]
+        },
+        {
+            "MessageMedia": [
+                "fax"
+            ]
+        },
+        {
+            "DaysOfWeek": [
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "Notify": [
+                {
+                    "Transport": [
+                        {
+                            "By": [
+                                "call"
+                            ]
+                        },
+                        {
+                            "Destination": [
+                                "1-118-779-5353"
+                            ]
+                        },
+                        {
+                            "CallMethod": [
+                                "simultaneously"
+                            ]
+                        },
+                        {
+                            "Attempts": [
+                                0
+                            ]
+                        },
+                        {
+                            "ToAttach": [
+                                false
+                            ]
+                        },
+                        {
+                            "Pause": [
+                                10
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Transport": [
+                        {
+                            "By": [
+                                "call"
+                            ]
+                        },
+                        {
+                            "Destination": [
+                                "1-834-878-6513 x832"
+                            ]
+                        },
+                        {
+                            "CallMethod": [
+                                "sequentially"
+                            ]
+                        },
+                        {
+                            "Attempts": [
+                                2
+                            ]
+                        },
+                        {
+                            "ToAttach": [
+                                false
+                            ]
+                        },
+                        {
+                            "Pause": [
+                                0
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Transport": [
+                        {
+                            "By": [
+                                "e-mail"
+                            ]
+                        },
+                        {
+                            "Destination": [
+                                "Joaquin_Will32@hotmail.com"
+                            ]
+                        },
+                        {
+                            "CallMethod": [
+                                "simultaneously"
+                            ]
+                        },
+                        {
+                            "Attempts": [
+                                0
+                            ]
+                        },
+                        {
+                            "ToAttach": [
+                                true
+                            ]
+                        },
+                        {
+                            "Pause": [
+                                240
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "ruleId": "cac2c5e3-e4c0-4274-9aa6-13dff210c0d4",
+    "ruleName": "Lucienne Walsh rule ",
+    "userId": 68717
+}

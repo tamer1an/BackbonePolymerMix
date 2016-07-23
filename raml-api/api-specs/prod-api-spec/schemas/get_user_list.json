@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org",
+    "id": "http://jsonschema.net",
+    "type": "array",
+    "items": {
+        "id": "http://jsonschema.net/0",
+        "type": "object",
+        "properties": {
+            "command": {
+                "type": "string"
+            },
+            "index": {
+                "type": "string"
+            },
+            "success": {
+                "type": "string"
+            },
+            "users": {
+                "type": "array"
+            }
+        }
+    }
+}

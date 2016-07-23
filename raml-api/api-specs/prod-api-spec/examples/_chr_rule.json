@@ -1,0 +1,67 @@
+{
+    "address": "144 Amy Throughway",
+    "addresseeId": "92973",
+    "displayUserIDForExCall": true,
+    "enabled": false,
+    "number": 1,
+    "ownerType": "User",
+    "rule": {
+        "Actions": [
+            {
+                "ForwardTo": [
+                    "1001"
+                ]
+            }
+        ],
+        "Conditions": [
+            {
+                "DateRange": [
+                    "",
+                    "9/9/2015"
+                ]
+            },
+            {
+                "TimeFrame": [
+                    "00:00",
+                    "15:10"
+                ]
+            },
+            {
+                "Holidays": []
+            },
+            {
+                "Presence": [
+                    0,
+                    1,
+                    2,
+                    7,
+                    10
+                ]
+            },
+            {
+                "CallFrom": [
+                    "1-305-560-8307"
+                ]
+            },
+            {
+                "WeekDays": [
+                    [
+                        3,
+                        4,
+                        6
+                    ]
+                ]
+            }
+        ],
+        "Triggers": [
+            {
+                "NoAnswer": [
+                    70920
+                ]
+            }
+        ]
+    },
+    "ruleId": "jcemJDI8aYmPJ4HvPFC8vcAs",
+    "ruleName": "Tommie Baumbach rule ",
+    "userId": 16130
+}

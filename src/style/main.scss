@@ -1,0 +1,146 @@
+/* VARIABLES */
+// COLORS
+$color: #2ca1b6;
+$color-bg: #FFFFFF;
+$color-grey: lightgrey;
+$color-dark: #343a3f;
+$color-button: #f0c702;
+
+// TEXT
+$text-indent: 15px;
+
+// DIMENSIONS
+$break-small: 320px;
+$break-large: 1200px;
+$break-ipad-portrait: 640px;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin no-select($val) {
+  -webkit-user-select: $val;
+  -moz-user-select: $val;
+  -ms-user-select: $val;
+  user-select: $val;
+}
+
+/*RESET*/
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 670px;
+}
+
+div#DoneContainer {
+  display:none;
+}
+
+
+/* APP CLASS */
+.app {
+  @media screen and (min-width: $break-ipad-portrait) {
+    width: 760px;
+  }
+  width: 315px;
+  border: 1px solid $color-grey;
+  height: 2000px;
+  background: $color-bg;
+  margin: 0 auto;
+  font-family: "Lucida Grande", "Helvetica Nueue", Arial, sans-serif;
+
+  &_tabs {
+    width: 100%;
+    height: 75px;
+    vertical-align: baseline;
+    @include no-select(none);
+
+    &_tab {
+      display: inline-block;
+      width: 33.3%;
+      background: $color-grey;
+      height: 100%;
+      text-align: center;
+      line-height: 70px;
+      text-decoration: none;
+      font-weight: bolder;
+      color: $color;
+    }
+  }
+
+  &_toolbar {
+    width: 100%;
+    height: 58px;
+    border-bottom: 10px solid $color;
+    text-align: right;
+    cursor: pointer;
+    @include no-select(none);
+
+    &_hamburger {
+      width: 25px;
+      height: 18px;
+      margin: 20px 20px 0 0;
+      display: inline-block;
+    }
+  }
+
+  add-items-section,completed-items {
+    height: 165px;
+    display: block;
+    margin: 15px;
+  }
+
+  completed-items {
+    //overflow-y: scroll;
+    //height: 100%;
+
+    paper-input {
+      width: 95%;
+      display: inline-block;
+      transform: translateX(15px);
+    }
+  }
+}
+
+.todoapp {
+  padding: 26px;
+
+  h3 {
+    margin: 10px 0 0 0;
+  }
+
+  completed-items {
+    //overflow-y: scroll;
+    //height: 100%;
+    form{
+      display:inline-flex;
+      margin: 11px;
+    }
+
+    paper-input {
+      width: 90%;
+    }
+  }
+}
+
+///* iPad (landscape) ----------- */
+//@media screen and (max-width:960px) {
+//
+//}
+//
+///* ipad (portraid) --------- */
+//@media only screen and (max-width : 640px) {
+//
+//}
+//
+///* Smartphones (landscape) ----------- */
+//@media only screen and (max-width : 480px) {
+//
+//}
+///* Smartphones (portrait) ----------- */
+//@media only screen and (max-width : 320px) {
+//
+//}

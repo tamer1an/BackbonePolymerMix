@@ -1,0 +1,25 @@
+link(rel="import", href="/vendor/polymer/polymer.html")
+dom-module(id="completed-items", attributes="")
+  template
+      style(rel="stylesheet", href="/style/completed-items.css")
+      h3 {{ title }}
+      div#todosContainer
+      div#DoneContainer
+      
+script.
+  (function () {
+    Polymer({
+      is: "completed-items",
+      properties: {
+        title: {
+          type: String,
+          value: "To do list:"
+        },
+        newTask: {
+          type: String,
+          value: ""
+        }
+      }
+    });
+  })();
+      
