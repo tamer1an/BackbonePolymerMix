@@ -1,0 +1,28 @@
+.panels
+{
+    padding: 10px 0;
+
+    &__panel
+    {
+        &-header
+        {
+            margin: 0px;
+
+            padding: 15px 10px;
+
+            font-family: "Roboto",Arial,sans-serif;
+            font-weight: 400;
+
+            cursor: pointer;
+
+            #gradient > .vertical(@start-color: #fff; @end-color: lighten(@gray-base, 90%));
+        }
+
+        &-content
+        {
+            position: relative;
+
+            top: -100%;
+        }
+    }
+}

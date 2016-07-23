@@ -1,0 +1,128 @@
+.input
+
+{
+
+    position: relative;
+
+
+    padding-bottom: 13px;
+
+
+    &--clear .form-control
+    {
+        padding-right: 25px;
+    }
+
+    &--error
+
+    {
+
+        .input__error
+
+        {
+
+            display: block;
+
+        }
+
+
+        .input__length
+
+        {
+
+            color: red;
+
+        }
+
+
+        .form-control,
+
+        .form-control:focus
+
+        {
+
+            border-bottom-color: @error-color;
+
+        }
+
+    }
+
+
+
+    &__error
+
+    {
+
+        position: absolute;
+
+        bottom: 0;
+
+        left: 0;
+
+
+        display: none;
+
+
+        color: red;
+
+
+        font-size: 0.7em;
+
+    }
+
+
+    &__clear
+
+    {
+
+        position: absolute;
+
+        z-index: 10;
+
+        top: 0;
+
+        right: 0;
+
+
+        width: 20px;
+
+        height: 25px;
+
+
+        cursor: pointer;
+
+
+        .glyphicon
+
+        {
+
+            color: #ccc;
+
+
+            line-height: 25px;
+
+        }
+
+    }
+
+
+    &__length
+
+    {
+
+        position: absolute;
+
+        right: 0;
+
+        bottom: 0;
+
+
+        color: green;
+
+
+        font-size: 0.7em;
+
+    }
+
+}
+

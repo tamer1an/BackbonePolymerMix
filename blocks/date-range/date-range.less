@@ -1,0 +1,44 @@
+.date-range
+{
+    display: inline-block;
+
+    min-width: 190px;
+    padding: 10px;
+
+    white-space: nowrap;
+
+    background: #fff;
+
+    &__row:not(:last-child)
+    {
+        margin-bottom: 10px;
+    }
+
+    &__label
+    {
+        display: inline-block;
+
+        width: 70px;
+    }
+
+    &__control
+    {
+        display: inline-block;
+    }
+
+    &__error
+    {
+        display: none;
+
+        color: red;
+
+        &--vis
+        {
+            display: block;
+
+            max-width: 185px;
+
+            white-space: normal;
+        }
+    }
+}

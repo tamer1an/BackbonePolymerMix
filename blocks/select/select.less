@@ -1,0 +1,26 @@
+.select
+{
+    position: relative;
+
+    padding-bottom: 15px;
+
+    &__error
+    {
+        position: absolute;
+        bottom: 0;
+
+        color: red;
+
+        font-size: 0.8em;
+    }
+
+    &--error-dis
+    {
+        .select__error
+        {
+            display: none;
+        }
+
+        padding-bottom: 0;
+    }
+}

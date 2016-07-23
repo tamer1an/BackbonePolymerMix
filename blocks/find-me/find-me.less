@@ -1,0 +1,174 @@
+.find-me
+{
+    .select
+    {
+        display: inline-block;
+        margin: 0 5px 0 10px;
+    }
+
+    &__try-control
+    {
+        &-wrapper
+        {
+            padding: 10px 20px;
+            width: 640px;
+        }
+
+        &-confirm
+        {
+            margin-top: 10px;
+        }
+
+        &-value
+        {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 12px;
+
+            .select
+            {
+                margin: 0;
+            }
+        }
+
+        &-element
+        {
+            display: inline-block;
+            margin-top: 3px;
+            margin-left: 10px;
+            width: 300px;
+            vertical-align: top;
+        }
+
+        &-number
+        {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 12px;
+
+            &-value
+            {
+                padding: 0 5px;
+                background: @brand-primary-50;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__try
+    {
+        font-size: 12px;
+
+        .select .form-control,
+        .tool-tip input
+        {
+            font-size: 12px;
+        }
+
+        &-elem
+        {
+            font-size: 12px;
+            line-height: 2em;
+
+            .glyphicon
+            {
+                margin: 0 3px;
+                vertical-align: -1px;
+                opacity: 0;
+                cursor: pointer;
+                transition: opacity 0.3s ease 0.1s;
+
+                &:hover
+                {
+                    color: @brand-danger;
+                }
+            }
+
+            &:hover
+            {
+                .glyphicon
+                {
+                    opacity: 1;
+                }
+            }
+
+            &-control
+            {
+                margin: 0 10px 0 5px;
+            }
+        }
+    }
+
+    &__add
+    {
+        display: inline-block;
+        padding: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+
+        &:hover
+        {
+            color: @brand-danger;
+        }
+    }
+
+    &__text
+    {
+        display: inline-block;
+    }
+
+    &__dropdown
+    {
+        padding: 0 10px;
+
+        &--time
+        {
+            .input
+            {
+                display: inline-block;
+                margin-right: 15px;
+                width: 85px;
+            }
+        }
+    }
+
+    &__try-ask
+    {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    &__action-rule
+    {
+        &--provide
+        {
+            font-size: 12px;
+            .select
+            {
+                margin-left: 0;
+                select
+                {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &--bad
+        {
+            margin-left: -40px;
+        }
+    }
+
+    &__box
+    {
+        &--try
+        {
+            margin-left: 20px;
+        }
+
+        &--unsucc
+        {
+            margin-left: 40px;
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.spin
+{
+    z-index: 9999999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    .glyphicon
+    {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+
+        margin-top: -30px;
+        margin-left: -30px;
+
+        -webkit-animation: spin 2s infinite linear;
+        -moz-animation: spin 2s infinite linear;
+        -o-animation: spin 2s infinite linear;
+        animation: spin 2s infinite linear;
+
+        color: #FFF;
+
+        font-size: 60px;
+    }
+
+    &--visible
+    {
+        position: absolute;
+
+        display: block;
+    }
+}
+
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

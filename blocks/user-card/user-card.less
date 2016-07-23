@@ -1,0 +1,180 @@
+.user-card
+
+{
+    &__header
+    {
+        &-text
+        {
+            margin-right: 20px;
+        }
+    }
+
+    &__error,
+
+    &__message,
+
+    &__delete
+
+    {
+
+        padding: 15px 20px;
+
+
+        background: @error-bg;
+
+    }
+
+
+    &__error
+
+    {
+
+        color: @error-color;
+
+    }
+
+
+    &__message
+
+    {
+
+        color: @brand-primary-700;
+
+    }
+
+
+    &__delete
+
+    {
+
+        clear: both;
+
+        &-text,
+
+        .button
+
+        {
+
+            margin-right: 10px;
+
+        }
+
+    }
+
+
+    &__container
+
+    {
+
+        display: block;
+
+        zoom: 1;
+
+
+        &:after {
+
+            display: block;
+
+            visibility: hidden;
+
+            clear: both;
+
+
+            height: 0;
+
+
+            content: ".";
+
+        }
+
+    }
+
+
+    &__modal
+
+    {
+
+        .modal-dialog
+
+        {
+
+            width: 90%;
+
+        }
+
+    }
+
+
+    &__box
+
+    {
+
+        float: left;
+
+
+        width: 40%;
+        margin: 0 5%;
+
+        margin: 0 5%;
+        min-width: 350px;
+
+
+        &-content
+
+        {
+
+            padding: 0 20px 0 0;
+
+        }
+
+
+        &-row
+
+        {
+
+            &-label
+
+            {
+
+                white-space: nowrap;
+
+                color: #999;
+
+                font-size: 0.9em;
+
+                line-height: 33px;
+
+                //@media screen and (max-width: 992px) {
+                //    display: none;
+                //}
+            }
+
+
+            &-text
+
+            {
+
+                font-size: 1.5em;
+
+            }
+
+            &-data
+            {
+                input
+                {
+                    height: 25px;
+                    padding: 2px @padding-base-horizontal 2px 5px;
+                    line-height: 25px;
+                }
+            }
+        }
+
+    }
+
+
+    .checkbox
+    {
+        margin-left: 10%;
+    }
+}
+

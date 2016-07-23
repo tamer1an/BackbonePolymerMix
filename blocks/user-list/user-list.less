@@ -1,0 +1,90 @@
+.user-list
+{
+    background: #FFFFFF;
+
+    .add-button
+    {
+        position: absolute;
+        right: 45px;
+        bottom: -17px;
+    }
+
+    &__modals-checkboxrows
+    {
+        padding: 2px 0;
+    }
+
+    &__head
+    {
+        position: relative;
+
+        margin: 0;
+        padding: 50px 20px 20px;
+
+        background: #a5d6a7;
+
+        &-title
+        {
+            display: inline-block;
+
+            margin: 0 20px 0 0;
+
+            vertical-align: top;
+        }
+    }
+
+    &__content
+    {
+        padding: 0 20px;
+    }
+
+    &__message
+    {
+        padding: 10px 30px;
+
+        color: @brand-primary-700;
+        background: @error-bg;
+
+        &--error
+        {
+            color: @error-color;
+        }
+    }
+
+    &__table
+    {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+
+        -khtml-user-select: none;
+
+        &-tr
+        {
+            cursor: pointer;
+        }
+    }
+
+    &__th-text
+    {
+        cursor: pointer;
+
+        line-height: 34px;
+    }
+
+    &__button
+    {
+        cursor: pointer;
+        text-align: right;
+
+        color: @brand-primary-700;
+
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    &__footer
+    {
+        text-align: center;
+    }
+}

@@ -1,0 +1,60 @@
+.tabs
+{
+    margin-bottom: 15px;
+
+    &__heads
+    {
+        &-tab
+        {
+            display: inline-block;
+
+            padding: 8px 10px 2px;
+
+            border: 1px solid transparent;
+            border-bottom-color: @brand-primary-100;
+            background: #fff;
+            cursor: pointer;
+            color: @link-color;
+
+            margin-bottom: -1px;
+
+            .transition(.1s ease-in-out all);
+
+            &:hover
+            {
+                border-bottom-color: @link-color;
+            }
+
+            &--current
+            {
+                border-color: @brand-primary-100;
+                border-bottom-color: transparent;
+
+                color: @gray-base;
+
+                cursor: auto;
+
+                &:hover
+                {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+    }
+
+    &__contens
+    {
+        border: 1px solid @brand-primary-100;
+        padding: 15px 15px 0;
+
+        &-tab
+        {
+            display: none;
+
+            &--current
+            {
+                display: block;
+            }
+        }
+    }
+}

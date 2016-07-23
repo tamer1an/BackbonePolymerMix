@@ -1,0 +1,189 @@
+.notif-card
+{
+    .IntervalDD{
+        min-width: 170px;
+    }
+
+    &__numberType{
+        border: none;
+        color: white;
+        width: 16px;
+
+        &::-webkit-outer-spin-button{
+            border-top: 1px solid grey;
+            opacity: 1;
+        }
+        &::-webkit-inner-spin-button{
+            border-top: 1px solid grey;
+            opacity: 1;
+        }
+    }
+
+    &__delButton{
+        background: white;
+        border: none;
+        padding:0;
+        color:red;
+    }
+
+    .addNotif{
+      width: 140px;
+    }
+
+    padding-left: 10px;
+    list-style: none;
+    margin-bottom: 10px;
+
+    &__control
+    {
+        display: inline-block;
+        white-space: nowrap;
+        margin-bottom: 5px;
+
+        .btn-group
+        {
+            padding-left: 3px;
+            padding-right: 7px;
+
+            vertical-align: top;
+        }
+
+        .btn
+        {
+            padding: 4px 8px 3px;
+        }
+    }
+
+    &__input.form-control
+    {
+        display: inline-block;
+        width: 40px;
+        margin: 0 4px;
+        padding-right: 4px;
+    }
+
+    &:not(:last-of-type)
+    {
+        border-bottom: 1px solid lighten(@gray-base, 85%);
+    }
+
+    &__header
+    {
+        &-control
+        {
+            margin: 0 3px;
+            color: @gray-light;
+            font-size: 16px;
+            cursor: pointer;
+
+            &:hover
+            {
+                color: @brand-primary-400;
+            }
+        }
+
+        &-enabled.checkbox
+        {
+            display: inline-block;
+            vertical-align: -2px;
+        }
+
+        .input
+        {
+            display: inline-block;
+            width: 400px;
+        }
+    }
+
+    .checkbox
+    {
+        margin-left: 0;
+    }
+
+    &__action
+    {
+        &-header
+        {
+            margin-bottom: 0;
+        }
+
+        &-rule
+        {
+            position: relative;
+            margin-left: 40px;
+
+            &--or:not(:first-child):before
+            {
+                position: absolute;
+                left: -20px;
+                color: @gray-light;
+                content: 'or';
+            }
+
+            &--and:not(:first-child):before
+            {
+                position: absolute;
+                left: -30px;
+                color: @gray-light;
+                content: 'and';
+            }
+        }
+    }
+
+    &__dropdown
+    {
+        padding: 0 10px;
+
+        &--time
+        {
+            .input
+            {
+                display: inline-block;
+                margin: 3px 10px 3px 0;
+                width: 85px;
+                vertical-align: top;
+            }
+        }
+
+        &--time-range
+        {
+            width: 190px;
+
+            .time-range
+            {
+                margin-bottom: 5px;
+            }
+        }
+
+        &--olderThan
+        {
+            input[type="number"]
+            {
+                display: inline-block;
+                margin: 3px 3px 3px 8px;
+                width: 67px;
+                vertical-align: top;
+            }
+        }
+    }
+
+    &__user-caller
+    {
+        margin-top: 15px;
+    }
+
+    &__description
+    {
+        font-size: 0.8em;
+        color: lighten(@gray-base, 65%);
+        margin-bottom: 10px;
+    }
+
+    &__warning
+    {
+        background: @brand-warning;
+
+        padding: 5px 20px;
+        display: inline-block;
+    }
+}

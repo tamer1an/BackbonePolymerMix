@@ -1,0 +1,7 @@
+# Ignore object files, shared libraries, executables
+node_modules/*
+libs/*
+.enb/tmp/*
+bundles/*/*
+!bundles/*/*.html!
+!bundles/*/*.bemdecl.js

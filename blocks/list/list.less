@@ -1,0 +1,174 @@
+.list
+{
+    .add-button
+    {
+        position: fixed;
+        z-index: 100;
+        right: 35px;
+        bottom: 24px;
+
+        width: 60px;
+        height: 60px;
+        padding: 0;
+
+        border: none;
+
+        font-size: 2em;
+        line-height: 60px;
+    }
+
+    &__modals
+    {
+        &-checkboxrows
+        {
+            padding: 2px 0;
+        }
+
+        &-text
+        {
+            padding: 20px 0;
+        }
+    }
+
+    &__table
+    {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        -khtml-user-select: none;
+        margin: 0 auto;
+
+        .checkbox
+        {
+            height: 20px;
+        }
+
+        > tbody {
+          border-left: @table-list-border;
+          border-bottom: @table-list-border;
+        }
+
+        &-tr > td{
+           border-right: @table-list-border;
+        }
+
+        &-tr
+        {
+            cursor: pointer;
+
+            &--active
+            {
+                background: @brand-primary-A100;
+            }
+        }
+    }
+
+    &__th
+    {
+        vertical-align: middle;
+        white-space: nowrap;
+
+        color: @gray-light;
+
+        &-text
+        {
+            cursor: pointer;
+
+            font-weight: 500;
+            line-height: 34px;
+        }
+    }
+
+    &__control
+    {
+        &-button
+        {
+            width: 40px;
+            margin: 0 auto;
+            padding: 2px 0 1px;
+
+            cursor: pointer;
+            text-align: center;
+
+            opacity: .5;
+            color: @brand-primary-700;
+            border: 1px solid transparent;
+
+            font-size: 24px;
+            line-height: 24px;
+
+            &--active
+            {
+                opacity: 1;
+                border: 1px solid @brand-primary-600;
+                box-shadow: inset 0px 0px 2px 2px rgba(71, 107, 46, 0.20);
+            }
+        }
+
+        &-multiple
+        {
+            .button:first-of-type
+            {
+                margin-right: 5px;
+            }
+
+            &-text
+            {
+                margin-right: 10px;
+            }
+
+        }
+
+        &-panel
+        {
+            display: none;
+
+            padding: 20px 0;
+
+            &:after
+            {
+
+            }
+
+            &--visible
+            {
+                display: block;
+            }
+
+            .user-list__control-wrapper
+            {
+                & > .button,
+                & > .btn-group-nesting
+                {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    &__footer
+    {
+        text-align: center;
+    }
+
+    &__control-lines {
+        margin-top: 10px;
+
+        .select {
+            display: inline-block;
+
+            margin-left: 10px;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max)
+{
+    .list
+    {
+        &__head-title
+        {
+            margin-bottom: 10px;
+        }
+    }
+}

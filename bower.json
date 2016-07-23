@@ -1,0 +1,1 @@
+{  "name": "react-tutorial",  "version": "0.0.0",  "authors": [    "Sergey Syrkin <ssyrkin@yandex.ru>"  ],  "dependencies": {    "bem-core": "https://github.com/jchouse/bem-core.git#a740db3a33f50211ca2eaed55e29c1284bde56ae",    "bootstrap-less": "https://github.com/twbs/bootstrap.git"  },  "ignore": [    "node_modules",    "libs",    "bundles"  ]}
