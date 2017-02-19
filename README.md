@@ -1,7 +1,7 @@
 # ClientSide Application
 ***
 
-Clone git repo: `git clone "git@vm199251.projects.local:CSC/CAP-N-FrontEnd.git"`
+Clone git repo: `git clone "project"`
 
 After clone run: `git submodule update --init --recursive`
 
